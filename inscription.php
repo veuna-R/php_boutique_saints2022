@@ -19,7 +19,7 @@ if ($_POST) {
     // Vérifier si le pseudo a entre 3 et 20 caractères(strlen)
     if (strlen($_POST["pseudo"]) < 3 || strlen($_POST["pseudo"]) > 20) {
         $erreur .= "<div class='alert alert-danger' role='alert'>
-                Le pseudo doit faire entre 3 et 20 caractères!
+                The nickname needs to be between 3 and 20 characters!
             </div>";
     }
 
@@ -69,7 +69,7 @@ if ($_POST) {
         // Si l'insert a correctement fonctionné msg de confirmation
         if ($count > 0) {
             $content .= "<div class='alert alert-success' role='alert'>
-                    Votre inscription a bien été réalisée!
+                    Your account is registered!
                 </div>";
 
             $inscriptionDone = true;

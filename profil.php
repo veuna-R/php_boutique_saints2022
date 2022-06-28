@@ -23,9 +23,9 @@ require_once("inc/header.php");
     <div class="col-md-12">
         <!-- Message de bienvenu -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <h2 class="text-center mb-5">Bonjour Mr <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>, bienvenue sur votre espace personnel !</h2>
+            <h2 class="text-center mb-5 text-white">Hello sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } else { ?>
-            <h2 class="text-center mb-5">Bonjour Mme/Mlle <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>, bienvenue sur votre espace personnel !</h2>
+            <h2 class="text-center mb-5 text-white">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } ?>
     </div>
 
@@ -52,11 +52,11 @@ require_once("inc/header.php");
 
     <div class="col-md-4">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> Mes commandes en cours </h5> </li>
+            <li class="list-group-item text-center"> <h5> Order pending </h5> </li>
 
             <?php while($commande = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <li class="list-group-item text-center">
-                    <p> Commande n° <?php echo $commande["id_commande"] . " du " . $commande["date_enregistrement"];  ?> </p>
+                    <p> Order n° <?php echo $commande["id_commande"] . " of " . $commande["date_enregistrement"];  ?> </p>
                     <p class="badge badge-primary"> <?php echo $commande["etat"]; ?> </p>
                 </li>
             <?php } ?>
@@ -65,10 +65,10 @@ require_once("inc/header.php");
         </ul>
 
         <ul class="mt-5 list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> Mon historique de commande </h5> </li>
+            <li class="list-group-item text-center"> <h5> My order history </h5> </li>
             <li class="list-group-item text-center">
-                <p> Commande n° 1 du 22/01/2020 </p>
-                <p class="badge badge-primary"> En cours de traitement </p>
+                <p> Order n°1 of 22/01/2020 </p>
+                <p class="badge badge-primary"> Pending </p>
             </li>
         </ul>
     </div>

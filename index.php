@@ -24,9 +24,9 @@ require_once("inc/header.php");
     <!-- jumbotron -->
     <div class="text-white text-center">
         <h1 class="display-4">WELCOME TO THE SHOP OF GOLD</h1><br>
-            <div class="mb-5">
-                <img src="photo/soul_of_gold.png" alt="">
-            </div>
+        <div class="mb-5">
+            <img src="photo/soul_of_gold.png" alt="">
+        </div>
     </div>
 
 
@@ -49,7 +49,9 @@ require_once("inc/header.php");
     </div>
     <!-- fin du carousel -->
 
-    
+    <!-- music in background -->
+    <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop autoplay controls class="col-md-3 mt-5"></audio>
+    <p class="text-white text-center">Saint Seiya - Blue Dream (instrumental)</p>
 
 
 
