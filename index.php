@@ -24,6 +24,9 @@ require_once("inc/header.php");
     <!-- jumbotron -->
     <div class="text-white text-center">
         <h1 class="display-4">WELCOME TO THE SHOP OF GOLD</h1><br>
+        <p class="text-white text-center">
+            This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> Have you ever felt your cosmos?
+        </p>
         <div class="mb-5">
             <img src="photo/soul_of_gold.png" alt="">
         </div>
