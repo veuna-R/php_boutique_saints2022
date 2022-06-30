@@ -23,9 +23,9 @@ require_once("inc/header.php");
 <body>
     <!-- jumbotron -->
     <div class="text-white text-center">
-        <h1 class="display-4">WELCOME TO THE SHOP OF GOLD</h1><br>
+        <h1 class="display-4">WELCOME TO THE SITE OF GOLD</h1><br>
         <p class="text-white text-center">
-            This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> Have you ever felt your cosmos?
+            This is a small site/shop dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> Have you ever felt your cosmos?
         </p>
         <div class="mb-5">
             <img src="photo/soul_of_gold.png" alt="">
@@ -34,7 +34,7 @@ require_once("inc/header.php");
 
 
     <!-- debut du carousel -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="photo/0-gold-saints-wallpapers.png" class="d-block w-100 rounded" alt="...">
@@ -52,9 +52,18 @@ require_once("inc/header.php");
     </div>
     <!-- fin du carousel -->
 
+    <!-- start of brief history -->
+    <div class="container col-md-9 col-sm-12 text-center text-white">
+        <h4 class="text-center text-white">The Gold Saints</h4>
+            <p>The Gold Saints are a group of the twelve most powerful and highest ranking warriors in Athena's army. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate warriors in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
+    </div>
+    <!-- end of brief history -->
+
     <!-- music in background -->
-    <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop autoplay controls class="col-md-3 mt-5"></audio>
-    <p class="text-white text-center">Saint Seiya - Blue Dream (instrumental)</p>
+    <div class="container text-center">
+        <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop autoplay controls class="col-md-3 mt-5"></audio>
+        <p class="text-white text-center">Saint Seiya - Blue Dream (instrumental)</p>
+    </div>
 
 
 
