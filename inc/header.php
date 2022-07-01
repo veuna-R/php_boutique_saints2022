@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ma Boutique</title>
+    <title></title>
 </head>
 
 <body>
 
     <div class="container-flud">
 
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start sticky-top" style="background-image: url(photo/stars_bg.jpg);">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start sticky-top" style="background-image: url(photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
                 SOUL OF GOLD
@@ -75,5 +75,5 @@
             </div>
         </nav>
 
-        <main class="bg-light py-5" style="background-image: url(photo/stars_bg.jpg);">
-            <div class="row col-md-12 mx-auto justify-content-center">
+        <main class=" bg-light py-3 px-20">
+            <div class="row col-sm-12 mx-auto justify-content-center">

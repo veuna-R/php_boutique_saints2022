@@ -1,10 +1,10 @@
             </div>
         </main>
         <!-- Footer -->
-        <footer class="bg-dark page-footer font-small blue pt-4" style="background-image: url(photo/stars_bg.jpg);">
+        <footer class="bg-dark page-footer font-small blue pt-4" style="background-image: url(photo/stars_bg2.jpg);">
 
         <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
+        <div class="container-fluid text-center text-md-left py-4">
 
             <!-- Grid row -->
             <div class="row">
@@ -81,8 +81,8 @@
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="text-white footer-copyright text-center py-3">© 2022 Copyright:
-            <a href="https://mdbootstrap.com/" class="text-white">Robert VEU NA</a>
+        <div class="text-white footer-copyright text-center py-3">
+            © 2022 Copyright: Robert VEU NA
         </div>
         <!-- Copyright -->
 

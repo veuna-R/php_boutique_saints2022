@@ -61,7 +61,7 @@ if($_POST) {
         } else {
             // Si le mot de passe rentré dans le formulaire ne correspond pas au mdp en BDD
                 $content .= "<div class='alert alert-danger' role='alert'>
-                    Veuillez vérifier votre mot de passe!
+                    Please verify your password!
                 </div>";
 
         }
@@ -69,7 +69,7 @@ if($_POST) {
     } else {
 
         $content .= "<div class='alert alert-danger' role='alert'>
-            Veuillez vérifier votre pseudo!
+            Please verify your nickname!
         </div>";
 
     }
@@ -87,7 +87,7 @@ require_once("inc/header.php");
 </div>
 
 <div class="col-md-12">
-    <h3 class='text-center mb-3 text-white'>Access your profile</h3>
+    <h3 class='text-center my-5'>Access your profile</h3>
 </div>
 
 <div class="col-md-3">

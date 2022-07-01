@@ -94,7 +94,7 @@ if ($inscriptionDone) { ?>
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
-                <input type="text" class="form-control" id="pseudo" placeholder="NIckname" name="pseudo">
+                <input type="text" class="form-control" id="pseudo" placeholder="Nickname" name="pseudo">
             </div>
 
             <!-- Password -->

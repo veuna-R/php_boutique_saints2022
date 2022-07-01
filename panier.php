@@ -8,7 +8,7 @@ require_once("inc/init.php");
 
     if(isset($_GET["action"]) && $_GET["action"] == "suppressionArticle") {
         $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-success'>
-        Votre article a bien été retiré du panier !</span> </div>";
+        Your articles have been succesfully removed from the cart!</span> </div>";
         retirerProduitDuPanier($_GET["id_produit"]);
         mettreAJourIndiceIndexProduitPanier();
     }
@@ -18,7 +18,7 @@ require_once("inc/init.php");
     ////////////////////////////////////////////
 
     if(isset($_GET["action"]) && $_GET["action"] == "viderPanier") {
-        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>Panier vidé !</span> </div>";
+        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>Cart emptied!</span> </div>";
         unset($_SESSION["panier"]);
     }
 
@@ -28,7 +28,7 @@ require_once("inc/init.php");
     if($_POST && isset($_POST["modifierQuantite"])) {
         modifierQuantitePanier($_POST["id_produit"], $_POST["quantite"]);
         $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-            La quantité pour le produit " . $_POST["titre"]  . " a bien été modifiée !
+            The quantity of " . $_POST["titre"]  . " has been modified!
         </div>";
     }
 
@@ -64,7 +64,7 @@ require_once("inc/init.php");
                 if($produit["stock"] <= 0) {
                     
                     $content .= "<div class=\"col-md-12 alert alert-danger\" role=\"alert\">
-                        Le stock est épuisé pour l'article " . $_SESSION["panier"]["titre"][$i] . "!
+                        Currently out of stock " . $_SESSION["panier"]["titre"][$i] . "!
                     </div>";
                     retirerProduitDuPanier($_SESSION["panier"]["id_produit"][$i]);
                     $i--;
@@ -75,7 +75,7 @@ require_once("inc/init.php");
 
                     $_SESSION["panier"]["quantite"][$i] = $produit["stock"];
                     $content .= "<div class=\"col-md-12 alert alert-warning\" role=\"alert\">
-                        La quantité pour le produit " . $_SESSION["panier"]["titre"][$i] . "a été réduite à $produit[stock] car le stock était insufisant pour vos achats !
+                        The quantity for the product " . $_SESSION["panier"]["titre"][$i] . "has been reduced to $produit[stock] because there was not enough stock for your purchase!
                     </div>";
 
                 }
@@ -100,7 +100,7 @@ require_once("inc/init.php");
             // commande : id_membre, montant; date_enregistrement (NOW())
             $idMembre = $_SESSION["membre"]["id_membre"];
             $montant = montantTotal();
-            $pdo->exec("INSERT INTO commande (id_membre, montant, date_enregistrement, etat) VALUES('$idMembre', '$montant', NOW(),'en cours de traitement')");
+            $pdo->exec("INSERT INTO commande (id_membre, montant, date_enregistrement, etat) VALUES('$idMembre', '$montant', NOW(),'being processed')");
 
             // Récupérer l'id de la commande générée
             $idCommande = $pdo->lastInsertId();
@@ -127,7 +127,7 @@ require_once("inc/init.php");
             // msg de confirmation en affichant le numéro de la commande
 
             $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                Merci pour votre commande ! Votre numéro de suivi est le n° $idCommande 
+                Thank you for your order! Your tracking number is $idCommande 
             </div>";
 
         }
@@ -164,13 +164,13 @@ require_once("inc/init.php");
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
-        $content .= "<a href='?action=viderPanier' class='badge badge-danger'> Vider le Panier </a>";
+        $content .= "<a href='?action=viderPanier' class='badge badge-danger'> Empty the cart </a>";
         $content .= "</div>";
 
     }
 
     // Début de la table panier
-    $content .= "<table class='table mb-5 text-white text-center'>
+    $content .= "<table class='table mb-5 text-center'>
     <thead>
         <tr>
             <th scope='col'>Title</th>
@@ -220,7 +220,7 @@ require_once("inc/init.php");
             $content .= "<td>" . $_SESSION["panier"]["prix"][$i] . "</td>";
             $content .= "<td> <img style='width:50px' src='". $_SESSION["panier"]["photo"][$i]  ."' alt=''> </td>";
             $content .= "<td> <a href='?action=suppressionArticle&id_produit=" . 
-            $_SESSION["panier"]["id_produit"][$i] . "'> Supprimer <a/></td>";
+            $_SESSION["panier"]["id_produit"][$i] . "'> Remove <a/></td>";
             $content .= "</tr>";
         }
 
