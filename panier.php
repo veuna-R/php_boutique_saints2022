@@ -100,7 +100,7 @@ require_once("inc/init.php");
             // commande : id_membre, montant; date_enregistrement (NOW())
             $idMembre = $_SESSION["membre"]["id_membre"];
             $montant = montantTotal();
-            $pdo->exec("INSERT INTO commande (id_membre, montant, date_enregistrement, etat) VALUES('$idMembre', '$montant', NOW(),'being processed')");
+            $pdo->exec("INSERT INTO commande (id_membre, montant, date_enregistrement, etat) VALUES('$idMembre', '$montant', NOW(),'en cours de traitement')");
 
             // Récupérer l'id de la commande générée
             $idCommande = $pdo->lastInsertId();
