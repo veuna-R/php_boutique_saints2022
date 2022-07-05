@@ -23,9 +23,9 @@ require_once("inc/header.php");
     <div class="col-md-12">
         <!-- Message de bienvenu -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <h2 class="text-center mb-5 text-white">Hello sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+            <h2 class="text-center mb-5">Hello sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } else { ?>
-            <h2 class="text-center mb-5 text-white">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+            <h2 class="text-center mb-5">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } ?>
     </div>
 

@@ -27,7 +27,7 @@ if ($_POST) {
 
     if (!ctype_alnum($_POST["pseudo"])) {
         $erreur .= "<div class='alert alert-danger' role='alert'>
-                Veuillez renseigner une valeur alpha numérique !
+                Numbers and letters only please!
             </div>";
     }
 

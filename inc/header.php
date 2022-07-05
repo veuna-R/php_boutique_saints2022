@@ -75,5 +75,6 @@
             </div>
         </nav>
 
-        <main class=" bg-light py-3 px-20">
-            <div class="row col-sm-12 mx-auto justify-content-center">
+        <main class="">
+            <div class="row col-sm-12 mx-auto justify-content-center p-0">
+        
