@@ -87,7 +87,7 @@ require_once("inc/header.php");
 </div>
 
 <div class="col-md-12">
-    <h3 class='text-center my-5'>Access your profile</h3>
+    <h3 class='text-center mt-5 mb-3'>Connect to your profile, Saint of Athena!</h3>
 </div>
 
 <div class="col-md-3">

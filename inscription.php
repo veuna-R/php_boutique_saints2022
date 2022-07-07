@@ -82,6 +82,10 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
+<div class="col-md-12">
+    <h3 class='text-center mt-5 mb-3'>Register to become a Saint of Athena!</h3>
+</div>
+
 <?php if ($erreur != "") { ?>
     <?php echo $erreur; ?>
 <?php }

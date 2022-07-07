@@ -15,12 +15,12 @@
     // Récupérer les catégories
     $stmt = $pdo->query("SELECT DISTINCT(categorie) FROM produit");
     // itérer à l'intérieur et générer une liste
-    $content .= (!isset($_GET["categorie"])) ? "<h3 class='my-5'> Welcome to the shop of gold </h3>" : "";
+    $content .= (!isset($_GET["categorie"])) ? "<h3 class='mt-5 text-center'> Welcome to the shop of gold! <br> Choose your destiny</h3>" : "";
     $content .= "<div class='w-100'> </div>";
-    $content .= " <div class='col-md-4 col-12 mb-3 justify-content-center'>";
-    $content .= "<ul class='list-group text-center display-5'>";
+    $content .= " <div class='col-md-4 col-12 mb-5 justify-content-center'>";
+    $content .= "<ul class='list-group text-center display-5 pt-5'>";
     while($categorie = $stmt->fetch(PDO::FETCH_ASSOC)) {
-       $content .= " <li class='list-group-item'> <a class='text-dark' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
+       $content .= " <li class='list-group-item border border-warning my-1'> <a class='text-dark' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
     }
     $content .= "</ul>";
     $content .= "</div>";
@@ -43,8 +43,8 @@
         // j'itère dans mon PDOSTATEMENT EN FETCHANT LES DONNÉES EN ITÉRANT DANS CHAQUE ARRAY GÉNÉRÉ PAR LE FETCH
         while($produit = $r->fetch(PDO::FETCH_ASSOC)) {
             // Génération de card boostrap à chaque fois qu'un produit est récupéré
-            $content .= "<div class='col-md-6 col-lg-3 pl-2 pr-2 pb-2'> <div class='card col-md-12' style='width: 18rem;'>
-            <img style='cursor:pointer' class='card-img-top' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
+            $content .= "<div class='col-md-6 col-lg-3 pb-2'> <div class='card col-md-12 border border-warning mb-2' style='max-width: 20rem;'>
+            <img style='cursor:pointer' class='card-img-top mt-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
                 <div class='card-body'>
                     <h5 class='text-center card-title'>$produit[titre]</h5>
                     <p class='text-center card-text'>" . substr($produit["description"], 0, 35) . "..." . "</p>
