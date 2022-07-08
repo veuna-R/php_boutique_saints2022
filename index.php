@@ -68,7 +68,7 @@ require_once("inc/header.php");
         <!-- Introduction -->
         <div class="container text-center mt-5 col-sm-12">
             <h1 class="display-2 text-warning">WELCOME TO THE SITE OF GOLD</h1><br>
-            <p class="text-center">
+            <p class="fs-5">
                 This is a small site/shop dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
             </p>
             <div class="mb-3">

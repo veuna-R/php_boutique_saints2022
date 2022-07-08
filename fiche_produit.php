@@ -69,5 +69,5 @@ require_once("inc/init.php");
 <!-- BODY -->
 
 <?php
-require_once("inc/footer.php");
+// require_once("inc/footer.php");
 ?>
