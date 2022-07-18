@@ -35,7 +35,7 @@ require_once("inc/header.php");
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
             <img src="photo/avatar_male.png" alt="avatar male" class="card-img-top">
         <?php } else { ?>
-            <img src="photo/avatar_female.png" alt="avatar female" class="card-img-top">
+            <img src="photo/Avatar_female.jpg" alt="avatar female" class="card-img-top">
         <?php } ?>
 
         <div class="card-body">
@@ -80,5 +80,5 @@ require_once("inc/header.php");
 
 
 <?php
-require_once("inc/footer.php");
+// require_once("inc/footer.php");
 ?>

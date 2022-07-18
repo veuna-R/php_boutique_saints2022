@@ -60,7 +60,7 @@ if($_POST) {
 
         } else {
             // Si le mot de passe rentré dans le formulaire ne correspond pas au mdp en BDD
-                $content .= "<div class='alert alert-danger' role='alert'>
+                $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
                     Please verify your password!
                 </div>";
 
@@ -68,7 +68,7 @@ if($_POST) {
         // Si je n'ai pas ce pseudo en base
     } else {
 
-        $content .= "<div class='alert alert-danger' role='alert'>
+        $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
             Please verify your nickname!
         </div>";
 
@@ -98,7 +98,7 @@ require_once("inc/header.php");
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1"></label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
     </div>
 
     <br>

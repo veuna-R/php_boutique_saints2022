@@ -77,7 +77,7 @@ require_once("inc/header.php");
         </div>
 
         <!-- start of brief history -->
-        <div class="container col-md-9 col-sm-12 text-center p-3 border border-warning border-3">
+        <div class="container col-md-9 col-sm-12 text-center p-3 border border-warning border-3 shadow">
             <h2 class="text-center text-warning display-4">The Gold Saints</h2>
             <p>The Gold Saints are a group of the twelve most powerful and highest ranking warriors in Athena's army. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate warriors in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
 
