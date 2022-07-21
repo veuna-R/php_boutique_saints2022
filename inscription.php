@@ -175,5 +175,5 @@ if ($inscriptionDone) { ?>
 
 
 <?php
-// require_once("inc/footer.php");
+require_once("inc/footer.php");
 ?>

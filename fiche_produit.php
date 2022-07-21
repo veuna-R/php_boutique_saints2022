@@ -39,8 +39,7 @@ require_once("inc/init.php");
 
             <form method="POST" action="panier.php">
 
-                <li class="list-group-item border border-warning">
-                    <p> <span class="title"></span> </p>
+                <li class="list-group-item border border-warning">                  
                     <input type="hidden" name="id_produit" value="<?php echo $produit["id_produit"]?>">
                     <input type="hidden" name="categorie" value="<?php echo $produit["categorie"]?>">
                     <select class="custom-select border border-warning" name="quantite" id="selectQuantity">
@@ -54,9 +53,9 @@ require_once("inc/init.php");
                 </li>
      
                 <div class="text-center">
-                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Add to cart" name="ajout_panier" style="width:65%" id="addCart">
+                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Add to cart" name="ajout_panier" style="width:60%" id="addCart">
 
-                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:65%">Return to Shop</a>
+                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:60%">Return to Shop</a>
                 </div>
 
             </form>
@@ -69,5 +68,5 @@ require_once("inc/init.php");
 <!-- BODY -->
 
 <?php
-// require_once("inc/footer.php");
+require_once("inc/footer.php");
 ?>
