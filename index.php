@@ -30,7 +30,11 @@ require_once("inc/header.php");
 <body>
 
     <style>
-        h1, h2, h3, h4, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h6 {
             font-family: 'Yellowtail', cursive;
         }
     </style>
@@ -88,13 +92,23 @@ require_once("inc/header.php");
         </div>
         <!-- end of brief history -->
 
+        <br>
         <hr class="w-50 mx-auto text-warning">
+        <br>
 
         <!-- Profiles  -->
         <div class="container-fluid col-sm-12">
+            <div class="col-md-4 col-sm-12 mx-auto text-center">
+                <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3  img-fluid shadow">
+                <h2 class="text-warning mt-2">Athena</h2>
+                <p>Saori Kido is the reincarnation of the goddess Athena.</p>
+            </div>
+
+            <hr class="w-50 mx-auto text-warning">
+
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Aries-Mu.png" alt="Mu" class=" w-100 border border-warning p-3  img-fluid">
+                    <img src="profile_photo/Aries-Mu.png" alt="Mu" class=" w-100 border border-warning p-3  img-fluid shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Aries - Mu</h2>
@@ -105,11 +119,11 @@ require_once("inc/header.php");
                     <p class="text-end">Aldebaran of brazilian origin, is physically the strongest among all golden saints.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class=" w-100 border border-warning p-3 ">
+                    <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class=" w-100 border border-warning p-3 shadow">
                 </div>
             </div> <!-- end of the row -->
 
-            <hr class="w-50 mx-auto text-warning">
+            <hr class="w-75 mx-auto text-warning">
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -117,10 +131,10 @@ require_once("inc/header.php");
                     <p>Saga, also known as Pope Ares, is the Gold Saint of the constellation Gemini. It is said that he is the most powerful Gold Saint to have ever served Athena.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/tinywow_resize_3247975.jpg" alt="Saga" class=" w-100 border border-warning p-3 ">
+                    <img src="profile_photo/tinywow_resize_3247975.jpg" alt="Saga" class=" w-100 border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/tinywow_resize_3248573.png" alt="Deathmask" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/tinywow_resize_3248573.png" alt="Deathmask" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Cancer - Deathmask</h2>
@@ -128,11 +142,11 @@ require_once("inc/header.php");
                 </div>
             </div><!-- end of the row -->
 
-            <hr class="w-50 mx-auto text-warning">
+            <hr class="w-75 mx-auto text-warning">
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Leo.jpg" alt="Aiolio" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Leo.jpg" alt="Aiolio" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Leo - Aiolia</h2>
@@ -143,11 +157,11 @@ require_once("inc/header.php");
                     <p class="text-end">Shaka, the reincarnation of Buddha is the most serene and one of the strongest Gold Saint.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Shaka.png" alt="Shaka" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Shaka.png" alt="Shaka" class=" w-100  border border-warning p-3 shadow">
                 </div>
             </div><!-- end of the row -->
 
-            <hr class="w-50 mx-auto text-warning">
+            <hr class="w-75 mx-auto text-warning">
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -155,10 +169,10 @@ require_once("inc/header.php");
                     <p>The master of Shiryu, he is one of the oldest characters next to Aries Shion, as they both appear in the previous Holy War. He is also referred to as the Old Master (Roshi) by all the Saints of Athena, as a sign of respect, even though his only true student is Shiryu.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Dohko.jpg" alt="Dohko" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Dohko.jpg" alt="Dohko" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Milo.png" alt="Milo" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Milo.png" alt="Milo" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Scorpion - Milo</h2>
@@ -166,11 +180,11 @@ require_once("inc/header.php");
                 </div>
             </div><!-- end of the row -->
 
-            <hr class="w-50 mx-auto text-warning">
+            <hr class="w-75 mx-auto text-warning">
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Aoilos.jpg" alt="Aoilos" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Aoilos.jpg" alt="Aoilos" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Sagittarius - Aiolos</h2>
@@ -181,11 +195,11 @@ require_once("inc/header.php");
                     <p class="text-end">Shura belongs to the fabled rank of Gold Saint hierarchy.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Shura_(2).png" alt="Shura" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Shura_(2).png" alt="Shura" class=" w-100  border border-warning p-3 shadow">
                 </div>
             </div><!-- end of the row -->
 
-            <hr class="w-50 mx-auto text-warning">
+            <hr class="w-75 mx-auto text-warning">
 
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -193,10 +207,10 @@ require_once("inc/header.php");
                     <p>Known as the "Mage of water and ice". He trained Hyoga and Isaac for six years in the icy lands of eastern Siberia, and was forced to fight against Hyoga at the battle of 12 temples. Camus is a very powerful Saint, with the ability to lower the temperature and cast "Diamond Dust" with great ease. "Execution Aurora" is his most powerful attack, which emits a cold energy close to absolute zero.</p>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Camus.jpg" alt="Camus" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Camus.jpg" alt="Camus" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <img src="profile_photo/Aphrodite.png" alt="Aphrodite" class=" w-100  border border-warning p-3 ">
+                    <img src="profile_photo/Aphrodite.png" alt="Aphrodite" class=" w-100  border border-warning p-3 shadow">
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <h2 class="text-warning">Pisces - Aphrodite</h2>
@@ -205,22 +219,46 @@ require_once("inc/header.php");
             </div><!-- end of the row -->
 
             <hr class="w-50 mx-auto text-warning">
-            
+
         </div><!-- end of 'row.container-fluid- -->
 
         <!-- music in background -->
-        <div class="container text-center">
-            <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop controls class="col-md-3 mt-5"></audio>
+        <div class="container text-center my-5">
+            <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop controls class="col-md-3"></audio>
             <p class="text-center">Saint Seiya - Blue Dream (instrumental)</p>
         </div>
 
+        <!-- FEEDBACK AREA -->
+        <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 p-3 mx-auto border border-light shadow">
+            <div>
 
+                <h5 class="text-uppercase text-center">please leave me a feedback</h5>
+                <label for="feedback" class="form-label"></label>
 
+                <textarea class="form-control" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
 
+                <div class="text-center">
+                    <button type="submit" name="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+
+            </div>
+            
+        </form>
+
+        <script>
+function myFunction()
+{
+alert("Hello! I am an alert box!");
+}
+</script>
 
         <?php
         require_once("inc/footer.php");
         ?>
+
+        <!-- JS-->
+        <script src="comments.js"></script>
+
         <!-- Bootstrap JavaScript Libraries -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 

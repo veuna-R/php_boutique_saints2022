@@ -1,47 +1,20 @@
-<!-- End of header -->
 </div>
-</main>
+</main><!-- End of header -->
 
 <!-- Footer -->
-<footer class="page-footer font-small blue pt-3" style="background-image: url(photo/stars_bg2.jpg);">
+<footer class="page-footer font-small p-2" style="background-image: url(photo/stars_bg2.jpg);">
 
-    <div class="container-fluid text-center text-md-left py-4">
-
-        <!-- Grid row -->
-        <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-6 mt-3 px-5 text-center">
+    <div class="container-fluid text-center col-md-4 mx-auto">
 
                 <!-- Content -->
-                <h5 class="text-white text-uppercase">Welcome to my online shop</h5>
-                <br>
+                <!-- <h5 class="text-white text-uppercase">Welcome to my online shop</h5> -->
                 <p class="text-white">This shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
                 <p class="text-white">Thank you for taking the time to visit my site.</p>
-
-            </div>
-
-            <!-- FEEDBACK AREA -->
-            <form action="" method="post" class="col-md-6 px-5">
-                <div>
-                    <h5 class="text-white text-uppercase text-center">please leave me a feedback</h5>
-                    <label for="feedback" class="form-label"></label>
-
-                    <textarea class="form-control" id="feedback" rows="5" placeholder="Enter text here..." name="feedback"></textarea>
-
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-        
 
     </div>
 
     <!-- Copyright -->
-    <div class="text-white footer-copyright text-center py-3">
+    <div class="text-white footer-copyright text-center">
         © 2022 Copyright: Robert VEU NA
     </div>
 
