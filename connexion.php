@@ -94,7 +94,13 @@ require_once("inc/header.php");
     <form method="post" action="">
     <div class="form-group">
         <label for="pseudo"></label>
-        <input type="text" name="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo" placeholder="Enter your nickname">
+        <input type="text" name="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo" placeholder="Enter your username">
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+      <label class="form-check-label" for="autoSizingCheck">
+        Remember me
+      </label>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1"></label>

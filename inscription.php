@@ -27,7 +27,7 @@ if ($_POST) {
 
     if (!ctype_alnum($_POST["pseudo"])) {
         $erreur .= "<div class='alert alert-danger col-6 text-center' role='alert'>
-                The nickname must contain only numbers and letters only please!
+                The username must contain only numbers and letters only please!
             </div>";
     }
 
@@ -98,7 +98,7 @@ if ($inscriptionDone) { ?>
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
-                <input type="text" class="form-control" id="pseudo" placeholder="Nickname must be between 3 - 25 characters" name="pseudo">
+                <input type="text" class="form-control" id="pseudo" placeholder="Username" name="pseudo" required>
             </div>
 
             <!-- Password -->

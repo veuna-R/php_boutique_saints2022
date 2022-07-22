@@ -47,7 +47,6 @@
             <img style='cursor:pointer' class='card-img-top mt-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
                 <div class='card-body'>
                     <h5 class='text-center card-title'>$produit[titre]</h5>
-                    <p class='text-center card-text'>" . substr($produit["description"], 0, 35) . "..." . "</p>
                     <p class='text-center card-text'>$produit[prix] €</p>
                     <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-warning'>Details/Place your order</a>
                 </div>

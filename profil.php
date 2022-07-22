@@ -20,22 +20,22 @@ $stmt = $pdo->query('SELECT * FROM commande WHERE id_membre ="' . $_SESSION["mem
 
 require_once("inc/header.php");
 ?>  
-    <div class="col-md-12">
+    <div class="col-md-12 mt-3">
         <!-- Message de bienvenu -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <h2 class="text-center mb-5">Hello sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+            <h2 class="text-center mb-5">Hello Sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } else { ?>
             <h2 class="text-center mb-5">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } ?>
     </div>
 
-    <div class="card col-md-4" style="width:18rem">
+    <div class="card col-md-3 mb-3" style="width:15rem">
 
         <!-- Avatar -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <img src="photo/avatar_male.png" alt="avatar male" class="card-img-top">
+            <img src="photo/Avatar_male.png" alt="avatar male" class="card-img-top">
         <?php } else { ?>
-            <img src="photo/Avatar_female.jpg" alt="avatar female" class="card-img-top">
+            <img src="photo/Avatar-female1.jpg" alt="avatar female" class="card-img-top">
         <?php } ?>
 
         <div class="card-body">
@@ -45,12 +45,12 @@ require_once("inc/header.php");
         <ul class="list-group list-group-flush">
             <li class="list-group-item text-center"> <?= $_SESSION["membre"]["email"] ?> </li>
             <li class="list-group-item text-center"> <?= $_SESSION["membre"]["adresse"] ?> </li>
-            <li class="list-group-item text-center"> <?= $_SESSION["membre"]["code_postal"] . " " . $_SESSION["membre"]["ville"] ?> </li>
+            <li class="list-group-item text-center"> <?= $_SESSION["membre"]["ville"] . " " . $_SESSION["membre"]["code_postal"] ?> </li>
         </ul>
 
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <ul class="list-group list-group-flush">
             <li class="list-group-item text-center"> <h5> Order pending </h5> </li>
 
@@ -66,10 +66,10 @@ require_once("inc/header.php");
 
         <ul class="mt-5 list-group list-group-flush">
             <li class="list-group-item text-center"> <h5> My order history </h5> </li>
-            <li class="list-group-item text-center">
+            <!-- <li class="list-group-item text-center">
                 <p> Order n°1 of 22/01/2020 </p>
                 <p class="badge badge-primary"> Pending </p>
-            </li>
+            </li> -->
         </ul>
     </div>
 

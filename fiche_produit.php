@@ -22,7 +22,7 @@ require_once("inc/init.php");
     require_once("inc/header.php");
 
 ?>
-    <div class='card col-md-4 my-3 border border-warning' style='width: 18rem;'>
+    <div class='card col-md-3 my-3 border border-warning' style='width: 15rem;'>
         <img class='card-img-top mt-3' src='<?php echo $produit["photo"]?>' alt='<?php echo $produit["titre"]?>'>
         <div class='card-body'>
             <h5 class='card-title text-center'><?php echo $produit["titre"]?></h5>
@@ -30,7 +30,7 @@ require_once("inc/init.php");
         </div>
     </div>
 
-    <div class="col-md-4 my-3">
+    <div class="col-md-3 my-3">
         <ul class="list-group">
             <li class="list-group-item border border-warning">Category: <?php echo $produit["categorie"]?> </li>
             <li class="list-group-item border border-warning my-1">Price: <?php echo $produit["prix"]?> € </li>
@@ -53,9 +53,9 @@ require_once("inc/init.php");
                 </li>
      
                 <div class="text-center">
-                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Add to cart" name="ajout_panier" style="width:60%" id="addCart">
+                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Add to cart" name="ajout_panier" style="width:50%" id="addCart">
 
-                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:60%">Return to Shop</a>
+                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:50%">Return to Shop</a>
                 </div>
 
             </form>

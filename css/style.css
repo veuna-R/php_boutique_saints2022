@@ -34,3 +34,11 @@ footer {
     font-size: 10px;
     line-height: 17px;
 }
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+    font-family: 'Yellowtail', cursive;
+}
