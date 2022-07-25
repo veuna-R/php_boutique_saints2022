@@ -42,3 +42,7 @@ h4,
 h6 {
     font-family: 'Yellowtail', cursive;
 }
+
+body {
+    background-image: url("photo/Gold_stars.jpg");
+}

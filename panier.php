@@ -242,12 +242,12 @@ require_once("inc/init.php");
             if(internauteEstConnecte()) {
                 $content .= "<div class='d-flex justify-content-end col-md-12'>";
                 $content .= "<form method='post' action=''>";
-                $content .= "<input type='submit' class='btn btn-outline-secondary' name='payer' value='Payer'>";
+                $content .= "<input type='submit' class='btn btn-outline-secondary' name='payer' value='Pay'>";
                 $content .= "</form>";
                 // J'afficher le bouton payer
             } else {
                 // J'affiche le bouton se connecter
-                $content .= "<div class='text-center'> <p> Please connect to your accountto finalize payment. </p>";
+                $content .= "<div class='text-center'> <p> Please connect to your account to finalize payment. </p>";
                 $content .= "<a href='connexion.php'> Connect </a> </div> ";
             }
 

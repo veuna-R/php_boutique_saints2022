@@ -28,6 +28,12 @@ require_once("inc/header.php");
 </head>
 
 <body>
+    <style>
+        #profiles {
+            background-image: url("photo/Gold_stars.jpg");
+            background-size: cover;
+        }
+    </style>
 
     <!-- Introduction -->
     <div class="container text-center mt-5 col-12">
@@ -92,7 +98,7 @@ require_once("inc/header.php");
     <!-- end of brief history -->
 
     <!-- Profiles  -->
-    <div class="container-fluid col-sm-12">
+    <div class="container-fluid col-sm-12" id="profiles">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
             <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3 img-fluid shadow">
             <h2 class="text-warning mt-2">Athena</h2>
@@ -214,9 +220,9 @@ require_once("inc/header.php");
         </div><!-- end of the row -->
         <!-- end of the section 'profile' -->
 
-        <hr class="w-50 mx-auto text-warning">
+        <!-- <hr class="w-50 mx-auto text-warning"> -->
 
-    </div><!-- end of 'row.container-fluid- -->
+    </div><!-- end of 'row.container-fluid- 'profiles'-->
 
     <!-- music in background -->
     <div class="container text-center my-3">
