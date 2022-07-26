@@ -37,9 +37,9 @@ require_once("inc/header.php");
 
     <!-- Introduction -->
     <div class="container text-center mt-5 col-12">
-        <h1 class="display-2 p-2 text-warning border border-warning border-2 shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
+        <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-light shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
         <p class="fs-5">
-            This is a small site/shop dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
+            This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
         </p>
         <div class="mb-3">
             <img src="photo/soul_of_gold.png" alt="" class="img-fluid">
@@ -98,7 +98,7 @@ require_once("inc/header.php");
     <!-- end of brief history -->
 
     <!-- Profiles  -->
-    <div class="container-fluid col-sm-12" id="profiles">
+    <div class="container-fluid col-sm-12 text-light pt-4" id="profiles">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
             <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3 img-fluid shadow">
             <h2 class="text-warning mt-2">Athena</h2>
