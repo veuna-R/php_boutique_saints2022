@@ -43,7 +43,7 @@
         // j'itère dans mon PDOSTATEMENT EN FETCHANT LES DONNÉES EN ITÉRANT DANS CHAQUE ARRAY GÉNÉRÉ PAR LE FETCH
         while($produit = $r->fetch(PDO::FETCH_ASSOC)) {
             // Génération de card boostrap à chaque fois qu'un produit est récupéré
-            $content .= "<div class='col-md-6 col-lg-3 pb-2'> <div class='card col-md-12 border border-warning mb-2' style='max-width: 20rem;'>
+            $content .= "<div class='col-md-6 col-lg-3 pb-2'> <div class='card col-md-12 border border-warning mb-3 bg-light shadow' style='max-width: 20rem;'>
             <img style='cursor:pointer' class='card-img-top mt-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
                 <div class='card-body'>
                     <h5 class='text-center card-title'>$produit[titre]</h5>

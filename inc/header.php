@@ -10,10 +10,38 @@
 </head>
 
 <body>
+    <style>
+        .nav-item::after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 2px;
+            background: #fec400;
+            transition: 0.5s;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .active>.nav-link,
+        .navbar-dark .navbar-nav .nav-link.active,
+        .navbar-dark .navbar-nav .nav-link.show,
+        .navbar-dark .navbar-nav .show>.nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: white;
+        }
+
+        .nav-link {
+            padding: 15px 5px;
+            transition: 0.2s;
+        }
+    </style>
 
     <div class="container-flud">
 
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start sticky-top" style="background-image: url(photo/stars_bg2.jpg);">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start sticky-top px-5" style="background-image: url(photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
                 SOUL OF GOLD
@@ -41,7 +69,7 @@
                             <a class="nav-link active" href="inscription.php">Register</a>
                         </li>
                     <?php } else { ?>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="profil.php">My profile</a>
                         </li>
                     <?php } ?>
@@ -77,5 +105,3 @@
 
         <main class="">
             <div class="row col-sm-12 mx-auto justify-content-center p-0">
-       
-            

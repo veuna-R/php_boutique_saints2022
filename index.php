@@ -30,8 +30,15 @@ require_once("inc/header.php");
 <body>
     <style>
         #profiles {
-            background-image: url("photo/Gold_stars.jpg");
+            background-image: url("photo/stars_bg3.jpg");
             background-size: cover;
+        }
+        #title_image:hover {
+            transform: scale(1.05);
+            transition: transform .5s ease;
+        }
+        #maintitle {
+            text-shadow: 3px 3px black;
         }
     </style>
 
@@ -42,7 +49,7 @@ require_once("inc/header.php");
             This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
         </p>
         <div class="mb-3">
-            <img src="photo/soul_of_gold.png" alt="" class="img-fluid">
+            <img src="photo/soul_of_gold.png" alt="" class="img-fluid" id="title_image">
         </div>
     </div>
 
@@ -98,7 +105,7 @@ require_once("inc/header.php");
     <!-- end of brief history -->
 
     <!-- Profiles  -->
-    <div class="container-fluid col-sm-12 text-light pt-4" id="profiles">
+    <div class="container-fluid col-sm-12 text-light p-4" id="profiles">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
             <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3 img-fluid shadow">
             <h2 class="text-warning mt-2">Athena</h2>
@@ -109,7 +116,7 @@ require_once("inc/header.php");
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <img src="profile_photo/Aries-Mu.png" alt="Mu" class=" w-100 border border-warning p-3  img-fluid shadow">
+                <img src="profile_photo/Aries-Mu.png" alt="Mu" class="w-100 border border-warning p-3  img-fluid shadow">
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Aries - Mu</h2>
@@ -120,7 +127,7 @@ require_once("inc/header.php");
                 <p class="text-end">Aldebaran of brazilian origin, is physically the strongest among all golden saints.</p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class=" w-100 border border-warning p-3 shadow">
+                <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class="w-100 border border-warning p-3 shadow">
             </div>
         </div> <!-- end of the row -->
 
@@ -200,12 +207,12 @@ require_once("inc/header.php");
             </div>
         </div><!-- end of the row -->
 
-        <hr class="w-75 mx-auto text-warning">
+        <hr class="w-50 mx-auto text-warning">
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Aquarius -Camus</h2>
-                <p>Known as the "Mage of water and ice". He trained Hyoga and Isaac for six years in the icy lands of eastern Siberia, and was forced to fight against Hyoga at the battle of 12 temples. Camus is a very powerful Saint, with the ability to lower the temperature and cast "Diamond Dust" with great ease. "Execution Aurora" is his most powerful attack, which emits a cold energy close to absolute zero.</p>
+                <p>Known as the "Mage of water and ice". Camus is a very powerful Saint, with the ability to lower the temperature and cast "Diamond Dust" with great ease. "Execution Aurora" is his most powerful attack, which emits a cold energy close to absolute zero.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Camus.jpg" alt="Camus" class=" w-100  border border-warning p-3 shadow">
@@ -215,12 +222,11 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Pisces - Aphrodite</h2>
-                <p>Aphrodite is a Saint famous not only because of his beauty, but also for his reputation as one of the strongest among the 88 Saints. He is a man of medium stature and fair skin. He has blue eyes and long blue hair. Under the left eye, Aphrodite has a speckle. It is said that its beauty shines between heaven and earth and that there is no one more beautiful than him amongst the 88 Saints.</p>
+                <p>Aphrodite is a Saint famous not only because of his beauty, but also for his reputation as one of the strongest Saint. He is a man of medium stature and fair skin. He has blue eyes and long blue hair. It is said that its beauty shines between heaven and earth and that there is no one more beautiful than him.</p>
             </div>
         </div><!-- end of the row -->
         <!-- end of the section 'profile' -->
 
-        <!-- <hr class="w-50 mx-auto text-warning"> -->
 
     </div><!-- end of 'row.container-fluid- 'profiles'-->
 

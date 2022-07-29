@@ -43,7 +43,8 @@ h6 {
     font-family: 'Yellowtail', cursive;
 }
 
-/* #profiles {
-    background-image: url("photo/Gold_stars.jpg");
+#profiles {
+    background-image: url("photo/stars_bg3.jpg");
     background-size: cover;
-} */
+}
+
