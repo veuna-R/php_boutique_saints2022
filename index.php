@@ -246,7 +246,7 @@ require_once("inc/header.php");
             <textarea class="form-control" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
 
             <div class="text-center">
-                <button type="submit" name="submit" class="btn btn-primary mt-3">Submit</button>
+                <button type="submit" name="submit" class="btn btn-info mt-3">Submit</button>
             </div>
 
         </div>
