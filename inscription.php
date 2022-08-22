@@ -105,23 +105,24 @@ if ($inscriptionDone) { ?>
             <div class="form-group col-md-6">
                 <label for="password"></label>
                 <input type="password" class="form-control" id="password" placeholder="Password must be between 8 - 20 characters" name="mdp" required>
+                <!-- <input type="checkbox" onclick="myFunction()"> Show Password -->
             </div>
 
             <!-- Name -->
             <div class="form-group col-md-4">
-                <label for="name"></label>
+                <!-- <label for="name"></label> -->
                 <input type="text" class="form-control" id="name" placeholder="Last name" name="nom" required>
             </div>
 
             <!-- First Name -->
             <div class="form-group col-md-4">
-                <label for="firstName"></label>
+                <!-- <label for="firstName"></label> -->
                 <input type="text" class="form-control" id="firstName" placeholder="First Name" name="prenom" required>
             </div>
 
             <!-- Civilité -->
             <div class="form-group col-md-4">
-                <label for="email"></label>
+                <!-- <label for="email"></label> -->
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="civilitem" value="m" name="civilite" checked>
                     <label class="form-check-label" for="civilitem">
@@ -140,25 +141,25 @@ if ($inscriptionDone) { ?>
 
         <!-- Email -->
         <div class="form-group">
-                <label for="email"></label>
+                <!-- <label for="email"></label> -->
                 <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
         </div>
 
         <!-- Address -->
 
         <div class="form-group">
-            <label for="address"></label>
+            <!-- <label for="address"></label> -->
             <input type="text" class="form-control" id="address" name="adresse" placeholder="Complete adress" required>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputCity"></label>
+                <!-- <label for="inputCity"></label> -->
                 <input type="text" class="form-control" name="ville" id="inputCity" placeholder="State" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="inputZip"></label>
+                <!-- <label for="inputZip"></label> -->
                 <input type="text" class="form-control" id="inputZip" name="code_postal" placeholder="Zip Code" required>
             </div>
         </div>
@@ -172,6 +173,7 @@ if ($inscriptionDone) { ?>
     </form>
 
 <?php } ?>
+
 
 
 <?php

@@ -96,12 +96,12 @@ require_once("inc/header.php");
         <label for="pseudo"></label>
         <input type="text" name="pseudo" class="form-control" id="pseudo" aria-describedby="pseudo" placeholder="Enter your username">
     </div>
-    <div class="form-check">
+    <!-- <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck">
       <label class="form-check-label" for="autoSizingCheck">
         Remember me
       </label>
-    </div>
+    </div> -->
     <div class="form-group">
         <label for="exampleInputPassword1"></label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
@@ -110,7 +110,7 @@ require_once("inc/header.php");
     <br>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-info">Get connected</button>
+        <button type="submit" class="btn btn-info">Log in</button>
     </div>
     </form>
 </div>
