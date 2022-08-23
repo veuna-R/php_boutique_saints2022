@@ -105,6 +105,7 @@ require_once("inc/header.php");
     <div class="form-group">
         <label for="exampleInputPassword1"></label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+        <input type="checkbox" onclick="myFunction()"> Show Password
     </div>
 
     <br>
@@ -114,6 +115,8 @@ require_once("inc/header.php");
     </div>
     </form>
 </div>
+
+<script src="js/pw.js"></script>
 
 <?php
 require_once("inc/footer.php");
