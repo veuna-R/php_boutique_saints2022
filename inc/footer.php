@@ -8,14 +8,15 @@
 
                 <!-- Content -->
                 <!-- <h5 class="text-white text-uppercase">Welcome to my online shop</h5> -->
-                <p class="text-white">This shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
+                <p class="text-white">The shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
                 <p class="text-white">Thank you for taking the time to visit my site.</p>
 
     </div>
 
     <!-- Copyright -->
     <div class="text-white footer-copyright text-center">
-        © 2022 Copyright: Robert VEU NA
+        <p>© 2022 Copyright: Robert VEU NA</p>
+        
     </div>
 
 </footer>
