@@ -5,16 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="inc/css/style.css">
-    <title>Ma Boutique</title>
+    <title>Space Admin</title>
 </head>
 <body>
+<style>
+        .nav-item::after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 2px;
+            background: #fec400;
+            transition: 0.5s;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .active>.nav-link,
+        .navbar-dark .navbar-nav .nav-link.active,
+        .navbar-dark .navbar-nav .nav-link.show,
+        .navbar-dark .navbar-nav .show>.nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: white;
+        }
+
+        .nav-link {
+            padding: 5px 5px;
+            transition: 0.2s;
+        }
+    </style>
 
     <div class="container-flud">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end" style="background-image: url(../photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php">
-                <img src="../photo/kisspng-the-boss-baby-film-dreamworks-animation-comedy-boss-5abb4dc7f20ab3.1393930015222245839914.png" width="100" height="100" class="d-inline-block align-top" alt="">
-            <p class="d-inline-block align-center ">Espace administrateur</p> 
+                <img src="" width="" height="" class="d-inline-block align-center " alt="">
+            Administrator
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,20 +50,20 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <!-- Si je ne suis pas connecté j'affiche les pages connexion/inscription -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.php">Boutique</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gestion_produits.php">Gestion des produits</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gestion_produits.php">Product Management</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gestion_commandes.php">Gestion des commandes</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gestion_commandes.php">Order Management</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gestion_emails.php">Gestion des emails</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gestion_commentaires.php">Gestion des commentaires</a>
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="gestion_emails.php">E-mail Management</a>
+                    </li> -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gestion_commentaires.php">Feedback Management</a>
                     </li>
 
                     <!-- Si l'internaute est connecté j'affiche le bouton de déconnexion -->
@@ -43,7 +71,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link font-italic" href="../connexion.php?action=deconnexion">
-                                Se déconnecter
+                                Disconnect
                             </a>
                         </li>
 

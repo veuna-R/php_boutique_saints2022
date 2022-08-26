@@ -21,7 +21,7 @@ require_once("../inc/init.php");
     if(isset($_GET["action"]) && $_GET["action"] == "suppression") {
         $count = $pdo->exec("DELETE FROM produit WHERE id_produit = '$_GET[id_produit]' ");
         $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-            Le produit a bien été supprimé !
+            The product has been sucessfully deleted.
         </div>";
     }
 
@@ -92,14 +92,14 @@ require_once("../inc/init.php");
 
         if(isset($_POST["ajouterProduit"])) {
 
-            $count = $pdo->exec("INSERT INTO produit (reference, categorie, titre, description, couleur, taille, public, photo, prix, stock) VALUES(
+            $count = $pdo->exec("INSERT INTO produit (reference, categorie, titre, description, photo, prix, stock) VALUES(
                 '$_POST[reference]',
                 '$_POST[categorie]',
                 '$_POST[titre]',
                 '$_POST[description]',
-                '$_POST[couleur]',
-                '$_POST[taille]',
-                '$_POST[public]',
+                -- '$_POST[couleur]',
+                -- '$_POST[taille]',
+                -- '$_POST[public]',
                 '$chemin_vers_la_photo_en_terme_durl_pour_attribut_src',
                 '$_POST[prix]',
                 '$_POST[stock]'
@@ -107,7 +107,7 @@ require_once("../inc/init.php");
 
             if($count > 0) {
                 $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                    Le produit avec la référence $_POST[reference] a bien été ajouté !
+                    The product with reference # $_POST[reference] has been sucessfully added.
                 </div>";
             }
 
@@ -128,9 +128,9 @@ require_once("../inc/init.php");
             categorie = '$_POST[categorie]',
             titre = '$_POST[titre]',
             description = '$_POST[description]',
-            couleur = '$_POST[couleur]',
-            taille = '$_POST[taille]',
-            public = '$_POST[public]',
+            -- couleur = '$_POST[couleur]',
+            -- taille = '$_POST[taille]',
+            -- public = '$_POST[public]',
             photo = '$cheminPhoto',
             prix = '$_POST[prix]',
             stock = '$_POST[stock]' 
@@ -138,7 +138,7 @@ require_once("../inc/init.php");
 
             if($count > 0) {
                 $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                    Le produit avec la référence $_POST[reference] a bien été modifié !
+                    The product reference # $_POST[reference] has been sucessfully modified.
                 </div>";
             }
 
@@ -171,9 +171,9 @@ $reference = (isset($produit)) ? $produit["reference"] : "";
 $categorie = (isset($produit)) ? $produit["categorie"] : "";
 $titre = (isset($produit)) ? $produit["titre"] : "";
 $description = (isset($produit)) ? $produit["description"] : "";
-$couleur = (isset($produit)) ? $produit["couleur"] : "";
-$taille = (isset($produit)) ? $produit["taille"] : "";
-$public = (isset($produit)) ? $produit["public"] : "";
+// $couleur = (isset($produit)) ? $produit["couleur"] : "";
+// $taille = (isset($produit)) ? $produit["taille"] : "";
+// $public = (isset($produit)) ? $produit["public"] : "";
 $photo = (isset($produit)) ? $produit["photo"] : "";
 $prix = (isset($produit)) ? $produit["prix"] : "";
 $stock = (isset($produit)) ? $produit["stock"] : "";
@@ -185,24 +185,27 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre backOffice</h1>
+<div class='mb-5 text-center'>
+    <h1>Product Management</h1>
+    <p>The products from the database</p>
+</div>
 
 
 <!-- TABLE -->
 
-<p>Vos produits en BDD:</p>
+
 
 <?php echo $content; ?>
 
-<table class="table table-responsive mb-5">
+<table class="table table-hover mb-5 bg-light">
   <thead class="thead-dark">
     <tr>
         <?php for ($i = 0; $i < $stmt->columnCount(); $i++) {
             $col = $stmt->getColumnMeta($i); ?>
             <th scope="col"><?= $col['name']; ?></th>
         <?php } ?>
-        <th scope="col"> Modification  </th>
-        <th scope="col"> Suppression  </th>
+        <th scope="col"> Modify</th>
+        <th scope="col"> Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -220,15 +223,15 @@ require_once("inc/header.php");
                 
                 <!-- Lien de modification et de suppression -->
 
-                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif"> Modification </a> </td>
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Suppresion </a> </td>
+                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif"> Modify </a> </td>
+                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Delete </a> </td>
             </tr>
        <?php } ?>
 
   </tbody>
 </table>
 
-<div class="row col-md-12">
+<div class="row col-md-6 col-sm-12">
     <nav aria-label="Page navigation example">
     <ul class="pagination">
 
@@ -250,29 +253,31 @@ require_once("inc/header.php");
 </div>
 <!-- Formulaire de modification/ajout de produit -->
 
-<p id="ajout_modif">Ajouter ou Modifier des produits :</p>
+<div class="mb-4 col-md-12 text-center">
+    <h2>Add or modify products:</h2>
+</div>
 
 <form action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id_produit" value="<?php echo $idProduit; ?>">
     <input type="hidden" name="prevPhoto" value="<?php echo $photo; ?>">
     <div class="form-row">
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2.5">
             <label for="reference">Reference</label>
             <input type="text" class="form-control" id="reference" name="reference" value="<?= $reference; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2.5">
             <label for="categorie">Categorie</label>
             <input type="text" class="form-control" id="categorie" name="categorie" value="<?= $categorie; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2.5">
             <label for="titre">Titre</label>
             <input type="text" class="form-control" id="titre" name="titre" value="<?= $titre; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2.5">
             <label for="prix">Prix</label>
             <input type="text" class="form-control" id="prix" name="prix" value="<?= $prix; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2.5">
             <label for="stock">Stock</label>
             <input type="text" class="form-control" id="stock" name="stock" value="<?= $stock; ?>">
         </div>
@@ -280,7 +285,7 @@ require_once("inc/header.php");
 
         <!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
 
-        <div class="form-group col-md-2">
+        <!-- <div class="form-group col-md-2">
             <label for="public_m">Public</label>
             <div class="custom-control custom-radio">
                 <input type="radio" id="public_m" name="public" class="custom-control-input" value="m" checked>
@@ -293,11 +298,11 @@ require_once("inc/header.php");
                 <input type="radio" id="public_f" name="public" class="custom-control-input" value="f">
                 <label class="custom-control-label" for="public_f">Féminin</label>
             </div>
-        </div>
+        </div> -->
         
-        <div class="custom-file mb-5">
+        <div class="col-md-6 custom-file m-auto">
             <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
-            <label class="custom-file-label" for="maPhoto">Choisir une photo</label>
+            <label class="custom-file-label" for="maPhoto">Choose an image</label>
 
             <!-- Si je suis dans le cadre d'une modification j'affiche l'img actuelle -->
             <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
@@ -305,19 +310,22 @@ require_once("inc/header.php");
             <?php } ?>
 
         </div>
-        <div class="form-group col-md-12 mt-5">
+        <div class="form-group col-md-9 m-auto">
             <label for="description">Description</label>
             <input type="text" class="form-control" id="description" name="description" value="<?= $description; ?>">
         </div>
-
-        <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
-            <button type="submit" class="btn btn-secondary" name="modifierProduit">Modifier un produit</button>
-        <?php } else { ?>
-            <button type="submit" class="btn btn-secondary" name="ajouterProduit">Ajouter un produit</button>
-        <?php } ?>
     </div>
                 
 </form>
+
+        <div class="mt-4">
+            <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
+                <button type="submit" class="btn btn-primary" name="modifierProduit">Modify the product</button>
+            <?php } else { ?>
+                <button type="submit" class="btn btn-primary" name="ajouterProduit">Add a product</button>
+            <?php } ?>
+        </div>
+    
 
 
 

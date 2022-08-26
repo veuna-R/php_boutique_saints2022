@@ -169,7 +169,7 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion de produits de votre backOffice</h1>
+<h1 class='mb-5 text-center'>Product Modification</h1>
 
 
 <!-- TABLE -->
@@ -222,31 +222,23 @@ require_once("inc/header.php");
     <input type="hidden" name="id_produit" value="<?php echo $idProduit; ?>">
     <input type="hidden" name="prevPhoto" value="<?php echo $photo; ?>">
     <div class="form-row">
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="reference">Reference</label>
             <input type="text" class="form-control" id="reference" name="reference" value="<?= $reference; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="categorie">Categorie</label>
             <input type="text" class="form-control" id="categorie" name="categorie" value="<?= $categorie; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="titre">Titre</label>
             <input type="text" class="form-control" id="titre" name="titre" value="<?= $titre; ?>">
         </div>
-        <div class="form-group col-md-3">
-            <label for="couleur">Couleur</label>
-            <input type="text" class="form-control" id="couleur" name="couleur" value="<?= $couleur; ?>">
-        </div>
-        <div class="form-group col-md-3">
-            <label for="taille">Taille</label>
-            <input type="text" class="form-control" id="taille" name="taille" value="<?= $taille; ?>">
-        </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="prix">Prix</label>
             <input type="text" class="form-control" id="prix" name="prix" value="<?= $prix; ?>">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
             <label for="stock">Stock</label>
             <input type="text" class="form-control" id="stock" name="stock" value="<?= $stock; ?>">
         </div>
@@ -254,7 +246,7 @@ require_once("inc/header.php");
 
         <!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
 
-        <div class="form-group col-md-2">
+        <!-- <div class="form-group col-md-2">
             <label for="public_m">Public</label>
             <div class="custom-control custom-radio">
                 <input type="radio" id="public_m" name="public" class="custom-control-input" value="m" checked>
@@ -267,7 +259,7 @@ require_once("inc/header.php");
                 <input type="radio" id="public_f" name="public" class="custom-control-input" value="f">
                 <label class="custom-control-label" for="public_f">Féminin</label>
             </div>
-        </div>
+        </div> -->
         
         <div class="custom-file mb-5">
             <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
@@ -285,9 +277,9 @@ require_once("inc/header.php");
         </div>
 
         <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
-            <button type="submit" class="btn btn-secondary" name="modifierProduit">Modifier un produit</button>
+            <button type="submit" class="btn btn-info" name="modifierProduit">Modifier un produit</button>
         <?php } else { ?>
-            <button type="submit" class="btn btn-secondary" name="ajouterProduit">Ajouter un produit</button>
+            <button type="submit" class="btn btn-info" name="ajouterProduit">Ajouter un produit</button>
         <?php } ?>
     </div>
                 

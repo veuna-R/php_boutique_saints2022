@@ -1,92 +1,27 @@
             </div>
         </main>
         <!-- Footer -->
-        <footer class="bg-secondary page-footer font-small blue pt-4">
+<footer class="page-footer font-small p-2" style="background-image: url(../photo/stars_bg2.jpg);">
 
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
+<div class="container-fluid text-center col-md-4 mx-auto">
 
-            <!-- Grid row -->
-            <div class="row">
+            <!-- Content -->
+            <!-- <h5 class="text-white text-uppercase">Welcome to my online shop</h5> -->
+            <p class="text-white">The shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
+            <p class="text-white">Thank you for taking the time to visit my site.</p>
 
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
+</div>
 
-                <!-- Content -->
-                <h5 class="text-white text-uppercase">Espace administrateur</h5>
-                <p  class="text-white">Ce site a été créé dans un but pédagogique uniquement.</p>
+<!-- Copyright -->
+<div class="text-white footer-copyright text-center">
+    <p>© 2022 Copyright: Robert VEU NA</p>
+    
+</div>
 
-            </div>
-            <!-- Grid column -->
+</footer>
+<!-- Footer -->
 
-            <hr class="clearfix w-100 d-md-none pb-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="text-white text-uppercase">Back-office</h5>
-
-                <ul class="list-unstyled">
-                <li>
-                    <a href="gestion_produits.php" class="text-white">Gestion des produits</a>
-                </li>
-                <li>
-                    <a href="gestion_commandes.php" class="text-white">Gestion des commandes</a>
-                </li>
-                <li>
-                    <a href="gestion_emails.php" class="text-white">Gestion des emails</a>
-                </li>
-                <li>
-                    <a href="gestion_commentaires.php" class="text-white">Gestion des commentaires</a>
-                </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="text-white text-uppercase">Liens utiles</h5>
-
-                <ul class="list-unstyled">
-                <li>
-                    <a href="../index.php" class="text-white">Boutique</a>
-                </li>
-                <li>
-                    <a href="../connexion.php?action=deconnexion" class="text-white">Se déconnecter</a>
-                </li>
-
-                <?php if(internauteEstConnecte()) { ?>
-                    <li>
-                        <a href="profil.php" class="text-white">Mon profil</a>
-                    </li>
-                <?php } else { ?>
-                    <li>
-                        <a href="../connexion.php" class="text-white">Connexion</a>
-                    </li>
-                <?php } ?>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-
-        </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="text-white footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/" class="text-white"> Samih Habbani</a>
-        </div>
-        <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
+</div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

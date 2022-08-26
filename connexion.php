@@ -111,7 +111,7 @@ require_once("inc/header.php");
     <br>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-info">Log in</button>
+        <button type="submit" class="btn btn-info">Connect</button>
     </div>
     </form>
 </div>

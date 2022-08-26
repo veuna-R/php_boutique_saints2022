@@ -34,7 +34,7 @@
         }
 
         .nav-link {
-            padding: 15px 5px;
+            padding: 5px 5px;
             transition: 0.2s;
         }
     </style>
@@ -95,7 +95,7 @@
 
                     <?php if (internauteEstConnecteEtAdmin()) { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="admin/index.php">Back Office</a>
+                            <a class="nav-link" href="admin/index.php">BackOffice</a>
                         </li>
                     <?php } ?>
 

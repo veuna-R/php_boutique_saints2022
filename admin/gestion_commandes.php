@@ -10,7 +10,7 @@ if($_POST) {
 
     if($count > 0) {
         $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-            La commande n° $_POST[id_commande] a bien été modifiée !
+            The order n° $_POST[id_commande] has been successfully modified.
         </div>";
     }
 }
@@ -25,7 +25,7 @@ require_once("inc/header.php");
 
 
 <!-- BODY -->
-<h1 class='mb-5 text-center'>Bienvenue dans la partie gestion des commandes de votre backOffice</h1>
+<h1 class='mb-5 text-center'>Orders received/pending</h1>
 
 <?php echo $content; ?>
 
@@ -49,19 +49,19 @@ require_once("inc/header.php");
                                 <input type="hidden" value="<?php echo $commande["id_commande"] ?>" name="id_commande">
                                 <select class="form-control" name="etat">
                                     <?php if($valeur == "en cours de traitement") { ?>
-                                        <option value="en cours de traitement" selected> En cours de traitement </option>
-                                        <option value="envoyé"> Envoyé </option>
-                                        <option value="livré"> Livré </option>
+                                        <option value="en cours de traitement" selected> Pending</option>
+                                        <option value="envoyé"> Sent </option>
+                                        <option value="livré"> Delivered </option>
                                     <?php }
                                     else if($valeur == "envoyé") { ?>
-                                        <option value="en cours de traitement"> En cours de traitement </option>
-                                        <option value="envoyé" selected> Envoyé </option>
-                                        <option value="livré"> Livré </option>
+                                        <option value="en cours de traitement"> Pending </option>
+                                        <option value="envoyé" selected> Sent </option>
+                                        <option value="livré"> Delivered </option>
                                     <?php } 
                                     else { ?>
-                                        <option value="en cours de traitement"> En cours de traitement </option>
-                                        <option value="envoyé"> Envoyé </option>
-                                        <option value="livré" selected> Livré </option>
+                                        <option value="en cours de traitement"> Pending </option>
+                                        <option value="envoyé"> Sent </option>
+                                        <option value="livré" selected> Delivered </option>
                                     <?php } ?>
                                 </select>
                             </form>

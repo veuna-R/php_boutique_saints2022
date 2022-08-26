@@ -104,7 +104,7 @@ if ($inscriptionDone) { ?>
             <!-- Password -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password must be between 8 - 20 characters" name="mdp" required>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password must be between 3 - 20 characters" name="mdp" required>
                 <input type="checkbox" onclick="myFunction()"> Show Password
             </div>
 
