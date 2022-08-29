@@ -1,6 +1,5 @@
 <?php
 
-// Accueil du BACK OFFICE
 
 require_once("../inc/init.php");
 
@@ -74,7 +73,7 @@ require_once("../inc/init.php");
             // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copié vers le répértoire de destination
             // tmp_name correspond au fichier chargé que l'on souhaite copier
             // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
-            $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "photo/" . $nomPhoto;
+            $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "../photo/" . $nomPhoto;
             copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
 
             $fileLoaded = true;
@@ -187,7 +186,7 @@ require_once("inc/header.php");
 
 <div class='mb-5 text-center'>
     <h1>Product Management</h1>
-    <p>The products from the database</p>
+    <!-- <p>The products from the database</p> -->
 </div>
 
 
@@ -197,7 +196,7 @@ require_once("inc/header.php");
 
 <?php echo $content; ?>
 
-<table class="table table-hover mb-5 bg-light">
+<table class="table table-hover mb-5 bg-light text-center">
   <thead class="thead-dark">
     <tr>
         <?php for ($i = 0; $i < $stmt->columnCount(); $i++) {

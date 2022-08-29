@@ -1,5 +1,5 @@
-<!-- After 3 seconds, redirect to a different page. In this case, the 'Home page'. -->
-<meta http-equiv='refresh' content='3; url=http://php_boutique_saints2022.test/index.php'>
+<!-- After 2 seconds, redirect to a different page. In this case, the 'Home page'. -->
+<meta http-equiv='refresh' content='2; url=http://php_boutique_saints2022.test/index.php'>
 <meta charset="UTF-8" />
 
 <?php

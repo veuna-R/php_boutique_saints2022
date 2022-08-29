@@ -56,25 +56,25 @@ require_once("inc/header.php");
     <!-- Start of the carousel -->
     <div id="carouselExampleSlidesOnly" class="m-0 p-0 col-md-9 col-sm-12 carousel slide carousel-fade          container-fluid" data-bs-ride="carousel">
         <div class="m-0 p-0 carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="3000">
                 <img src="photo/0-gold-saints-wallpapers.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <span class="badge bg-dark">Athena and the Gold Saints</span>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/1-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <span class="badge bg-dark">The Gold Saints</span>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/2-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <span class="badge bg-dark">The Gold Saints</span>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/3-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <span class="badge bg-dark">The Gold Saints</span>

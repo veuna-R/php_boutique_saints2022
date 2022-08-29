@@ -54,16 +54,16 @@
                         <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_produits.php">Product Management</a>
+                        <a class="nav-link" href="gestion_produits.php">Products</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_commandes.php">Order Management</a>
+                        <a class="nav-link" href="gestion_commandes.php">Orders</a>
                     </li>
-                    <!-- <li class="nav-item active">
-                        <a class="nav-link" href="gestion_emails.php">E-mail Management</a>
-                    </li> -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_commentaires.php">Feedback Management</a>
+                        <a class="nav-link" href="gestion_emails.php">Accounts</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="gestion_commentaires.php">Feedbacks</a>
                     </li>
 
                     <!-- Si l'internaute est connecté j'affiche le bouton de déconnexion -->

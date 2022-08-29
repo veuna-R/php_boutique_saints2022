@@ -29,7 +29,7 @@ require_once("inc/header.php");
 
 <?php echo $content; ?>
 
-<table class="table mb-5">
+<table class="table mb-5 table-hover bg-light text-center">
   <thead class="thead-dark">
     <tr>
         <?php for ($i = 0; $i < $stmt->columnCount(); $i++) {
