@@ -19,7 +19,7 @@ require_once("../inc/init.php");
 
     if(isset($_GET["action"]) && $_GET["action"] == "suppression") {
         $count = $pdo->exec("DELETE FROM produit WHERE id_produit = '$_GET[id_produit]' ");
-        $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
+        $content .= "<div class=\"col-md-6 alert alert-success\" role=\"alert\">
             The product has been sucessfully deleted.
         </div>";
     }
@@ -66,7 +66,7 @@ require_once("../inc/init.php");
             // echo '</pre>';
 
             // COPIER LE LIEN VERS LA PHOTO EN BDD
-            $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "photo/" . $nomPhoto;
+            $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "../photo/" . $nomPhoto;
 
             // Fichier de départ à copier
             // il correspond au fichier temporaire uploadé au niveau de l'input type file
@@ -203,8 +203,8 @@ require_once("inc/header.php");
             $col = $stmt->getColumnMeta($i); ?>
             <th scope="col"><?= $col['name']; ?></th>
         <?php } ?>
-        <th scope="col"> Modify</th>
-        <th scope="col"> Delete</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -220,10 +220,11 @@ require_once("inc/header.php");
                     <?php } ?>
                 <?php } ?>
                 
-                <!-- Lien de modification et de suppression -->
+                <!-- ***Lien de modification et de suppression*** -->
+                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-primary btn-sm"> Modify </a> </td>
 
-                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif"> Modify </a> </td>
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>"> Delete </a> </td>
+                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
+                
             </tr>
        <?php } ?>
 
