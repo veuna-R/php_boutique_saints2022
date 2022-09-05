@@ -19,7 +19,7 @@ require_once("../inc/init.php");
 
     if(isset($_GET["action"]) && $_GET["action"] == "suppression") {
         $count = $pdo->exec("DELETE FROM produit WHERE id_produit = '$_GET[id_produit]' ");
-        $content .= "<div class=\"col-md-6 alert alert-success\" role=\"alert\">
+        $content .= "<div class=\"col-md-6 alert alert-success text-center\" role=\"alert\">
             The product has been sucessfully deleted.
         </div>";
     }
@@ -57,12 +57,12 @@ require_once("../inc/init.php");
 
         $fileLoaded = false;
 
-        if(!empty($_FILES) && !empty($_FILES["maPhoto"]["name"])) {
+        if(!empty($_FILES) && !empty($_FILES["photo"]["name"])) {
 
             // Récupérer le nom de la photo
-            $nomPhoto = $_POST["reference"] . "_" . $_FILES["maPhoto"]["name"];
+            $nomPhoto = $_POST["reference"] . "_" . $_FILES["photo"]["name"];
             // echo '<pre>';
-            // var_dump($maPhoto);
+            // var_dump($photo);
             // echo '</pre>';
 
             // COPIER LE LIEN VERS LA PHOTO EN BDD
@@ -74,7 +74,7 @@ require_once("../inc/init.php");
             // tmp_name correspond au fichier chargé que l'on souhaite copier
             // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
             $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "../photo/" . $nomPhoto;
-            copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
+            copy($_FILES["photo"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
 
             $fileLoaded = true;
 
@@ -208,12 +208,13 @@ require_once("inc/header.php");
     </tr>
   </thead>
   <tbody>
+
         <!-- J'itère dans le fetchAll qui m'index dans un tableau multidimensionnel les arrays contenants mes produits
         Pour chaque array de produit récupéré j'itère dans les index pour récupérer les valeurs et générer un td pour chaque valeur  -->
         <?php foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
             <tr>
                 <?php foreach($produit as $index => $valeur) { 
-                    if($index == 'photo') { ?>
+                    if($index == '../photo') { ?>
                         <td> <img style="width:50px" src="<?= $valeur; ?>" alt=""> </td>
                     <?php } else { ?>
                         <td> <?php echo $produit[$index];  ?> </td>
@@ -221,7 +222,7 @@ require_once("inc/header.php");
                 <?php } ?>
                 
                 <!-- ***Lien de modification et de suppression*** -->
-                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-primary btn-sm"> Modify </a> </td>
+                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-success btn-sm"> Modify </a> </td>
 
                 <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
                 
@@ -231,6 +232,7 @@ require_once("inc/header.php");
   </tbody>
 </table>
 
+<!-- Pagination -->
 <div class="row col-md-6 col-sm-12">
     <nav aria-label="Page navigation example">
     <ul class="pagination">
@@ -251,8 +253,8 @@ require_once("inc/header.php");
     </ul>
     </nav>
 </div>
-<!-- Formulaire de modification/ajout de produit -->
 
+<!-- Formulaire de modification/ajout de produit -->
 <div class="mb-4 col-md-12 text-center">
     <h2>Add or modify products:</h2>
 </div>

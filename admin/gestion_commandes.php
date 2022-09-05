@@ -9,7 +9,7 @@ if($_POST) {
     $count = $pdo->exec("UPDATE commande SET etat = '$_POST[etat]' WHERE id_commande = '$_POST[id_commande]'");
 
     if($count > 0) {
-        $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
+        $content .= "<div class=\"col-md-12 alert alert-success text-center\" role=\"alert\">
             The order n° $_POST[id_commande] has been successfully modified.
         </div>";
     }
