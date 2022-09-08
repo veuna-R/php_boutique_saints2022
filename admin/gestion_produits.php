@@ -222,7 +222,7 @@ require_once("inc/header.php");
                 <?php } ?>
                 
                 <!-- ***Lien de modification et de suppression*** -->
-                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-success btn-sm"> Modify </a> </td>
+                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-primary btn-sm"> Modify </a> </td>
 
                 <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
                 
