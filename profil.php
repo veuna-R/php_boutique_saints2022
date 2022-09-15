@@ -65,7 +65,7 @@ require_once("inc/header.php");
         </ul>
 
         <ul class="mt-5 list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> My order history </h5> </li>
+            <!-- <li class="list-group-item text-center"> <h5> My order history </h5> </li> -->
             <!-- <li class="list-group-item text-center">
                 <p> Order n°1 of 22/01/2020 </p>
                 <p class="badge badge-primary"> Pending </p>

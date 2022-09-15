@@ -93,7 +93,7 @@ if ($inscriptionDone) { ?>
     <?php echo $content; ?>
 <?php } else { ?>
 
-    <form action="" method="POST">
+    <form action="" method="POST" class="mx-auto col-sm-12 col-md-6">
         <div class="form-row">
             <!-- Pseudo -->
             <div class="form-group col-md-6">
@@ -104,7 +104,7 @@ if ($inscriptionDone) { ?>
             <!-- Password -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password must be between 3 - 20 characters" name="mdp" required>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password must be between 3-20 characters" name="mdp" required>
                 <input type="checkbox" onclick="myFunction()"> Show Password
             </div>
 
