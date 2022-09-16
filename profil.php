@@ -29,13 +29,13 @@ require_once("inc/header.php");
         <?php } ?>
     </div>
 
-    <div class="card col-md-3 mb-3" style="width:15rem">
+    <div class="card col-md-3 mb-3 border border-dark" style="width:15rem">
 
         <!-- Avatar -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <img src="photo/Avatar_male.png" alt="avatar male" class="card-img-top">
+            <img src="photo/Avatar_male1.png" alt="avatar male" class="card-img-top">
         <?php } else { ?>
-            <img src="photo/Avatar-female1.jpg" alt="avatar female" class="card-img-top">
+            <img src="photo/Avatar_female2.jpg" alt="avatar female" class="card-img-top">
         <?php } ?>
 
         <div class="card-body">
@@ -52,7 +52,7 @@ require_once("inc/header.php");
 
     <div class="col-md-3">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> Order pending </h5> </li>
+            <li class="list-group-item text-center"> <h5> Order(s) pending </h5> </li>
 
             <?php while($commande = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <li class="list-group-item text-center">

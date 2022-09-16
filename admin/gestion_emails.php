@@ -15,7 +15,7 @@ $stmt = $pdo->query("SELECT id_membre, pseudo, nom, prenom, email, statut FROM m
 <h1 class='mb-5 text-center'>Account management</h1>
 
 <!-- table -->
-<table class="table table-hover mb-5 bg-light text-center">
+<table class="col-sm-12 table table-hover mb-5 bg-light text-center">
     <thead class="thead-dark">
         <tr>
             <!-- affiche les contenus du BDD "feedback" -->

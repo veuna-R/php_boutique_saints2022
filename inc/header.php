@@ -103,5 +103,5 @@
             </div>
         </nav>
 
-        <main class="">
+        <main>
             <div class="row col-sm-12 mx-auto justify-content-center p-0">

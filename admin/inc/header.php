@@ -37,7 +37,7 @@
         }
     </style>
 
-    <div class="container-flud">
+    <div class="container-fluid p-0">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end" style="background-image: url(../photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php">

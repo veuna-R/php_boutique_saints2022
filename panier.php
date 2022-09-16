@@ -164,7 +164,7 @@ require_once("inc/init.php");
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
-        $content .= "<a href='?action=viderPanier' class='badge badge-danger'> Empty the cart </a>";
+        $content .= "<a href='?action=viderPanier' class='btn btn-danger btn-sm mt-2'> Empty the cart </a>";
         $content .= "</div>";
 
     }
@@ -190,7 +190,7 @@ require_once("inc/init.php");
     $content .= "</tbody> </table>";
 
     if(isset($_POST["ajout_panier"])) {
-        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge badge-dark text-white'>Return to Category $_POST[categorie]</a> </div>";
+        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='btn btn-dark text-white'>Return to Category $_POST[categorie]</a> </div>";
     }
 
 
@@ -232,9 +232,9 @@ require_once("inc/init.php");
 
             // Fin de la table
             $content .= "</tbody> </table>";
-            if(isset($_POST["ajout_panier"])) {
-                $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='badge badge-dark text-white'>Return to Category $_POST[categorie]</a> </div>";
-            }
+            // if(isset($_POST["ajout_panier"])) {
+            //     $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='btn btn-dark btn-sm'>Return to Category $_POST[categorie]</a> </div>";
+            // }
             ////////////////////////////////////////////
             //////////// AFFICHER LE BOUTTON POUR PAYER ////////////////
             ////////////////////////////////////////////
@@ -242,7 +242,7 @@ require_once("inc/init.php");
             if(internauteEstConnecte()) {
                 $content .= "<div class='d-flex justify-content-end col-md-12'>";
                 $content .= "<form method='post' action=''>";
-                $content .= "<input type='submit' class='btn btn-outline-secondary' name='payer' value='Pay'>";
+                $content .= "<input type='submit' class='btn btn-outline-secondary' name='payer' value='Place order'>";
                 $content .= "</form>";
                 // J'afficher le bouton payer
             } else {

@@ -255,7 +255,7 @@ require_once("inc/header.php");
 </div>
 
 <!-- Formulaire de modification/ajout de produit -->
-<div class="mb-4 col-md-12 text-center">
+<div class="mb-4 col-12 text-center">
     <h2>Add or modify products:</h2>
 </div>
 

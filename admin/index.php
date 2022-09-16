@@ -24,7 +24,7 @@ require_once("inc/header.php");
         overflow: hidden;
         border-right: 3px solid;
         font-family: 'Franklin Gothic Medium';
-        font-size: 20vh;
+        font-size: 20vw;
     }
 
     @keyframes typing {
