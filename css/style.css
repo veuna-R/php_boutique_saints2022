@@ -43,9 +43,9 @@ h6 {
     font-family: 'Yellowtail', cursive;
 }
 
-#profiles {
-    background-image: url("photo/stars_bg3.jpg");
+body {
+    background-image: url("photo/stars_bg3.jpg") !important;
     background-size: cover;
+    background-attachment: fixed;
 }
-
 

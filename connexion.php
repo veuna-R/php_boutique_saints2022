@@ -87,7 +87,7 @@ require_once("inc/header.php");
 </div>
 
 <div class="col-md-12">
-    <h3 class='text-center mt-5 mb-3'>Connect to your profile, Saint of Athena!</h3>
+    <h3 class='text-center text-white mt-5 mb-3'>Connect to your profile, Saint of Athena!</h3>
 </div>
 
 <div class="col-md-3">
@@ -102,7 +102,7 @@ require_once("inc/header.php");
         Remember me
       </label>
     </div> -->
-    <div class="form-group">
+    <div class="form-group text-white">
         <label for="exampleInputPassword1"></label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
         <input type="checkbox" onclick="myFunction()"> Show Password
@@ -111,7 +111,7 @@ require_once("inc/header.php");
     <br>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-info">Connect</button>
+        <button type="submit" class="btn btn-outline-warning">Connect</button>
     </div>
     </form>
 </div>

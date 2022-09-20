@@ -83,7 +83,7 @@ require_once("inc/header.php");
 <!-- BODY -->
 
 <div class="col-md-12">
-    <h3 class='text-center mt-5 mb-4'>Register to become a Saint of Athena!</h3>
+    <h3 class='text-center text-white mt-5 mb-4'>Register to become a Saint of Athena!</h3>
 </div>
 
 <?php if ($erreur != "") { ?>
@@ -93,12 +93,12 @@ if ($inscriptionDone) { ?>
     <?php echo $content; ?>
 <?php } else { ?>
 
-    <form action="" method="POST" class="mx-auto col-sm-12 col-md-6">
+    <form action="" method="POST" class="mx-auto col-sm-12 col-md-6 text-white">
         <div class="form-row">
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
-                <input type="text" class="form-control" id="pseudo" placeholder="Username" name="pseudo" required>
+                <input type="text" class="form-control bg-transparent" id="pseudo" placeholder="Username" name="pseudo" required>
             </div>
 
             <!-- Password -->
@@ -167,7 +167,7 @@ if ($inscriptionDone) { ?>
         <br>
 
         <div class="text-center mb-5">
-            <button type="submit" class="btn btn-info">Create my account</button>
+            <button type="submit" class="btn btn-outline-warning">Create my account</button>
         </div>
 
     </form>

@@ -37,6 +37,11 @@
             padding: 5px 5px;
             transition: 0.2s;
         }
+        body {
+            background-image: url("photo/stars_bg3.jpg") !important;
+            background-size: cover;
+            background-attachment: fixed;
+        }
     </style>
 
     <div class="container-flud">

@@ -57,24 +57,24 @@ require_once("../inc/init.php");
 
         $fileLoaded = false;
 
-        if(!empty($_FILES) && !empty($_FILES["photo"]["name"])) {
+        if(!empty($_FILES) && !empty($_FILES["maPhoto"]["name"])) {
 
             // Récupérer le nom de la photo
-            $nomPhoto = $_POST["reference"] . "_" . $_FILES["photo"]["name"];
+            $nomPhoto = $_POST["reference"] . "_" . $_FILES["maPhoto"]["name"];
             // echo '<pre>';
             // var_dump($photo);
             // echo '</pre>';
 
             // COPIER LE LIEN VERS LA PHOTO EN BDD
-            $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "../photo/" . $nomPhoto;
+            $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "photo/" . $nomPhoto;
 
             // Fichier de départ à copier
             // il correspond au fichier temporaire uploadé au niveau de l'input type file
             // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copié vers le répértoire de destination
             // tmp_name correspond au fichier chargé que l'on souhaite copier
             // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
-            $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "../photo/" . $nomPhoto;
-            copy($_FILES["photo"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
+            $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "photo/" . $nomPhoto;
+            copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
 
             $fileLoaded = true;
 
@@ -96,9 +96,6 @@ require_once("../inc/init.php");
                 '$_POST[categorie]',
                 '$_POST[titre]',
                 '$_POST[description]',
-                -- '$_POST[couleur]',
-                -- '$_POST[taille]',
-                -- '$_POST[public]',
                 '$chemin_vers_la_photo_en_terme_durl_pour_attribut_src',
                 '$_POST[prix]',
                 '$_POST[stock]'
@@ -127,9 +124,6 @@ require_once("../inc/init.php");
             categorie = '$_POST[categorie]',
             titre = '$_POST[titre]',
             description = '$_POST[description]',
-            -- couleur = '$_POST[couleur]',
-            -- taille = '$_POST[taille]',
-            -- public = '$_POST[public]',
             photo = '$cheminPhoto',
             prix = '$_POST[prix]',
             stock = '$_POST[stock]' 
@@ -170,9 +164,6 @@ $reference = (isset($produit)) ? $produit["reference"] : "";
 $categorie = (isset($produit)) ? $produit["categorie"] : "";
 $titre = (isset($produit)) ? $produit["titre"] : "";
 $description = (isset($produit)) ? $produit["description"] : "";
-// $couleur = (isset($produit)) ? $produit["couleur"] : "";
-// $taille = (isset($produit)) ? $produit["taille"] : "";
-// $public = (isset($produit)) ? $produit["public"] : "";
 $photo = (isset($produit)) ? $produit["photo"] : "";
 $prix = (isset($produit)) ? $produit["prix"] : "";
 $stock = (isset($produit)) ? $produit["stock"] : "";
@@ -214,8 +205,8 @@ require_once("inc/header.php");
         <?php foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
             <tr>
                 <?php foreach($produit as $index => $valeur) { 
-                    if($index == '../photo') { ?>
-                        <td> <img style="width:50px" src="<?= $valeur; ?>" alt=""> </td>
+                    if($index == 'photo') { ?>
+                        <td> <img style="width:75px" src="../<?= $valeur; ?>" alt=""> </td>
                     <?php } else { ?>
                         <td> <?php echo $produit[$index];  ?> </td>
                     <?php } ?>

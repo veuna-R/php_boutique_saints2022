@@ -29,23 +29,30 @@ require_once("inc/header.php");
 
 <body>
     <style>
-        #profiles {
+        /* #profiles {
             background-image: url("photo/stars_bg3.jpg");
             background-size: cover;
-        }
+        } */
+
         #title_image:hover {
             transform: scale(1.05);
             transition: transform .5s ease;
         }
+
         #maintitle {
             text-shadow: 3px 3px black;
         }
+        /* body {
+            background-image: url("photo/stars_bg3.jpg") !important;
+            background-size: cover;
+            background-attachment: fixed;
+        } */
     </style>
 
     <!-- Introduction -->
     <div class="container text-center mt-5 col-12">
-        <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-light shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
-        <p class="fs-5">
+        <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-transparent shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
+        <p class="fs-5 text-white">
             This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
         </p>
         <div class="mb-3">
@@ -93,7 +100,7 @@ require_once("inc/header.php");
     <!-- End of the carousel -->
 
     <!-- start of brief history -->
-    <div class="container col-md-9 col-sm-12 text-center my-5 border border-warning border-3 shadow">
+    <div class="container col-md-9 col-sm-12 text-center my-5 border border-warning border-3 shadow text-white">
         <h2 class="text-center text-warning display-4">The Gold Saints</h2>
         <p>The Gold Saints are a group of the twelve most powerful and highest ranking warriors in Athena's army. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate warriors in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
 
@@ -233,17 +240,17 @@ require_once("inc/header.php");
     <!-- music in background -->
     <div class="container text-center my-3">
         <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop controls class="col-md-3"></audio>
-        <p class="text-center">Saint Seiya - Blue Dream (instrumental)</p>
+        <p class="text-center text-white">Saint Seiya - Blue Dream (instrumental)</p>
     </div>
 
     <!-- FEEDBACK AREA -->
-    <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 p-3 mx-auto mb-5 border border-light shadow">
+    <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 p-3 mx-auto mb-5 border border-warning">
         <div>
 
-            <h5 class="text-uppercase text-center">please leave me a feedback</h5>
+            <h5 class="text-uppercase text-center text-white">please leave me a feedback</h5>
             <label for="feedback" class="form-label"></label>
 
-            <textarea class="form-control" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
+            <textarea class="form-control bg-transparent text-white border border-warning" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
 
             <div class="text-center">
                 <button type="submit" name="submit" class="btn btn-outline-warning mt-3">Submit</button>
