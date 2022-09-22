@@ -2,7 +2,7 @@
 </main><!-- End of header -->
 
 <!-- Footer -->
-<footer class="page-footer font-small p-2" style="background-image: url(photo/stars_bg2.jpg);">
+<footer class="page-footer font-small p-2 bg-transparent">
 
     <div class="container-fluid text-center col-md-4 mx-auto">
 

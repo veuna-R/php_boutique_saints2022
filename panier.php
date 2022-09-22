@@ -161,6 +161,7 @@ require_once("inc/init.php");
 
     }
 
+    
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
@@ -170,7 +171,7 @@ require_once("inc/init.php");
     }
 
     // Début de la table panier
-    $content .= "<table class='table mb-5 text-center'>
+    $content .= "<table class='col-md-9 col-sm-12 table my-5 text-center text-white'>
     <thead>
         <tr>
             <th scope='col'>Title</th>
@@ -184,7 +185,7 @@ require_once("inc/init.php");
 
     // Si j'ai pas de produit en session je n'affiche rien dans mon tableau "Panier vide"
     if(empty($_SESSION["panier"]["id_produit"])) {
-        $content .= "<tr> <td colspan='12' class='text-center'> The cart is empty </td>  </tr>";
+        $content .= "<tr> <td colspan='12' class='text-center text-white'> The cart is empty </td>  </tr>";
 
     // Fin de la table
     $content .= "</tbody> </table>";

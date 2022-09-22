@@ -29,11 +29,6 @@ require_once("inc/header.php");
 
 <body>
     <style>
-        /* #profiles {
-            background-image: url("photo/stars_bg3.jpg");
-            background-size: cover;
-        } */
-
         #title_image:hover {
             transform: scale(1.05);
             transition: transform .5s ease;
@@ -42,11 +37,12 @@ require_once("inc/header.php");
         #maintitle {
             text-shadow: 3px 3px black;
         }
-        /* body {
+
+        body {
             background-image: url("photo/stars_bg3.jpg") !important;
             background-size: cover;
             background-attachment: fixed;
-        } */
+        }
     </style>
 
     <!-- Introduction -->
@@ -247,7 +243,7 @@ require_once("inc/header.php");
     <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 p-3 mx-auto mb-5 border border-warning">
         <div>
 
-            <h5 class="text-uppercase text-center text-white">please leave me a feedback</h5>
+            <h5 class="text-uppercase text-center text-warning">please leave me a feedback</h5>
             <label for="feedback" class="form-label"></label>
 
             <textarea class="form-control bg-transparent text-white border border-warning" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
@@ -255,7 +251,7 @@ require_once("inc/header.php");
             <div class="text-center">
                 <button type="submit" name="submit" class="btn btn-outline-warning mt-3">Submit</button>
             </div>
-
+            
         </div>
 
     </form>

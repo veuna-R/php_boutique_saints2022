@@ -83,7 +83,7 @@ require_once("inc/header.php");
 <!-- BODY -->
 
 <div class="col-md-12">
-    <h3 class='text-center text-white mt-5 mb-4'>Register to become a Saint of Athena!</h3>
+    <h3 class='text-center text-white mt-5 mb-5'>Register to become a Saint of Athena!</h3>
 </div>
 
 <?php if ($erreur != "") { ?>
@@ -93,31 +93,31 @@ if ($inscriptionDone) { ?>
     <?php echo $content; ?>
 <?php } else { ?>
 
-    <form action="" method="POST" class="mx-auto col-sm-12 col-md-6 text-white">
+    <form action="" method="POST" class="mx-auto col-sm-12 col-md-6 text-white border border-warning mb-5">
         <div class="form-row">
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
-                <input type="text" class="form-control bg-transparent" id="pseudo" placeholder="Username" name="pseudo" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="pseudo" placeholder="Username" name="pseudo" required>
             </div>
 
             <!-- Password -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password must be between 3-20 characters" name="mdp" required>
+                <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Password must be between 3-20 characters" name="mdp" required>
                 <input type="checkbox" onclick="myFunction()"> Show Password
             </div>
 
             <!-- Name -->
             <div class="form-group col-md-4">
                 <!-- <label for="name"></label> -->
-                <input type="text" class="form-control" id="name" placeholder="Last name" name="nom" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="name" placeholder="Last name" name="nom" required>
             </div>
 
             <!-- First Name -->
             <div class="form-group col-md-4">
                 <!-- <label for="firstName"></label> -->
-                <input type="text" class="form-control" id="firstName" placeholder="First Name" name="prenom" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="firstName" placeholder="First Name" name="prenom" required>
             </div>
 
             <!-- Civilité -->
@@ -142,25 +142,25 @@ if ($inscriptionDone) { ?>
         <!-- Email -->
         <div class="form-group">
                 <!-- <label for="email"></label> -->
-                <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="email" placeholder="Email" name="email" required>
         </div>
 
         <!-- Address -->
 
         <div class="form-group">
             <!-- <label for="address"></label> -->
-            <input type="text" class="form-control" id="address" name="adresse" placeholder="Complete adress" required>
+            <input type="text" class="form-control bg-transparent border border-warning text-white" id="address" name="adresse" placeholder="Complete adress" required>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <!-- <label for="inputCity"></label> -->
-                <input type="text" class="form-control" name="ville" id="inputCity" placeholder="State" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" name="ville" id="inputCity" placeholder="State" required>
             </div>
 
             <div class="form-group col-md-6">
                 <!-- <label for="inputZip"></label> -->
-                <input type="text" class="form-control" id="inputZip" name="code_postal" placeholder="Zip Code" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="inputZip" name="code_postal" placeholder="Zip Code" required>
             </div>
         </div>
 

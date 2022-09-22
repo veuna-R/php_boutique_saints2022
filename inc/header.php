@@ -42,11 +42,14 @@
             background-size: cover;
             background-attachment: fixed;
         }
+        nav {
+            background-image: url("photo/stars_bg3.jpg");
+        }
     </style>
 
     <div class="container-flud">
 
-        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start sticky-top px-5" style="background-image: url(photo/stars_bg2.jpg);">
+        <nav class="navbar navbar-expand-lg navbar-dark justify-content-start px-5 sticky-top">
             <a class="navbar-brand" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
                 SOUL OF GOLD
@@ -79,13 +82,20 @@
                         </li>
                     <?php } ?>
 
-                    <li class="nav-item position_relative">
+                    <li class="nav-item active position_relative">
                         <?php if (isset($_SESSION["panier"]["id_produit"]) && count($_SESSION["panier"]["id_produit"]) > 0) { ?>
                             <span class='number_elem_in_cart'> <?php echo afficherNombreProduitsPanier(); ?> </span>
 
                         <?php } ?>
                         <a class="nav-link" href="panier.php">Cart</a>
                     </li>
+
+                    <!-- Si je suis connecté entant q'admin -->
+                    <?php if (internauteEstConnecteEtAdmin()) { ?>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="admin/index.php">BackOffice</a>
+                        </li>
+                    <?php } ?>
 
                     <!-- Si l'internaute est connecté j'affiche le bouton de déconnexion -->
                     <?php if (internauteEstConnecte()) { ?>
@@ -98,11 +108,7 @@
 
                     <?php } ?>
 
-                    <?php if (internauteEstConnecteEtAdmin()) { ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="admin/index.php">BackOffice</a>
-                        </li>
-                    <?php } ?>
+                    
 
                 </ul>
             </div>

@@ -22,27 +22,27 @@ require_once("inc/init.php");
     require_once("inc/header.php");
 
 ?>
-    <div class='card col-md-3 my-3 border border-warning' style='width: 15rem;'>
+    <div class='card col-md-3 my-3 border border-warning bg-transparent' style='width: 15rem;'>
         <img class='card-img-top mt-3' src='<?php echo $produit["photo"]?>' alt='<?php echo $produit["titre"]?>'>
         <div class='card-body'>
-            <h5 class='card-title text-center'><?php echo $produit["titre"]?></h5>
-            <p class='card-text text-center'><?php echo $produit["description"]?></p>
+            <h5 class='card-title text-center text-white'><?php echo $produit["titre"]?></h5>
+            <p class='card-text text-center text-white'><?php echo $produit["description"]?></p>
         </div>
     </div>
 
     <div class="col-md-3 my-3">
         <ul class="list-group">
-            <li class="list-group-item border border-warning">Category: <?php echo $produit["categorie"]?> </li>
-            <li class="list-group-item border border-warning my-1">Price: <?php echo $produit["prix"]?> € </li>
+            <li class="list-group-item border border-warning bg-transparent text-white">Category: <?php echo $produit["categorie"]?> </li>
+            <li class="list-group-item border border-warning my-1 bg-transparent text-white">Price: <?php echo $produit["prix"]?> € </li>
 
             <!-- CRÉATION D'UN FORMULAIRE POUR RÉCUPÉRER LE PRODUIT SELECTIONNÉ ET LA QUANTITÉ POUR L'AJOUTER AU PANIER -->
 
             <form method="POST" action="panier.php">
 
-                <li class="list-group-item border border-warning">                  
+                <li class="list-group-item border border-warning bg-transparent">                  
                     <input type="hidden" name="id_produit" value="<?php echo $produit["id_produit"]?>">
                     <input type="hidden" name="categorie" value="<?php echo $produit["categorie"]?>">
-                    <select class="custom-select border border-warning" name="quantite" id="selectQuantity">
+                    <select class="custom-select border border-warning bg-transparent" name="quantite" id="selectQuantity">
                         <!-- Je créé dynamiquement la quantité sélectionnable dans la limite du stock -->
                         <option disabled selected>Select an amount</option>
                         <?php for($i = 1; $i <= $produit["stock"]; $i++) { ?>

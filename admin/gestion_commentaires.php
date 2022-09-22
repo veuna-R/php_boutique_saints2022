@@ -11,7 +11,7 @@ require_once("inc/header.php");
 
 if (isset($_GET["action"]) && $_GET["action"] == "suppression") {
     $count = $pdo->exec("DELETE FROM feedback WHERE id_feedback = '$_GET[id_feedback]' ");
-    // $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
+    // $content .= "<div class=\"col-md-9 alert alert-success\" role=\"alert\">
     //         The message has been sucessfully deleted.
     //     </div>";
 }

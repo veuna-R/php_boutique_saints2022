@@ -23,13 +23,13 @@ require_once("inc/header.php");
     <div class="col-md-12 mt-3">
         <!-- Message de bienvenu -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
-            <h2 class="text-center mb-5">Hello Sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+            <h2 class="text-center mb-5 text-white">Hello Sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } else { ?>
-            <h2 class="text-center mb-5">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+            <h2 class="text-center mb-5 text-white">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
         <?php } ?>
     </div>
 
-    <div class="card col-md-3 mb-3 border border-dark" style="width:15rem">
+    <div class="card col-md-3 mb-3 pt-3 border border-warning bg-transparent text-white" style="width:15rem">
 
         <!-- Avatar -->
         <?php if($_SESSION["membre"]["civilite"] == "m") { ?>
@@ -43,16 +43,16 @@ require_once("inc/header.php");
         </div>
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"> <?= $_SESSION["membre"]["email"] ?> </li>
-            <li class="list-group-item text-center"> <?= $_SESSION["membre"]["adresse"] ?> </li>
-            <li class="list-group-item text-center"> <?= $_SESSION["membre"]["ville"] . " " . $_SESSION["membre"]["code_postal"] ?> </li>
+            <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["email"] ?> </li>
+            <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["adresse"] ?> </li>
+            <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["ville"] . " " . $_SESSION["membre"]["code_postal"] ?> </li>
         </ul>
 
     </div>
 
     <div class="col-md-3">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center"> <h5> Order(s) pending </h5> </li>
+            <li class="list-group-item text-center bg-transparent text-white"> <h5> Order(s) pending </h5> </li>
 
             <?php while($commande = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <li class="list-group-item text-center">
