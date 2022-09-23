@@ -43,9 +43,13 @@ h6 {
     font-family: 'Yellowtail', cursive;
 }
 
-body {
+/* body {
     background-image: url("photo/stars_bg3.jpg") !important;
     background-size: cover;
     background-attachment: fixed;
+} */
+
+nav {
+    background: rgba(0,0,0, .5) !important; 
 }
 

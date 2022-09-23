@@ -57,27 +57,9 @@ $stmt = $pdo->query("SELECT * FROM feedback");
                 <td>
                     <!-- ***la suppression des commentaires*** -->
 
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
-                        Delete
-                    </button> -->
                     <a href="?action=suppression&id_feedback=<?= $feedback["id_feedback"] ?>" role="button" class="btn btn-outline-danger btn-sm" name="suppression" >Delete</a>
 
-                    <!-- Modal -->
-                    <!-- <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Confirm deletion</h5>
-                                </div>
-                                
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                                    <a href=""   role="button" class="btn btn-danger btn-sm" name="suppression">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+
                 </td>
             </tr>
 

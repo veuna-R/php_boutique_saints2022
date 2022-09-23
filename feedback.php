@@ -2,6 +2,7 @@
 <meta http-equiv='refresh' content='2; url=http://php_boutique_saints2022.test/index.php'>
 <meta charset="UTF-8" />
 
+
 <?php
 
 $feedback_txt = $_POST['feedback'];

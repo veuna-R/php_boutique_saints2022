@@ -1,6 +1,7 @@
 <?php
 
     require_once("inc/init.php");
+    require_once("inc/header.php");
 
     
     // cette page représente en gros le catalogue des produits
@@ -57,7 +58,7 @@
 
     }
 
-    require_once("inc/header.php");
+
 
 
 ?>

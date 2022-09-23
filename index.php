@@ -49,7 +49,7 @@ require_once("inc/header.php");
     <div class="container text-center mt-5 col-12">
         <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-transparent shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
         <p class="fs-5 text-white">
-            This is a small site dedicated to my love for the anime "Saint Seiya" and preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
+            This is a small site dedicated to my love for the anime "Saint Seiya", preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
         </p>
         <div class="mb-3">
             <img src="photo/soul_of_gold.png" alt="" class="img-fluid" id="title_image">
@@ -98,7 +98,7 @@ require_once("inc/header.php");
     <!-- start of brief history -->
     <div class="container col-md-9 col-sm-12 text-center my-5 border border-warning border-3 shadow text-white">
         <h2 class="text-center text-warning display-4">The Gold Saints</h2>
-        <p>The Gold Saints are a group of the twelve most powerful and highest ranking warriors in Athena's army. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate warriors in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
+        <p>The Gold Saints are a group of the twelve most powerful and highest ranking saints in Athena's service. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate saints in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
 
         <p>The Gold Saints are among the most powerful characters in the series. Their power derives from their mastery of the Seventh Sense, the essence of Cosmo, which grants them miraculous abilities, such as the capability to move at the speed of light. Some among them have also reached the Eighth Sense.</p>
 

@@ -42,15 +42,12 @@
             background-size: cover;
             background-attachment: fixed;
         }
-        nav {
-            background-image: url("photo/stars_bg3.jpg");
-        }
     </style>
 
     <div class="container-flud">
 
         <nav class="navbar navbar-expand-lg navbar-dark justify-content-start px-5 sticky-top">
-            <a class="navbar-brand" href="index.php" data-bs-toggle="tooltip" title="Home">
+            <a class="navbar-brand text-warning" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
                 SOUL OF GOLD
             </a>

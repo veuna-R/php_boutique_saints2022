@@ -1,6 +1,6 @@
 <?php
 require_once("inc/init.php");
-
+require_once("inc/header.php");
 
 // SI je me déconnecte alors je vide la session membre
 if (isset($_GET["action"]) && $_GET["action"] == "deconnexion") {
@@ -76,7 +76,7 @@ if ($_POST) {
 
 
 
-require_once("inc/header.php");
+
 ?>
 
 <div class="col-md-12">
