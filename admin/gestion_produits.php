@@ -143,7 +143,7 @@ require_once("../inc/init.php");
 //////////// Récupérer en BDD les produits ////////////////
 ////////////////////////////////////////////
 
-$stmt = $pdo->query("SELECT * FROM produit LIMIT $elementsPourLaPagination[premierArticle], 3");
+$stmt = $pdo->query("SELECT * FROM produit LIMIT $elementsPourLaPagination[premierArticle], 4");
 // echo '<pre>';
 // var_dump($stmt->fetchAll(PDO::FETCH_ASSOC));
 // echo '</pre>';
@@ -195,7 +195,6 @@ require_once("inc/header.php");
             <th scope="col"><?= $col['name']; ?></th>
         <?php } ?>
         <th scope="col"></th>
-        <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -213,7 +212,7 @@ require_once("inc/header.php");
                 <?php } ?>
                 
                 <!-- ***Lien de modification et de suppression*** -->
-                <td> <a href="?action=modification&id_produit=<?= $produit["id_produit"]?>#ajout_modif" role="button" class="btn btn-outline-primary btn-sm"> Modify </a> </td>
+                
 
                 <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
                 
@@ -224,7 +223,7 @@ require_once("inc/header.php");
 </table>
 
 <!-- Pagination -->
-<div class="row col-md-6 col-sm-12">
+<div class="row col-md-6 col-sm-12 justify-content-center">
     <nav aria-label="Page navigation example">
     <ul class="pagination">
 
@@ -246,7 +245,7 @@ require_once("inc/header.php");
 </div>
 
 <!-- Formulaire de modification/ajout de produit -->
-<div class="mb-4 col-12 text-center">
+<!-- <div class="mb-4 col-12 text-center">
     <h2>Add or modify products:</h2>
 </div>
 
@@ -274,31 +273,16 @@ require_once("inc/header.php");
             <label for="stock">Stock</label>
             <input type="text" class="form-control" id="stock" name="stock" value="<?= $stock; ?>">
         </div>
-        <div class="w-100"></div>
+        <div class="w-100"></div> -->
 
         <!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
-
-        <!-- <div class="form-group col-md-2">
-            <label for="public_m">Public</label>
-            <div class="custom-control custom-radio">
-                <input type="radio" id="public_m" name="public" class="custom-control-input" value="m" checked>
-                <label class="custom-control-label" for="public_m">Masculin</label>
-            </div>
-        </div>
-        <div class="form-group col-md-2">
-            <label for="public_f" style="color:transparent">Public</label>
-            <div class="custom-control custom-radio">
-                <input type="radio" id="public_f" name="public" class="custom-control-input" value="f">
-                <label class="custom-control-label" for="public_f">Féminin</label>
-            </div>
-        </div> -->
         
-        <div class="col-md-6 custom-file m-auto">
+        <!-- <div class="col-md-6 custom-file m-auto">
             <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
-            <label class="custom-file-label" for="maPhoto">Choose an image</label>
+            <label class="custom-file-label" for="maPhoto">Choose an image</label> -->
 
             <!-- Si je suis dans le cadre d'une modification j'affiche l'img actuelle -->
-            <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
+            <!-- <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
                 <img class="mt-1" style="width:75px" src="<?= $photo; ?>" alt="<?= $titre; ?>" title="<?= $description; ?>">
             <?php } ?>
 
@@ -318,7 +302,7 @@ require_once("inc/header.php");
                 <button type="submit" class="btn btn-primary" name="ajouterProduit">Add a product</button>
             <?php } ?>
         </div>
-    
+     -->
 
 
 
