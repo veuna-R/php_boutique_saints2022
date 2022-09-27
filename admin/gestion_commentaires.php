@@ -16,8 +16,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "suppression") {
     //     </div>";
 }
 
-
-// Récupération des commentaires de la BDD
+// Récupérer toutes les commentaires
 $stmt = $pdo->query("SELECT * FROM feedback");
 
 ?>
@@ -57,7 +56,7 @@ $stmt = $pdo->query("SELECT * FROM feedback");
                 <td>
                     <!-- ***la suppression des commentaires*** -->
 
-                    <a href="?action=suppression&id_feedback=<?= $feedback["id_feedback"] ?>" role="button" class="btn btn-outline-danger btn-sm" name="suppression" >Delete</a>
+                    <a href="?action=suppression&id_feedback=<?= $feedback["id_feedback"] ?>" role="button" class="btn btn-outline-danger btn-sm" name="suppression">Delete</a>
 
 
                 </td>
@@ -67,6 +66,7 @@ $stmt = $pdo->query("SELECT * FROM feedback");
 
     </tbody>
 </table>
+
 
 <?php
 require_once("inc/footer.php");

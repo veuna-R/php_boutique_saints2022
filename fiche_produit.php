@@ -32,8 +32,8 @@ require_once("inc/init.php");
 
     <div class="col-md-3 my-3">
         <ul class="list-group">
-            <li class="list-group-item border border-warning bg-transparent text-white">Category: <?php echo $produit["categorie"]?> </li>
-            <li class="list-group-item border border-warning my-1 bg-transparent text-white">Price: <?php echo $produit["prix"]?> € </li>
+            <li class="list-group-item border border-warning bg-transparent text-white text-center">Category: <?php echo $produit["categorie"]?> </li>
+            <li class="list-group-item border border-warning my-1 bg-transparent text-white text-center">Price: <?php echo $produit["prix"]?> € </li>
 
             <!-- CRÉATION D'UN FORMULAIRE POUR RÉCUPÉRER LE PRODUIT SELECTIONNÉ ET LA QUANTITÉ POUR L'AJOUTER AU PANIER -->
 

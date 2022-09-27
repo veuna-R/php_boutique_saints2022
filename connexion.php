@@ -32,6 +32,7 @@ if ($_POST) {
 
             // créer une session membre avec les coordonnées du membre
             $_SESSION["membre"]["id_membre"] = $membre["id_membre"];
+            $_SESSION["membre"]["pseudo"] = $membre["pseudo"];
             $_SESSION["membre"]["nom"] = $membre["nom"];
             $_SESSION["membre"]["prenom"] = $membre["prenom"];
             $_SESSION["membre"]["email"] = $membre["email"];

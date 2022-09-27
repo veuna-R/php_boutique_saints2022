@@ -99,7 +99,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link font-italic" href="connexion.php?action=deconnexion">
-                                Deconnect
+                                Disconnect
                             </a>
                         </li>
 
