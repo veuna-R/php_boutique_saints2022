@@ -9,10 +9,22 @@ if($_POST) {
     $count = $pdo->exec("UPDATE commande SET etat = '$_POST[etat]' WHERE id_commande = '$_POST[id_commande]'");
 
     if($count > 0) {
-        $content .= "<div class=\"col-md-12 alert alert-success text-center\" role=\"alert\">
+        $content .= "<div class=\"col-md-6 alert alert-success text-center\" role=\"alert\">
             The order n° $_POST[id_commande] has been successfully modified.
         </div>";
     }
+}
+
+////////////////////////////////////////////
+//////////// Suppression d'une commande ////////////////
+////////////////////////////////////////////
+
+if (isset($_GET["action"]) && $_GET["action"] == "suppression") {
+    $count = $pdo->exec("DELETE FROM commande WHERE id_commande = '$_GET[id_commande]' ") &&
+    $count = $pdo->exec("DELETE FROM details_commande WHERE id_details_commande = '$_GET[id_details_commande]' ");
+    $content .= "<div class=\"col-md-6 alert alert-success text-center\" role=\"alert\">
+            The message has been sucessfully deleted.
+        </div>";
 }
 
 // Récupérer toutes les commandes
@@ -25,7 +37,7 @@ require_once("inc/header.php");
 
 
 <!-- BODY -->
-<h1 class='mb-5 text-center'>Orders received/pending</h1>
+<h1 class='mb-5 text-center col-md-12'>Orders received/pending</h1>
 
 <?php echo $content; ?>
 
@@ -36,6 +48,7 @@ require_once("inc/header.php");
             $col = $stmt->getColumnMeta($i); ?>
             <th scope="col"><?= $col['name']; ?></th>
         <?php } ?>
+            <!-- <th scope="col"></th> -->
     </tr>
   </thead>
   <tbody>
@@ -66,10 +79,15 @@ require_once("inc/header.php");
                                 </select>
                             </form>
                         </td>
+                    <?php } elseif ($index == "suppression") { ?>
+
                     <?php } else { ?>
                         <td><?php echo $valeur; ?> </td>
                     <?php } ?>
                 <?php } ?>
+
+
+                <!-- <td> <a href="?action=suppression&id_commande&id_details_commande=<?= $commande["id_commande"] && $details_commande["id_details_commande"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td> -->
 
             </tr>
        <?php } ?>

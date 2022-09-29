@@ -31,15 +31,15 @@ require_once("inc/header.php");
     <?php } ?>
 </div>
 
-<div class="card col-md-3 mb-5 p-0 border border-warning bg-transparent text-white" style="width:15rem">
+<div class="card col-md-3 mb-5 p-3 border border-warning bg-transparent text-white" style="width:15rem">
 
     <!-- Avatar -->
     <?php if ($_SESSION["membre"]["statut"] == "1") { ?><!-- Si je suis connecté entant qu'administateur -->
-        <img src="photo/AvatarMaker.png" alt="avatar admin" class="card-img-top">
+        <img src="photo/Avatar_a.png" alt="avatar admin" class="card-img-top">
     <?php } elseif ($_SESSION["membre"]["civilite"] == "m") { ?>
-        <img src="photo/AvatarMaker_2.png" alt="avatar male" class="card-img-top">
+        <img src="photo/Avatar_1.png" alt="avatar male" class="card-img-top">
     <?php } else { ?>
-        <img src="photo/AvatarMaker_3.png" alt="avatar female" class="card-img-top">
+        <img src="photo/Avatar_f.png" alt="avatar female" class="card-img-top">
     <?php } ?>
 
     <!-- <div class="card-body">

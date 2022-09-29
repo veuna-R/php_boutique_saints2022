@@ -126,7 +126,7 @@ require_once("inc/init.php");
             unset($_SESSION["panier"]);
             // msg de confirmation en affichant le numéro de la commande
 
-            $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
+            $content .= "<div class=\"col-md-6 mx-auto alert alert-success text-center\" role=\"alert\">
                 Thank you for your order! Your tracking number is $idCommande 
             </div>";
 
@@ -165,7 +165,7 @@ require_once("inc/init.php");
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
-        $content .= "<a href='?action=viderPanier' class='btn btn-danger btn-sm mt-2'> Empty the cart </a>";
+        $content .= "<a href='?action=viderPanier' class='btn btn-danger btn-sm'> Empty the cart </a>";
         $content .= "</div>";
 
     }
@@ -218,7 +218,7 @@ require_once("inc/init.php");
              $content .=  "</select>
             </form>
             </td>";
-            $content .= "<td>" . $_SESSION["panier"]["prix"][$i] . "</td>";
+            $content .= "<td>" . $_SESSION["panier"]["prix"][$i] . " €" . "</td>";
             $content .= "<td> <img style='width:50px' src='". $_SESSION["panier"]["photo"][$i]  ."' alt=''> </td>";
             $content .= "<td> <a href='?action=suppressionArticle&id_produit=" . 
             $_SESSION["panier"]["id_produit"][$i] . "'> Remove <a/></td>";
@@ -243,7 +243,7 @@ require_once("inc/init.php");
             if(internauteEstConnecte()) {
                 $content .= "<div class='d-flex justify-content-end col-md-12'>";
                 $content .= "<form method='post' action=''>";
-                $content .= "<input type='submit' class='btn btn-outline-secondary' name='payer' value='Place order'>";
+                $content .= "<input type='submit' class='btn btn-outline-warning' name='payer' value='Place order'>";
                 $content .= "</form>";
                 // J'afficher le bouton payer
             } else {
