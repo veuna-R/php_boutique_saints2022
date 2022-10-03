@@ -39,7 +39,7 @@
 
     <div class="container-fluid p-0">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end" style="background-image: url(../photo/stars_bg2.jpg);">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end sticky-top" style="background-image: url(../photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php">
                 <img src="" width="" height="" class="d-inline-block align-center " alt="">
             Administrator

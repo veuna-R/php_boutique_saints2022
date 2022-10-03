@@ -88,7 +88,7 @@ if ($_POST) {
     <h3 class='text-center text-white mt-5 mb-5'>Connect to your profile, Saint of Athena!</h3>
 </div>
 
-<div class="col-md-3">
+<div class="col-lg-3 col-md-6 col-sm-6">
     <form method="post" action="" class="border border-warning px-3">
         <div class="form-group">
             <label for="pseudo"></label>

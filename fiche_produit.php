@@ -22,6 +22,8 @@ require_once("inc/init.php");
     require_once("inc/header.php");
 
 ?>
+
+<!-- Cardre de produit -->
     <div class='card col-md-3 my-3 border border-warning bg-transparent' style='width: 15rem;'>
         <img class='card-img-top mt-3' src='<?php echo $produit["photo"]?>' alt='<?php echo $produit["titre"]?>'>
         <div class='card-body'>
@@ -30,9 +32,12 @@ require_once("inc/init.php");
         </div>
     </div>
 
+<!-- Info de produit -->
     <div class="col-md-3 my-3">
         <ul class="list-group">
+            <!-- récupération de produits de la BDD -->
             <li class="list-group-item border border-warning bg-transparent text-white text-center">Category: <?php echo $produit["categorie"]?> </li>
+            <!-- récupération de prix de la BDD -->
             <li class="list-group-item border border-warning my-1 bg-transparent text-white text-center">Price: <?php echo $produit["prix"]?> € </li>
 
             <!-- CRÉATION D'UN FORMULAIRE POUR RÉCUPÉRER LE PRODUIT SELECTIONNÉ ET LA QUANTITÉ POUR L'AJOUTER AU PANIER -->
@@ -53,8 +58,10 @@ require_once("inc/init.php");
                 </li>
      
                 <div class="text-center">
+                    <!-- bouton: ajout au panier -->
                     <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Add to cart" name="ajout_panier" style="width:50%" id="addCart">
 
+                    <!-- bouton: revien à la page de la boutique -->
                     <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:50%">Return to Shop</a>
                 </div>
 

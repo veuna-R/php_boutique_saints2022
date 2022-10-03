@@ -47,40 +47,40 @@ require_once("inc/header.php");
 
     <!-- Introduction -->
     <div class="container text-center mt-5 col-12">
-        <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-transparent shadow" id="maintitle">WELCOME TO THE SITE OF GOLD</h1><br>
+        <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-transparent shadow" id="maintitle">Bienveunue sur le site de l'Or</h1><br>
         <p class="fs-5 text-white">
-            This is a small site dedicated to my love for the anime "Saint Seiya", preferbaly the Gold Saints. <br> <strong>Have you ever felt your cosmos?</strong>
+        Ceci est un petit site dédié à mon amour pour l'anime "Saint Seiya", de préférence les Chevaliers d'Or. <br> <strong>"Have you ever felt your cosmos?"</strong>
         </p>
         <div class="mb-3">
             <img src="photo/soul_of_gold.png" alt="" class="img-fluid" id="title_image">
         </div>
     </div>
 
-    <!-- Start of the carousel -->
+    <!-- Carousel -->
     <div id="carouselExampleSlidesOnly" class="m-0 p-0 col-md-9 col-sm-12 carousel slide carousel-fade          container-fluid" data-bs-ride="carousel">
         <div class="m-0 p-0 carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
                 <img src="photo/0-gold-saints-wallpapers.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <span class="badge bg-dark">Athena and the Gold Saints</span>
+                    <span class="badge bg-dark">Athena et les Chevaliers d'Or</span>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/1-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <span class="badge bg-dark">The Gold Saints</span>
+                    <span class="badge bg-dark">Les Chevaliers d'Or</span>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/2-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <span class="badge bg-dark">The Gold Saints</span>
+                    <span class="badge bg-dark">Les Chevaliers d'Or</span>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
                 <img src="photo/3-gold-saints-wallpapers.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <span class="badge bg-dark">The Gold Saints</span>
+                    <span class="badge bg-dark">Les Chevaliers d'Or</span>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
@@ -93,26 +93,26 @@ require_once("inc/header.php");
             </button>
         </div>
     </div>
-    <!-- End of the carousel -->
+    <!-- FIn du carousel -->
 
-    <!-- start of brief history -->
+    <!-- Un petit rappel de l'histoire des chevaliers d'or-->
     <div class="container col-md-9 col-sm-12 text-center my-5 border border-warning border-3 shadow text-white">
-        <h2 class="text-center text-warning display-4">The Gold Saints</h2>
-        <p>The Gold Saints are a group of the twelve most powerful and highest ranking saints in Athena's service. Their main duty at Sanctuary is to defend the Twelve Houses of Zodiac. They are the last line of defense and the ultimate saints in the service of Athena and of the Grand Pope, from among whom the Pope is generally selected.</p>
+        <h2 class="text-center text-warning display-4">Les Chevaliers d'Or</h2>
+        <p>Les Chevaliers d'Or sont un groupe des douze saints les plus puissants et les plus haut placés au service d'Athéna. Leur devoir principal au Sanctuaire est de défendre les Douze Maisons du Zodiaque. Ils sont la dernière ligne de défense et les saints ultimes au service d'Athéna et du Grand Pape, parmi lesquels le Pape est généralement choisi.</p>
 
-        <p>The Gold Saints are among the most powerful characters in the series. Their power derives from their mastery of the Seventh Sense, the essence of Cosmo, which grants them miraculous abilities, such as the capability to move at the speed of light. Some among them have also reached the Eighth Sense.</p>
+        <p>Les Chevaliers d'Or sont parmi les personnages les plus puissants de la série. Leur pouvoir découle de leur maîtrise du septième sens, l'essence de Cosmo, qui leur confère des capacités miraculeuses, telles que la capacité de se déplacer à la vitesse de la lumière. Certains d'entre eux ont également atteint le Huitième Sens.</p>
 
-        <p>Like other Saints, who can raise their Cosmo beyond ordinary levels in extraordinary circumstances, the Gold Saints are capable of overcoming their limits in times of crisis to accomplish miracles. They are highly respected by other Saints, though this does not signify that all Gold Saints are honest or righteous. There are multiple Gold Saints who act with open cruelty and self-interest, unchecked by their peers.</p>
+        <p>Comme les autres Chevaliers, qui peuvent élever leur Cosmo au-delà des niveaux ordinaires dans des circonstances extraordinaires, les Chevaliers d'Or sont capables de dépasser leurs limites en temps de crise pour accomplir des miracles. Ils sont très respectés par les autres Saints, bien que cela ne signifie pas que tous les Chevaliers d'Or sont honnêtes ou justes. Il y a plusieurs Chevaliers d'Or qui agissent avec cruauté et intérêt personnel, sans être contrôlés par leurs pairs.</p>
 
     </div>
-    <!-- end of brief history -->
+    <!-- fin de rappel -->
 
-    <!-- Profiles  -->
+    <!-- Profils  -->
     <div class="container-fluid col-sm-12 text-light p-4" id="profiles">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
             <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3 img-fluid shadow">
             <h2 class="text-warning mt-2">Athena</h2>
-            <p>Saori Kido is the reincarnation of the goddess Athena.</p>
+            <p>Saori Kido est la réincarnation de la déesse Athéna.</p>
         </div>
 
         <hr class="w-50 mx-auto text-warning">
@@ -122,24 +122,24 @@ require_once("inc/header.php");
                 <img src="profile_photo/Aries-Mu.png" alt="Mu" class="w-100 border border-warning p-3  img-fluid shadow">
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Aries - Mu</h2>
-                <p>Mu, Kiki's master, is one of the bronze saint's most trusted allies, and serves as the man who repairs damaged cloths. He is also known as Mu of Jamir "the Cloth Blacksmith".</p>
+                <h2 class="text-warning">Bélier - Mu</h2>
+                <p>Mu, le maître de Kiki, est l'un des alliés les plus fiables du saint de bronze et est l'homme qui répare les vêtements endommagés. Il est également connu sous le nom de Mu de Jamir "le forgeron en tissu".</p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning text-end">Taurus - Aldebaran</h2>
-                <p class="text-end">Aldebaran of brazilian origin, is physically the strongest among all golden saints.</p>
+                <h2 class="text-warning text-end">Taureau - Aldebaran</h2>
+                <p class="text-end">Aldebaran d'origine brésilienne, est physiquement le plus fort parmi tous les saints d'or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class="w-100 border border-warning p-3 shadow">
             </div>
-        </div> <!-- end of the row -->
+        </div> <!-- fin de la rangée -->
 
         <hr class="w-75 mx-auto text-warning">
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Gemini - Saga</h2>
-                <p>Saga, also known as Pope Ares, is the Gold Saint of the constellation Gemini. It is said that he is the most powerful Gold Saint to have ever served Athena.</p>
+                <h2 class="text-warning">Gémeaux - Saga</h2>
+                <p>Saga, également connu sous le nom de pape Ares, est le chevalier d'or de la constellation des Gémeaux. On dit qu'il est le chevalier d'or le plus puissant à avoir jamais servi Athéna.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/tinywow_resize_3247975.jpg" alt="Saga" class=" w-100 border border-warning p-3 shadow">
@@ -149,9 +149,9 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Cancer - Deathmask</h2>
-                <p>Deathmask is the cunningest and the cruelest Golden Saint. He was originally the keeper of the Temple of the same name, protecting the way to the Pontifical Chamber and the Statue of Athena along with the other eleven Golden Saints.</p>
+                <p>Deathmask est le chevalier d'or le plus rusé et le plus cruel. Il était à l'origine le gardien du temple du même nom, protégeant le chemin de la chambre pontificale et de la statue d'Athéna avec les onze autres chevaliers d'or.</p>
             </div>
-        </div><!-- end of the row -->
+        </div><!-- fin de la rangée -->
 
         <hr class="w-75 mx-auto text-warning">
 
@@ -160,24 +160,24 @@ require_once("inc/header.php");
                 <img src="profile_photo/Leo.jpg" alt="Aiolio" class=" w-100  border border-warning p-3 shadow">
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Leo - Aiolia</h2>
-                <p>Aiolia, the younger brother of Sagittarius Aiolos, is impetuous and has a hot spirit that incites him to action. Aiolia is named after the mythical island Aiolia or Aeolia, residence of Aiolos, the god of winds. Also, due to his talent and power, he is referred to as the reincarnation of Achilles.</p>
+                <h2 class="text-warning">Lion - Aiolia</h2>
+                <p>Aiolia, le frère cadet du Sagittaire Aiolos, est impétueux et a un esprit chaud qui l'incite à l'action. Aiolia tire son nom de l'île mythique Aiolia ou Aeolia, résidence d'Aiolos, le dieu des vents. De plus, en raison de son talent et de sa puissance, il est appelé la réincarnation d'Achille..</p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning text-end">Virgo - Shaka</h2>
-                <p class="text-end">Shaka, the reincarnation of Buddha is the most serene and one of the strongest Gold Saint.</p>
+                <h2 class="text-warning text-end">Vierge - Shaka</h2>
+                <p class="text-end">Shaka, la réincarnation de Bouddha est la plus sereine et l'une des plus fortes des chevaliers d'or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Shaka.png" alt="Shaka" class=" w-100  border border-warning p-3 shadow">
             </div>
-        </div><!-- end of the row -->
+        </div><!-- fin de la rangée -->
 
         <hr class="w-75 mx-auto text-warning">
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Libra - Dohko</h2>
-                <p>The master of Shiryu, he is one of the oldest characters next to Aries Shion, as they both appear in the previous Holy War. He is also referred to as the Old Master (Roshi) by all the Saints of Athena, as a sign of respect, even though his only true student is Shiryu.</p>
+                <h2 class="text-warning">Balance - Dohko</h2>
+                <p>Le maître de Shiryu, il est l'un des personnages les plus anciens à côté d'Aries Shion, car ils apparaissent tous les deux dans la précédente Guerre Sainte. Il est également appelé le Vieux Maître (Roshi) par tous les chevaliers d'Athéna, en signe de respect, même si son seul véritable élève est Shiryu.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Dohko.jpg" alt="Dohko" class=" w-100  border border-warning p-3 shadow">
@@ -187,9 +187,9 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Scorpion - Milo</h2>
-                <p>Milo is a proud knight who sees great importance in the pride and honor of the Gold Saints and he seems to be always ready to clean the name of his companions. Milo is always sure of himself, he is more impetuous than most of the other Golden Saints and is not afraid to voice what he is thinking.</p>
+                <p>Milo est un fier chevalier qui accorde une grande importance à la fierté et à l'honneur des chevaliers d'or et il semble toujours prêt à laver le nom de ses compagnons. Milo est toujours sûr de lui, il est plus impétueux que la plupart des autres chevaliers d'or et n'a pas peur d'exprimer ce qu'il pense.</p>
             </div>
-        </div><!-- end of the row -->
+        </div><!-- fin de la rangée -->
 
         <hr class="w-75 mx-auto text-warning">
 
@@ -198,24 +198,24 @@ require_once("inc/header.php");
                 <img src="profile_photo/Aoilos.jpg" alt="Aoilos" class=" w-100  border border-warning p-3 shadow">
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Sagittarius - Aiolos</h2>
-                <p>He is the older brother of Aiolia, the gold saint of Leo. Aiolos always was a paradigm of righteousness, seen as the perfect Saint and one of the two Gold Saints who could succeed Aries Shion as the next Pope of Sanctuary and the chosen one.</p>
+                <h2 class="text-warning">Sagittaire - Aiolos</h2>
+                <p>Il est le frère aîné d'Aiolia, le chevalier d'or du Lion. Aiolos a toujours été un paradigme de justice, considéré comme le saint parfait et l'un des deux chevaliers d'or qui pourraient succéder à Aries Shion en tant que prochain pape du sanctuaire et élu.</p>
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning text-end">Capricorn - Shura</h2>
-                <p class="text-end">Shura belongs to the fabled rank of Gold Saint hierarchy.</p>
+                <h2 class="text-warning text-end">Capricorne - Shura</h2>
+                <p class="text-end">Shura appartient au rang légendaire de la hiérarchie chevalier d'or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Shura_(2).png" alt="Shura" class=" w-100  border border-warning p-3 shadow">
             </div>
-        </div><!-- end of the row -->
+        </div><!-- fin de la rangée -->
 
         <hr class="w-50 mx-auto text-warning">
 
         <div class="row">
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Aquarius -Camus</h2>
-                <p>Known as the "Mage of water and ice". Camus is a very powerful Saint, with the ability to lower the temperature and cast "Diamond Dust" with great ease. "Execution Aurora" is his most powerful attack, which emits a cold energy close to absolute zero.</p>
+                <h2 class="text-warning">Verseau -Camus</h2>
+                <p>Connu sous le nom de "Mage de l'eau et de la glace". Camus est un chevalier très puissant, avec la capacité de baisser la température et de lancer "Poussière du diamond" avec une grande facilité. "Execution Aurora" est son attaque la plus puissante, qui émet une énergie froide proche du zéro absolu.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Camus.jpg" alt="Camus" class=" w-100  border border-warning p-3 shadow">
@@ -224,38 +224,38 @@ require_once("inc/header.php");
                 <img src="profile_photo/Aphrodite.png" alt="Aphrodite" class=" w-100  border border-warning p-3 shadow">
             </div>
             <div class="col-md-3 col-sm-6">
-                <h2 class="text-warning">Pisces - Aphrodite</h2>
-                <p>Aphrodite is a Saint famous not only because of his beauty, but also for his reputation as one of the strongest Saint. He is a man of medium stature and fair skin. He has blue eyes and long blue hair. It is said that its beauty shines between heaven and earth and that there is no one more beautiful than him.</p>
+                <h2 class="text-warning">Poissons - Aphrodite</h2>
+                <p>Aphrodite est une sainte célèbre non seulement pour sa beauté, mais aussi pour sa réputation d'une des saintes les plus fortes. C'est un homme de taille moyenne et de peau claire. Il a les yeux bleus et les longs cheveux bleus. On dit que sa beauté resplendit entre ciel et terre et qu'il n'y a personne de plus beau que lui.</p>
             </div>
-        </div><!-- end of the row -->
-        <!-- end of the section 'profile' -->
+        </div><!-- fin de la rangée -->
+        <!-- fin de la section 'profils' -->
 
 
-    </div><!-- end of 'row.container-fluid- 'profiles'-->
+    </div><!-- fin du 'row.container-fluid- 'profils'-->
 
-    <!-- music in background -->
-    <div class="container text-center my-3">
+    <!-- musique/media player -->
+    <div class="container text-center my-3 col-sm-6 col-md-12">
         <audio src="MP3/SaintSeiya-BlueDreamInstrumental.mp3" loop controls class="col-md-3"></audio>
         <p class="text-center text-white">Saint Seiya - Blue Dream (instrumental)</p>
     </div>
 
-    <!-- FEEDBACK AREA -->
-    <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 p-3 mx-auto mb-5 border border-warning">
+    <!-- Commentaires -->
+    <form action="feedback.php" method="post" id="feedback" class="container-fluid col-md-4 col-sm-9 p-3 mx-auto mb-5 border border-warning">
         <div>
 
-            <h5 class="text-uppercase text-center text-warning">please leave me a feedback</h5>
+            <h5 class="text-uppercase text-center text-warning">merci de me laisser un commentaire</h5>
             <label for="feedback" class="form-label"></label>
 
-            <textarea class="form-control bg-transparent text-white border border-warning" rows="5" placeholder="Enter text here..." name="feedback" required></textarea>
+            <textarea class="form-control bg-transparent text-white border border-warning" rows="5" placeholder="Entrez le texte ici..." name="feedback" required></textarea>
 
             <div class="text-center">
-                <button type="submit" name="submit" class="btn btn-outline-warning mt-3">Submit</button>
+                <button type="submit" name="submit" class="btn btn-outline-warning mt-3">Soumettre</button>
             </div>
             
         </div>
 
     </form>
-    <!-- end of the FEEDBACK AREA -->
+    <!-- fin de conmmentaires -->
 
 
     <?php

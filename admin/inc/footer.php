@@ -1,20 +1,19 @@
             </div>
         </main>
         <!-- Footer -->
-<footer class="page-footer font-small p-2" style="background-image: url(../photo/stars_bg2.jpg);">
+<footer class="page-footer font-small p-2 fixed-bottom" style="background-image: url(../photo/stars_bg2.jpg);">
 
 <div class="container-fluid text-center col-md-4 mx-auto">
 
             <!-- Content -->
-            <!-- <h5 class="text-white text-uppercase">Welcome to my online shop</h5> -->
-            <p class="text-white">The shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
-            <p class="text-white">Thank you for taking the time to visit my site.</p>
+            <!-- <p class="text-white">The shop is purely cosmetic and serves no immediate purpose other than entertainment and training.</p>
+            <p class="text-white">Thank you for taking the time to visit my site.</p> -->
 
 </div>
 
 <!-- Copyright -->
 <div class="text-white footer-copyright text-center">
-    <p>© 2022 Copyright: Robert VEU NA</p>
+    <p class="m-0">© 2022 Copyright: Robert VEU NA</p>
     
 </div>
 

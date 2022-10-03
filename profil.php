@@ -22,8 +22,10 @@ require_once("inc/header.php");
 ?>
 <div class="col-md-12 mt-3">
     <!-- Message de bienvenu -->
-    <?php if ($_SESSION["membre"]["statut"] == "1") { ?><!-- Si je connecte entant qu'administateur -->
+    <!-- Si je me connecte entant qu'administateur -->
+    <?php if ($_SESSION["membre"]["statut"] == "1") { ?>
         <h2 class="text-center mb-5 text-white">Hello Administrator, <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?> </h2>
+    <!-- ou, si je me conecte au compte 'membre' -->
     <?php } elseif ($_SESSION["membre"]["civilite"] == "m") { ?>
         <h2 class="text-center mb-5 text-white">Hello Sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
     <?php } else { ?>
@@ -31,21 +33,21 @@ require_once("inc/header.php");
     <?php } ?>
 </div>
 
+<!-- cadre de profil -->
 <div class="card col-md-3 mb-5 p-3 border border-warning bg-transparent text-white" style="width:15rem">
 
-    <!-- Avatar -->
-    <?php if ($_SESSION["membre"]["statut"] == "1") { ?><!-- Si je suis connecté entant qu'administateur -->
+    <!-- Img d'avatar -->
+    <!-- Si je me connecte entant qu'administateur -->
+    <?php if ($_SESSION["membre"]["statut"] == "1") { ?>
         <img src="photo/Avatar_a.png" alt="avatar admin" class="card-img-top">
+        <!-- ou, si je me conecte au compte 'membre' -->
     <?php } elseif ($_SESSION["membre"]["civilite"] == "m") { ?>
         <img src="photo/Avatar_1.png" alt="avatar male" class="card-img-top">
     <?php } else { ?>
-        <img src="photo/Avatar_f.png" alt="avatar female" class="card-img-top">
+        <img src="photo/Avatar_fe.png" alt="avatar female" class="card-img-top">
     <?php } ?>
 
-    <!-- <div class="card-body">
-        <h5 class="card-title text-center"> <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?> </h5>
-    </div> -->
-
+    <!-- Affichage des infos de membre -->
     <ul class="list-group list-group-flush">
         <li class="list-group-item text-center bg-transparent text-uppercase"> <?= $_SESSION["membre"]["pseudo"] ?> </li> 
         <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["email"] ?> </li>

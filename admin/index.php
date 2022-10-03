@@ -11,7 +11,7 @@ require_once("inc/header.php");
 
 <style>
     .wrapper {
-        height: 50vh;
+        height: 65vh;
         /*This part is important for centering*/
         display: grid;
         place-items: center;

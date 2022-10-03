@@ -6,7 +6,6 @@ require_once("inc/header.php");
 
 // cette page représente en gros le catalogue des produits
 
-// j'aimerais afficher les différentes catégories en base
 // et quand je clique sur une catégorie ça m'affiche tous les produits de ma catégories
 
 ////////////////////////////////////////////
@@ -44,7 +43,7 @@ if ($_GET && isset($_GET["categorie"])) {
     // j'itère dans mon PDOSTATEMENT EN FETCHANT LES DONNÉES EN ITÉRANT DANS CHAQUE ARRAY GÉNÉRÉ PAR LE FETCH
     while ($produit = $r->fetch(PDO::FETCH_ASSOC)) {
         // Génération de card boostrap à chaque fois qu'un produit est récupéré.
-        // Si il y a plus que zero en stock, il va afficher un card, autre il va aussi afficher un card mais avec un badge et un bouton désactivé.
+        // Si il y a plus que zero en stock, il va afficher un card normal, autre il va aussi afficher un card mais avec un badge: "out of stock" et un bouton désactivé.
         if (($produit['stock'] > 0)) {
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>

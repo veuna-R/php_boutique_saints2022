@@ -57,10 +57,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Accueil<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="boutique.php"><span class="sr-only">(current)</span>Shop</a>
+                        <a class="nav-link active" href="boutique.php"><span class="sr-only">(current)</span>Boutique</a>
                     </li>
 
 
@@ -68,14 +68,14 @@
                     <!-- Si je ne suis pas connecté j'affiche les pages connexion/inscription -->
                     <?php if (!internauteEstConnecte()) { ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="connexion.php">Connect</a>
+                            <a class="nav-link active" href="connexion.php">Connexion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="inscription.php">Register</a>
+                            <a class="nav-link active" href="inscription.php">Inscription</a>
                         </li>
                     <?php } else { ?>
                         <li class="nav-item active">
-                            <a class="nav-link" href="profil.php">My profile</a>
+                            <a class="nav-link" href="profil.php">Mon Profil</a>
                         </li>
                     <?php } ?>
 
@@ -84,7 +84,7 @@
                             <span class='number_elem_in_cart'> <?php echo afficherNombreProduitsPanier(); ?> </span>
 
                         <?php } ?>
-                        <a class="nav-link" href="panier.php">Cart</a>
+                        <a class="nav-link" href="panier.php">Panier</a>
                     </li>
 
                     <!-- Si je suis connecté entant q'admin -->
@@ -99,7 +99,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link font-italic" href="connexion.php?action=deconnexion">
-                                Disconnect
+                                Deconnexion
                             </a>
                         </li>
 
