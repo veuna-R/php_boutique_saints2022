@@ -37,7 +37,7 @@ require_once("inc/header.php");
 
 
 <!-- BODY -->
-<h1 class='mb-5 text-center col-md-12'>Orders received/pending</h1>
+<h1 class='mb-5 text-center col-md-12'>Gestion de Commandes</h1>
 
 <?php echo $content; ?>
 

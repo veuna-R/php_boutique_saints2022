@@ -24,12 +24,12 @@ require_once("inc/header.php");
     <!-- Message de bienvenu -->
     <!-- Si je me connecte entant qu'administateur -->
     <?php if ($_SESSION["membre"]["statut"] == "1") { ?>
-        <h2 class="text-center mb-5 text-white">Hello Administrator, <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?> </h2>
+        <h2 class="text-center mb-5 text-white">Bonjour Administateur, <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?> </h2>
     <!-- ou, si je me conecte au compte 'membre' -->
     <?php } elseif ($_SESSION["membre"]["civilite"] == "m") { ?>
-        <h2 class="text-center mb-5 text-white">Hello Sir <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+        <h2 class="text-center mb-5 text-white">Bonjour M., <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
     <?php } else { ?>
-        <h2 class="text-center mb-5 text-white">Hello Mrs./Ms. <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
+        <h2 class="text-center mb-5 text-white">Bonjour Mme/Mlle, <?= $_SESSION["membre"]["prenom"] . " " . $_SESSION["membre"]["nom"] ?>!</h2>
     <?php } ?>
 </div>
 
@@ -49,7 +49,7 @@ require_once("inc/header.php");
 
     <!-- Affichage des infos de membre -->
     <ul class="list-group list-group-flush">
-        <li class="list-group-item text-center bg-transparent text-uppercase"> <?= $_SESSION["membre"]["pseudo"] ?> </li> 
+        <h3 class="list-group-item text-center bg-transparent text-uppercase"> <?= $_SESSION["membre"]["pseudo"] ?> </h3> 
         <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["email"] ?> </li>
         <li class="list-group-item text-center bg-transparent"> <?= $_SESSION["membre"]["ville"] . " " . $_SESSION["membre"]["code_postal"] ?> </li>
     </ul>

@@ -12,7 +12,7 @@ $stmt = $pdo->query("SELECT id_membre, pseudo, nom, prenom, email, statut FROM m
 
 
 <!-- BODY -->
-<h1 class='mb-5 text-center'>Account management</h1>
+<h1 class='mb-5 text-center'>Gestion de Comptes</h1>
 
 <!-- table -->
 <table class="col-sm-12 table table-hover mb-5 bg-light text-center">

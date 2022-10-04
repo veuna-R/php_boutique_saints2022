@@ -24,7 +24,7 @@ $stmt = $pdo->query("SELECT * FROM feedback");
 <!-- *****BODY***** -->
 
 <!-- title -->
-<h1 class='mb-5 text-center'>Feedbacks</h1>
+<h1 class='mb-5 text-center'>Gestion de Commentaires</h1>
 
 <!-- table -->
 <table class="table table-hover mb-5 bg-light text-center">

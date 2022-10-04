@@ -8,7 +8,7 @@ require_once("inc/init.php");
 
     if(isset($_GET["action"]) && $_GET["action"] == "suppressionArticle") {
         $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-success'>
-        Your articles have been succesfully removed from the cart!</span> </div>";
+        Vos articles ont été supprimés du panier !</span> </div>";
         retirerProduitDuPanier($_GET["id_produit"]);
         mettreAJourIndiceIndexProduitPanier();
     }
@@ -18,7 +18,7 @@ require_once("inc/init.php");
     ////////////////////////////////////////////
 
     if(isset($_GET["action"]) && $_GET["action"] == "viderPanier") {
-        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>Cart emptied!</span> </div>";
+        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-dark'>Panier vidé !</span> </div>";
         unset($_SESSION["panier"]);
     }
 
@@ -28,7 +28,7 @@ require_once("inc/init.php");
     if($_POST && isset($_POST["modifierQuantite"])) {
         modifierQuantitePanier($_POST["id_produit"], $_POST["quantite"]);
         $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-            The quantity of " . $_POST["titre"]  . " has been modified!
+            La quantité de " . $_POST["titre"]  . " a été bien modifier!
         </div>";
     }
 
@@ -64,7 +64,7 @@ require_once("inc/init.php");
                 if($produit["stock"] <= 0) {
                     
                     $content .= "<div class=\"col-md-12 alert alert-danger\" role=\"alert\">
-                        Currently out of stock " . $_SESSION["panier"]["titre"][$i] . "!
+                        Actuellement en rupture de stock " . $_SESSION["panier"]["titre"][$i] . "!
                     </div>";
                     retirerProduitDuPanier($_SESSION["panier"]["id_produit"][$i]);
                     $i--;
@@ -75,7 +75,7 @@ require_once("inc/init.php");
 
                     $_SESSION["panier"]["quantite"][$i] = $produit["stock"];
                     $content .= "<div class=\"col-md-12 alert alert-warning\" role=\"alert\">
-                        The quantity for the product " . $_SESSION["panier"]["titre"][$i] . "has been reduced to $produit[stock] because there was not enough stock for your purchase!
+                        La quantité pour le produit " . $_SESSION["panier"]["titre"][$i] . "a été reduit à $produit[stock] car il n'y avait pas assez de stock pour votre achat !
                     </div>";
 
                 }
@@ -127,7 +127,7 @@ require_once("inc/init.php");
             // msg de confirmation en affichant le numéro de la commande
 
             $content .= "<div class=\"col-md-6 mx-auto alert alert-success text-center\" role=\"alert\">
-                Thank you for your order! Your tracking number is $idCommande 
+                Nous vous remercions de votre commande! Votre numéro de suivi est $idCommande 
             </div>";
 
         }
@@ -165,7 +165,7 @@ require_once("inc/init.php");
     // Lien pour vider le panier
     if(!empty($_SESSION["panier"]["id_produit"])) {
         $content .= "<div class='col-md-12 mb-5'>";
-        $content .= "<a href='?action=viderPanier' class='btn btn-danger btn-sm'> Empty the cart </a>";
+        $content .= "<a href='?action=viderPanier' class='btn btn-danger btn-sm'> Vider le panier </a>";
         $content .= "</div>";
 
     }
@@ -174,9 +174,9 @@ require_once("inc/init.php");
     $content .= "<table class='col-md-9 col-sm-12 table my-5 text-center text-white'>
     <thead>
         <tr>
-            <th scope='col'>Title</th>
-            <th scope='col'>Quantity</th>
-            <th scope='col'>Price</th>
+            <th scope='col'>Titre</th>
+            <th scope='col'>Quantité</th>
+            <th scope='col'>Prix</th>
             <th scope='col'>Miniature</th>
             <th scope='col'>Action</th>
         </tr>
@@ -185,13 +185,13 @@ require_once("inc/init.php");
 
     // Si j'ai pas de produit en session je n'affiche rien dans mon tableau "Panier vide"
     if(empty($_SESSION["panier"]["id_produit"])) {
-        $content .= "<tr> <td colspan='12' class='text-center text-white'> The cart is empty </td>  </tr>";
+        $content .= "<tr> <td colspan='12' class='text-center text-white'> Le panier est vide </td>  </tr>";
 
     // Fin de la table
     $content .= "</tbody> </table>";
 
     if(isset($_POST["ajout_panier"])) {
-        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='btn btn-dark text-white'>Return to Category $_POST[categorie]</a> </div>";
+        $content .= "<div class='col-md-12'> <a href='index.php?categorie=$_POST[categorie]' class='btn btn-dark text-white'>Retour à la catégorie $_POST[categorie]</a> </div>";
     }
 
 
@@ -221,7 +221,7 @@ require_once("inc/init.php");
             $content .= "<td>" . $_SESSION["panier"]["prix"][$i] . " €" . "</td>";
             $content .= "<td> <img style='width:50px' src='". $_SESSION["panier"]["photo"][$i]  ."' alt=''> </td>";
             $content .= "<td> <a href='?action=suppressionArticle&id_produit=" . 
-            $_SESSION["panier"]["id_produit"][$i] . "'> Remove <a/></td>";
+            $_SESSION["panier"]["id_produit"][$i] . "'> Retirer <a/></td>";
             $content .= "</tr>";
         }
 
@@ -243,13 +243,13 @@ require_once("inc/init.php");
             if(internauteEstConnecte()) {
                 $content .= "<div class='d-flex justify-content-end col-md-12'>";
                 $content .= "<form method='post' action=''>";
-                $content .= "<input type='submit' class='btn btn-outline-warning' name='payer' value='Place order'>";
+                $content .= "<input type='submit' class='btn btn-outline-warning' name='payer' value='Placer la commande'>";
                 $content .= "</form>";
                 // J'afficher le bouton payer
             } else {
                 // J'affiche le bouton se connecter
-                $content .= "<div class='text-center'> <p> Please connect to your account to finalize payment. </p>";
-                $content .= "<a href='connexion.php'> Connect </a> </div> ";
+                $content .= "<div class='text-center text-white'> <p> Veuillez vous connecter à votre compte pour finaliser le paiement. </p>";
+                $content .= "<a href='connexion.php'> Se connecter </a> </div> ";
             }
 
     }

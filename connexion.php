@@ -62,14 +62,14 @@ if ($_POST) {
         } else {
             // Si le mot de passe rentré dans le formulaire ne correspond pas au mdp en BDD
             $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
-                    Please verify your password!
+            Veuillez vérifier votre mot de passe!
                 </div>";
         }
         // Si je n'ai pas ce pseudo en base
     } else {
 
         $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
-            Please verify your nickname!
+        Veuillez vérifier votre pseudo!
         </div>";
     }
 }
@@ -85,14 +85,14 @@ if ($_POST) {
 </div>
 
 <div class="col-md-12">
-    <h3 class='text-center text-white mt-5 mb-5'>Connect to your profile, Saint of Athena!</h3>
+    <h3 class='text-center text-white mt-5 mb-5'>Connectez-vous à votre profil, Chevalier d'Athéna!</h3>
 </div>
 
 <div class="col-lg-3 col-md-6 col-sm-6">
     <form method="post" action="" class="border border-warning px-3">
         <div class="form-group">
             <label for="pseudo"></label>
-            <input type="text" name="pseudo" class="form-control bg-transparent border border-warning text-white" id="pseudo" aria-describedby="pseudo" placeholder="Enter your username">
+            <input type="text" name="pseudo" class="form-control bg-transparent border border-warning text-white" id="pseudo" aria-describedby="pseudo" placeholder="Entrez votre pseudo">
         </div>
         <!-- <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck">
@@ -102,14 +102,14 @@ if ($_POST) {
     </div> -->
         <div class="form-group text-white">
             <label for="exampleInputPassword1"></label>
-            <input type="password" name="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Enter your password">
-            <input type="checkbox" onclick="myFunction()"> Show Password
+            <input type="password" name="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Entrez votre mot de passe">
+            <input type="checkbox" onclick="myFunction()"> Afficher le mot de passe
         </div>
 
         <br>
 
         <div class="text-center mb-3">
-            <button type="submit" class="btn btn-outline-warning">Connect</button>
+            <button type="submit" class="btn btn-outline-warning">Se connecter</button>
         </div>
 
     </form>

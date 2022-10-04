@@ -15,7 +15,7 @@ require_once("inc/header.php");
 // Récupérer les catégories
 $stmt = $pdo->query("SELECT DISTINCT(categorie) FROM produit");
 // itérer à l'intérieur et générer une liste
-$content .= (!isset($_GET["categorie"])) ? "<h3 class='mt-5 text-center text-white'> Welcome to the shop of gold! <br> Choose your destiny</h3>" : "";
+$content .= (!isset($_GET["categorie"])) ? "<h3 class='mt-5 text-center text-white'> Bienvenue dans la Boutique de l'Or <br> Choisissez votre destin</h3>" : "";
 $content .= "<div class='w-100'> </div>";
 $content .= " <div class='col-md-4 col-12 mb-5'>";
 $content .= "<ul class='list-group text-center display-5 pt-5' style='list-style: none'>";
@@ -51,7 +51,7 @@ if ($_GET && isset($_GET["categorie"])) {
                 <div class='card-body'>
                     <h5 class='text-center card-title text-white'>$produit[titre]</h5>
                     <p class='text-center card-text text-white'>$produit[prix] €</p>
-                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning'>Details/Place your order</a>
+                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning'>Détails/Commander</a>
                 </div>
             </div> </div>";
         } else {
@@ -61,10 +61,10 @@ if ($_GET && isset($_GET["categorie"])) {
                 <div class='card-body'>
                     <h5 class='text-center card-title text-white'>$produit[titre]</h5>
                     <p class='text-center card-text text-white'>$produit[prix] €</p>
-                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning disabled'>Details/Place your order</a>
+                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning disabled'>Détails/Commander</a>
                 </div>
             
-                <span class='position-absolute ml-2 mt-2 translate-middle badge rounded-pill border border-dark shadow p-2 bg-danger text-uppercase'>Out of stock</span>
+                <span class='position-absolute ml-2 mt-2 translate-middle badge rounded-pill border border-dark shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
 
             </div> </div>";
         }

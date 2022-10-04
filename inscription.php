@@ -19,7 +19,7 @@ if ($_POST) {
     // Vérifier si le pseudo a entre 3 et 20 caractères(strlen)
     if (strlen($_POST["mdp"]) < 3 || strlen($_POST["mdp"]) > 20) {
         $erreur .= "<div class='alert alert-danger col-6 text-center' role='alert'>
-                The password needs to be between 3 and 20 characters!
+                Le mot de passe doit être entre 3 et 20 caractères !
             </div>";
     }
 
@@ -27,7 +27,7 @@ if ($_POST) {
 
     if (!ctype_alnum($_POST["pseudo"])) {
         $erreur .= "<div class='alert alert-danger col-6 text-center' role='alert'>
-                The username must contain only numbers and letters only please!
+                Le pseudo ne doit contenir que des chiffres et des lettres uniquement !
             </div>";
     }
 
@@ -69,7 +69,7 @@ if ($_POST) {
         // Si l'insert a correctement fonctionné msg de confirmation
         if ($count > 0) {
             $content .= "<div class='alert alert-success' role='alert'>
-                    Your account is registered!
+                    Votre compte est bien enregistré !
                 </div>";
 
             $inscriptionDone = true;
@@ -83,7 +83,7 @@ require_once("inc/header.php");
 <!-- BODY -->
 
 <div class="col-md-12">
-    <h3 class='text-center text-white mt-5 mb-5'>Register to become a Saint of Athena!</h3>
+    <h3 class='text-center text-white mt-5 mb-5'>Inscrivez-vous pour devenir un Chevalier d'Athéna !</h3>
 </div>
 
 <?php if ($erreur != "") { ?>
@@ -98,26 +98,26 @@ if ($inscriptionDone) { ?>
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
-                <input type="text" class="form-control bg-transparent border border-warning text-white" id="pseudo" placeholder="Username" name="pseudo" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="pseudo" placeholder="Pseudo" name="pseudo" required>
             </div>
 
             <!-- Password -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
-                <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Password must be between 3-20 characters" name="mdp" required>
-                <input type="checkbox" onclick="myFunction()"> Show Password
+                <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Mot de passe 3-20 caractères" name="mdp" required>
+                <input type="checkbox" onclick="myFunction()"> Afficher le mot de passe
             </div>
 
             <!-- Name -->
             <div class="form-group col-md-4">
                 <!-- <label for="name"></label> -->
-                <input type="text" class="form-control bg-transparent border border-warning text-white" id="name" placeholder="Last name" name="nom" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="name" placeholder="Nom" name="nom" required>
             </div>
 
             <!-- First Name -->
             <div class="form-group col-md-4">
                 <!-- <label for="firstName"></label> -->
-                <input type="text" class="form-control bg-transparent border border-warning text-white" id="firstName" placeholder="First Name" name="prenom" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="firstName" placeholder="Prénom" name="prenom" required>
             </div>
 
             <!-- Civilité -->
@@ -126,13 +126,13 @@ if ($inscriptionDone) { ?>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="civilitem" value="m" name="civilite" checked>
                     <label class="form-check-label" for="civilitem">
-                        Male
+                        Homme
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="civilitef" value="f" name="civilite">
                     <label class="form-check-label" for="civilitef">
-                        Female
+                        Femme
                     </label>
                 </div>
             </div>
@@ -149,25 +149,25 @@ if ($inscriptionDone) { ?>
 
         <div class="form-group">
             <!-- <label for="address"></label> -->
-            <input type="text" class="form-control bg-transparent border border-warning text-white" id="address" name="adresse" placeholder="Complete adress" required>
+            <input type="text" class="form-control bg-transparent border border-warning text-white" id="address" name="adresse" placeholder="Adresse" required>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-6">
                 <!-- <label for="inputCity"></label> -->
-                <input type="text" class="form-control bg-transparent border border-warning text-white" name="ville" id="inputCity" placeholder="State" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" name="ville" id="inputCity" placeholder="Ville" required>
             </div>
 
             <div class="form-group col-md-6">
                 <!-- <label for="inputZip"></label> -->
-                <input type="text" class="form-control bg-transparent border border-warning text-white" id="inputZip" name="code_postal" placeholder="Zip Code" required>
+                <input type="text" class="form-control bg-transparent border border-warning text-white" id="inputZip" name="code_postal" placeholder="Code Postal" required>
             </div>
         </div>
 
         <br>
 
         <div class="text-center mb-5">
-            <button type="submit" class="btn btn-outline-warning">Create my account</button>
+            <button type="submit" class="btn btn-outline-warning">Créer mon compte</button>
         </div>
 
     </form>

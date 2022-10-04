@@ -176,7 +176,7 @@ require_once("inc/header.php");
 <!-- BODY -->
 
 <div class='mb-5 text-center'>
-    <h1>Product Management</h1>
+    <h1>Gestion de Produits</h1>
     <!-- <p>The products from the database</p> -->
 </div>
 
@@ -214,7 +214,7 @@ require_once("inc/header.php");
                 <!-- ***Lien de modification et de suppression*** -->
                 
 
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Delete </a> </td>
+                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Supprimer </a> </td>
                 
             </tr>
        <?php } ?>
@@ -228,7 +228,7 @@ require_once("inc/header.php");
     <ul class="pagination">
 
         <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == 1) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Previous</a>
+            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Précédent</a>
         </li>
 
         <?php for($page = 1; $page <= $elementsPourLaPagination["pages"]; $page++) { ?>
@@ -238,7 +238,7 @@ require_once("inc/header.php");
         <?php } ?>
 
         <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $elementsPourLaPagination["pages"]) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Next</a>
+            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Suivant</a>
         </li>
     </ul>
     </nav>

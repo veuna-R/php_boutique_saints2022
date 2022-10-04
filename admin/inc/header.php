@@ -42,7 +42,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end sticky-top" style="background-image: url(../photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php">
                 <img src="" width="" height="" class="d-inline-block align-center " alt="">
-            Administrator
+            Administrateur
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,19 +51,19 @@
                 <ul class="navbar-nav">
                     <!-- Si je ne suis pas connecté j'affiche les pages connexion/inscription -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="../index.php">Home</a>
+                        <a class="nav-link" href="../index.php">Acceuil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_produits.php">Products</a>
+                        <a class="nav-link" href="gestion_produits.php">Produis</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_commandes.php">Orders</a>
+                        <a class="nav-link" href="gestion_commandes.php">Commandes</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_emails.php">Accounts</a>
+                        <a class="nav-link" href="gestion_emails.php">Comptes</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_commentaires.php">Feedbacks</a>
+                        <a class="nav-link" href="gestion_commentaires.php">Commentaires</a>
                     </li>
 
                     <!-- Si l'internaute est connecté j'affiche le bouton de déconnexion -->
@@ -71,7 +71,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link font-italic" href="../connexion.php?action=deconnexion">
-                                Disconnect
+                                Déconnexion
                             </a>
                         </li>
 

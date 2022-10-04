@@ -127,7 +127,7 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning text-end">Taureau - Aldebaran</h2>
-                <p class="text-end">Aldebaran d'origine brésilienne, est physiquement le plus fort parmi tous les saints d'or.</p>
+                <p class="text-end">Aldebaran d'origine brésilienne, est physiquement le plus fort parmi tous les Chevaliers d'Or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/tinywow_resize_3247508.jpg" alt="Aldebaran" class="w-100 border border-warning p-3 shadow">
@@ -139,7 +139,7 @@ require_once("inc/header.php");
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Gémeaux - Saga</h2>
-                <p>Saga, également connu sous le nom de pape Ares, est le chevalier d'or de la constellation des Gémeaux. On dit qu'il est le chevalier d'or le plus puissant à avoir jamais servi Athéna.</p>
+                <p>Saga, également connu sous le nom de pape Ares, est le Chevalier d'Or de la constellation des Gémeaux. On dit qu'il est le chevalier d'or le plus puissant à avoir jamais servi Athéna.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/tinywow_resize_3247975.jpg" alt="Saga" class=" w-100 border border-warning p-3 shadow">
@@ -149,7 +149,7 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Cancer - Deathmask</h2>
-                <p>Deathmask est le chevalier d'or le plus rusé et le plus cruel. Il était à l'origine le gardien du temple du même nom, protégeant le chemin de la chambre pontificale et de la statue d'Athéna avec les onze autres chevaliers d'or.</p>
+                <p>Deathmask est le Chevalier d'Or le plus rusé et le plus cruel. Il était à l'origine le gardien du temple du même nom, protégeant le chemin de la chambre pontificale et de la statue d'Athéna avec les onze autres chevaliers d'or.</p>
             </div>
         </div><!-- fin de la rangée -->
 
@@ -161,11 +161,11 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Lion - Aiolia</h2>
-                <p>Aiolia, le frère cadet du Sagittaire Aiolos, est impétueux et a un esprit chaud qui l'incite à l'action. Aiolia tire son nom de l'île mythique Aiolia ou Aeolia, résidence d'Aiolos, le dieu des vents. De plus, en raison de son talent et de sa puissance, il est appelé la réincarnation d'Achille..</p>
+                <p>Aiolia, le frère cadet du Sagittaire Aiolos, est impétueux et a un esprit chaud qui l'incite à l'action. Aiolia tire son nom de l'île mythique Aiolia ou Aeolia, résidence d'Aiolos, le dieu des vents. De plus, en raison de son talent et de sa puissance, il est appelé la réincarnation d'Achille.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning text-end">Vierge - Shaka</h2>
-                <p class="text-end">Shaka, la réincarnation de Bouddha est la plus sereine et l'une des plus fortes des chevaliers d'or.</p>
+                <p class="text-end">Shaka, la réincarnation de Bouddha est la plus sereine et l'une des plus fortes des Chevaliers d'Or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Shaka.png" alt="Shaka" class=" w-100  border border-warning p-3 shadow">
@@ -187,7 +187,7 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Scorpion - Milo</h2>
-                <p>Milo est un fier chevalier qui accorde une grande importance à la fierté et à l'honneur des chevaliers d'or et il semble toujours prêt à laver le nom de ses compagnons. Milo est toujours sûr de lui, il est plus impétueux que la plupart des autres chevaliers d'or et n'a pas peur d'exprimer ce qu'il pense.</p>
+                <p>Milo est un fier Chevalier qui accorde une grande importance à la fierté et à l'honneur des chevaliers d'or et il semble toujours prêt à laver le nom de ses compagnons. Milo est toujours sûr de lui, il est plus impétueux que la plupart des autres Chevaliers d'Or et n'a pas peur d'exprimer ce qu'il pense.</p>
             </div>
         </div><!-- fin de la rangée -->
 
@@ -199,11 +199,11 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Sagittaire - Aiolos</h2>
-                <p>Il est le frère aîné d'Aiolia, le chevalier d'or du Lion. Aiolos a toujours été un paradigme de justice, considéré comme le saint parfait et l'un des deux chevaliers d'or qui pourraient succéder à Aries Shion en tant que prochain pape du sanctuaire et élu.</p>
+                <p>Il est le frère aîné d'Aiolia, le Chevalier d'Or du Lion. Aiolos a toujours été un paradigme de justice, considéré comme le saint parfait et l'un des deux chevaliers d'or qui pourraient succéder à Aries Shion en tant que prochain pape du sanctuaire et élu.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning text-end">Capricorne - Shura</h2>
-                <p class="text-end">Shura appartient au rang légendaire de la hiérarchie chevalier d'or.</p>
+                <p class="text-end">Shura appartient au rang légendaire de la hiérarchie Chevalier d'Or.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Shura_(2).png" alt="Shura" class=" w-100  border border-warning p-3 shadow">
@@ -215,7 +215,7 @@ require_once("inc/header.php");
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Verseau -Camus</h2>
-                <p>Connu sous le nom de "Mage de l'eau et de la glace". Camus est un chevalier très puissant, avec la capacité de baisser la température et de lancer "Poussière du diamond" avec une grande facilité. "Execution Aurora" est son attaque la plus puissante, qui émet une énergie froide proche du zéro absolu.</p>
+                <p>Connu sous le nom de "Sorcier de l'eau et de la glace". Camus est un Chevalier très puissant, avec la capacité de baisser la température et de lancer " La poussière du diamond" avec une grande facilité. "Aurora Execution" est son attaque la plus puissante, qui émet une énergie froide proche du zéro absolu.</p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <img src="profile_photo/Camus.jpg" alt="Camus" class=" w-100  border border-warning p-3 shadow">
@@ -225,7 +225,7 @@ require_once("inc/header.php");
             </div>
             <div class="col-md-3 col-sm-6">
                 <h2 class="text-warning">Poissons - Aphrodite</h2>
-                <p>Aphrodite est une sainte célèbre non seulement pour sa beauté, mais aussi pour sa réputation d'une des saintes les plus fortes. C'est un homme de taille moyenne et de peau claire. Il a les yeux bleus et les longs cheveux bleus. On dit que sa beauté resplendit entre ciel et terre et qu'il n'y a personne de plus beau que lui.</p>
+                <p>Aphrodite est une sainte célèbre non seulement pour sa beauté, mais aussi pour sa réputation d'une des Chevaliers les plus forts. C'est un homme de taille moyenne et de peau claire. Il a les yeux bleus et les longs cheveux bleus. On dit que sa beauté resplendit entre ciel et terre et qu'il n'y a personne de plus beau que lui.</p>
             </div>
         </div><!-- fin de la rangée -->
         <!-- fin de la section 'profils' -->
