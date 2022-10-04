@@ -4,10 +4,12 @@
 <!-- changement de colour pour les icones -->
 <style>
     i {
-        color: white !important;
+        color: white ;
+        transition: 1s;
     }
-    footer > div > a:hover {
-        background-color: #fcc107;
+    i:hover {
+        color: #fcc107 ;
+        transition: 0.5s;
     }
 </style>
 
