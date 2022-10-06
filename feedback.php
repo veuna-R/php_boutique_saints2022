@@ -11,9 +11,10 @@ $conn = mysqli_connect("localhost", "root","", "boutique"); // connexion au BDD
 $query ="insert into feedback(feedback)values('$feedback_txt')"; // inséré au BDD
 $result = mysqli_query($conn, $query);
 
-if($result == 'true') // affichage de message
-  echo "Thank you for your feedback. Very much appreciated!";
+// affichage de message
+if($result == 'true') 
+  echo "Merci pour votre avis. Très apprécié !";
 else
-  echo "Something went wrong, please try again.";
+  echo "Une erreur s'est produite. Veuillez réessayer.";
 
 ?>

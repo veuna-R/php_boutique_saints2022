@@ -6,15 +6,16 @@ require_once("../inc/init.php");
 require_once("inc/header.php");
 
 ////////////////////////////////////////////
-//////////// Suppression d'un commentaire ////////////////
+//////////// Suppression de commentaire ////////////////
 ////////////////////////////////////////////
 
 if (isset($_GET["action"]) && $_GET["action"] == "suppression") {
     $count = $pdo->exec("DELETE FROM feedback WHERE id_feedback = '$_GET[id_feedback]' ");
-    $content .= "<div class=\"col-md-9 alert alert-success text-center\" role=\"alert\">
-            The message has been sucessfully deleted.
-        </div>";
+    // $content .= "<div class=\"col-md-9 alert alert-success text-center\" role=\"alert\">
+    //         The message has been sucessfully deleted.
+    //     </div>";
 }
+
 
 // Récupérer toutes les commentaires
 $stmt = $pdo->query("SELECT * FROM feedback");
@@ -55,9 +56,7 @@ $stmt = $pdo->query("SELECT * FROM feedback");
 
                 <td>
                     <!-- ***la suppression des commentaires*** -->
-
-                    <a href="?action=suppression&id_feedback=<?= $feedback["id_feedback"] ?>" role="button" class="btn btn-outline-danger btn-sm" name="suppression">Delete</a>
-
+                    <a href="gestion_commentaires.php?action=suppression&id_feedback=<?= $feedback["id_feedback"] ?>" role="button" class="btn btn-outline-danger btn-sm" name="suppression" onclick="return(confirm('Êtes-vous sûr de vouloir supprimer ce commentaire ?'))">Supprimer</a>
 
                 </td>
             </tr>

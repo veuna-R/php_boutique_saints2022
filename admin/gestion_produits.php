@@ -1,125 +1,129 @@
 <?php
-
-
+// la connexion à la base de données
 require_once("../inc/init.php");
 
 
+////////////////////////////////////////////
+//////////// Récupérer les informations liées au produit que l'on veut modifier ////////////////
+////////////////////////////////////////////
+
+if (isset($_GET["action"]) && $_GET["action"] == "modification") {
+    $r = $pdo->query("SELECT * FROM produit WHERE id_produit = '$_GET[id_produit]' ");
+    $produit = $r->fetch(PDO::FETCH_ASSOC);
+}
+
+////////////////////////////////////////////
+//////////// Suppression d'un produit ////////////////
+////////////////////////////////////////////
+
+if (isset($_GET['action']) && $_GET['action'] == 'suppression' && isset($_GET['id_produit'])) {/* je fais toutes mes vérifications pour la suppression dans l'URL du bouton supprimer */
+    // Je prépare ma requête avec un marqueur vide
+    $delete = $pdo->prepare(" DELETE FROM produit WHERE id_produit = :id_produit ");
+    // Je fais correspondre le marqueur à l'élément recherché
+    $delete->execute(array(
+        ':id_produit' => $_GET['id_produit']
+    ));
+
+    if ($delete->rowCount() == 0) {/* si ça n'a pas fonctionné */
+        $content .= '<div class="alert alert-danger">Erreur de suppression du produit n° ' . $_GET['id_produit'] . '</div>';
+    } else {/* sinon, c'est que ça a fonctionné */
+        $content .= '<div class="alert alert-success">Le produit n° ' . $_GET['id_produit'] . ' a bien été supprimé</div>';
+    }
+}
+
+
+$elementsPourLaPagination = pagination($pdo, 3, "SELECT COUNT(*) FROM produit");
+
+// echo '<pre>';
+// var_dump($elementsPourLaPagination);
+// echo '</pre>';
+
+
+// Afficher les données dans un tableau
+// Faudra rajouter deux colones (modification/suppresion)
+// 2 événements post : modif et suppresion
+
+// En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
+
+// Si je suis dans le cadre d'un post modification
+// Je vais pré charger les infos du produits à modifier dans le formulaire
+
+
+if ($_POST) {
+
     ////////////////////////////////////////////
-    //////////// Récupérer les informations liées au produit que l'on veut modifier ////////////////
+    //////////// Ajout d'un produit ////////////////
     ////////////////////////////////////////////
 
-    if(isset($_GET["action"]) && $_GET["action"] == "modification") {
-        $r = $pdo->query("SELECT * FROM produit WHERE id_produit = '$_GET[id_produit]' ");
-        $produit = $r->fetch(PDO::FETCH_ASSOC);
+
+    ////////////////////////////////////////////
+    //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
+    ////////////////////////////////////////////
+
+    $fileLoaded = false;
+
+    if (!empty($_FILES) && !empty($_FILES["maPhoto"]["name"])) {
+
+        // Récupérer le nom de la photo
+        $nomPhoto = $_POST["reference"] . "_" . $_FILES["maPhoto"]["name"];
+        // echo '<pre>';
+        // var_dump($photo);
+        // echo '</pre>';
+
+        // COPIER LE LIEN VERS LA PHOTO EN BDD
+        $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "photo/" . $nomPhoto;
+
+        // Fichier de départ à copier
+        // il correspond au fichier temporaire uploadé au niveau de l'input type file
+        // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copié vers le répértoire de destination
+        // tmp_name correspond au fichier chargé que l'on souhaite copier
+        // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
+        $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "photo/" . $nomPhoto;
+        copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
+
+        $fileLoaded = true;
     }
 
     ////////////////////////////////////////////
-    //////////// Suppression d'un produit ////////////////
+    //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
     ////////////////////////////////////////////
 
-    if(isset($_GET["action"]) && $_GET["action"] == "suppression") {
-        $count = $pdo->exec("DELETE FROM produit WHERE id_produit = '$_GET[id_produit]' ");
-        $content .= "<div class=\"col-md-6 alert alert-success text-center\" role=\"alert\">
-            The product has been sucessfully deleted.
-        </div>";
+    // Permet d'échapper les caractères succeptibles de crééer des erreurs sql
+    foreach ($_POST as $indice => $valeur) {
+        $_POST[$indice] = addslashes($valeur);
     }
 
-    ////////////////////////////////////////////
-    //////////// Suppression d'un produit ////////////////
-    ////////////////////////////////////////////
-    $elementsPourLaPagination = pagination($pdo, 3, "SELECT COUNT(*) FROM produit");
-    
-    // echo '<pre>';
-    // var_dump($elementsPourLaPagination);
-    // echo '</pre>';
+    if(isset($_POST["ajouterProduit"])) {
 
-    
-    // Afficher les données dans un tableau
-    // Faudra rajouter deux colones (modification/suppresion)
-    // 2 événements post : modif et suppresion
+        $count = $pdo->exec("INSERT INTO produit (reference, categorie, titre, description, photo, prix, stock) VALUES(
+            '$_POST[reference]',
+            '$_POST[categorie]',
+            '$_POST[titre]',
+            '$_POST[description]',
+            '$chemin_vers_la_photo_en_terme_durl_pour_attribut_src',
+            '$_POST[prix]',
+            '$_POST[stock]'
+        )");
 
-    // En dessous du tableau on va avoir un formulaire qui va permettre deux choses : ajouter un produit / modifier
-
-    // Si je suis dans le cadre d'un post modification
-    // Je vais pré charger les infos du produits à modifier dans le formulaire
-
-
-    if($_POST) {
-
-        ////////////////////////////////////////////
-        //////////// Ajout d'un produit ////////////////
-        ////////////////////////////////////////////
-
-
-        ////////////////////////////////////////////
-        //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
-        ////////////////////////////////////////////
-
-        $fileLoaded = false;
-
-        if(!empty($_FILES) && !empty($_FILES["maPhoto"]["name"])) {
-
-            // Récupérer le nom de la photo
-            $nomPhoto = $_POST["reference"] . "_" . $_FILES["maPhoto"]["name"];
-            // echo '<pre>';
-            // var_dump($photo);
-            // echo '</pre>';
-
-            // COPIER LE LIEN VERS LA PHOTO EN BDD
-            $chemin_vers_la_photo_en_terme_durl_pour_attribut_src = URL . "photo/" . $nomPhoto;
-
-            // Fichier de départ à copier
-            // il correspond au fichier temporaire uploadé au niveau de l'input type file
-            // il faut récupérer le répertoire de ce fichier temporaire uploadé et le copié vers le répértoire de destination
-            // tmp_name correspond au fichier chargé que l'on souhaite copier
-            // COPIER LA PHOTO SUR LE SERVEUR (préciser le bon chemin du dossier)
-            $dossier_sur_serveur_pour_enregistrer_photo = RACINE_SITE . "photo/" . $nomPhoto;
-            copy($_FILES["maPhoto"]["tmp_name"], $dossier_sur_serveur_pour_enregistrer_photo);
-
-            $fileLoaded = true;
-
+        if($count > 0) {
+            $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
+                Le produit à la référence # $_POST[reference] a bien été ajouté.
+            </div>";
         }
+    
+    } else {
+
+        // Si j'ai chargé une photo dans mon input type file
+        // je récupère le chemin générer vers la photo
+        // si je modifie le produit sans modifier la photo
+        // je préserve en BDD la photo existente en BDD pour ce produit
+        $cheminPhoto = ($fileLoaded) ? $chemin_vers_la_photo_en_terme_durl_pour_attribut_src : $_POST["prevPhoto"];
 
         ////////////////////////////////////////////
-        //////////// TRAITEMENT DE L'INPUT TYPE FILE ////////////////
+        //////////// Modification d'un produit ////////////////
         ////////////////////////////////////////////
 
-        // Permet d'échapper les caractères succeptibles de crééer des erreurs sql
-        foreach($_POST as $indice => $valeur) {
-            $_POST[$indice] = addslashes($valeur);
-        }
-
-        if(isset($_POST["ajouterProduit"])) {
-
-            $count = $pdo->exec("INSERT INTO produit (reference, categorie, titre, description, photo, prix, stock) VALUES(
-                '$_POST[reference]',
-                '$_POST[categorie]',
-                '$_POST[titre]',
-                '$_POST[description]',
-                '$chemin_vers_la_photo_en_terme_durl_pour_attribut_src',
-                '$_POST[prix]',
-                '$_POST[stock]'
-            )");
-
-            if($count > 0) {
-                $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                    The product with reference # $_POST[reference] has been sucessfully added.
-                </div>";
-            }
-
-        } else {
-
-            // Si j'ai chargé une photo dans mon input type file
-            // je récupère le chemin générer vers la photo
-            // si je modifie le produit sans modifier la photo
-            // je préserve en BDD la photo existente en BDD pour ce produit
-            $cheminPhoto = ($fileLoaded) ? $chemin_vers_la_photo_en_terme_durl_pour_attribut_src : $_POST["prevPhoto"];
-
-            ////////////////////////////////////////////
-            //////////// Modification d'un produit ////////////////
-            ////////////////////////////////////////////
-
-            $count = $pdo->exec("UPDATE produit SET
+        $count = $pdo->exec("UPDATE produit SET
             reference = '$_POST[reference]',
             categorie = '$_POST[categorie]',
             titre = '$_POST[titre]',
@@ -129,15 +133,13 @@ require_once("../inc/init.php");
             stock = '$_POST[stock]' 
             WHERE id_produit = '$_POST[id_produit]'");
 
-            if($count > 0) {
-                $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-                    The product reference # $_POST[reference] has been sucessfully modified.
+        if ($count > 0) {
+            $content .= "<div class=\"col-md-6 alert alert-success\" role=\"alert\">
+                    Le produit à la référence # $_POST[reference] a bien été modifié.
                 </div>";
-            }
-
         }
-
     }
+}
 
 ////////////////////////////////////////////
 //////////// Récupérer en BDD les produits ////////////////
@@ -175,7 +177,7 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<div class='mb-5 text-center'>
+<div class='col-md-9 col-sm-12 mb-5 text-center'>
     <h1>Gestion de Produits</h1>
     <!-- <p>The products from the database</p> -->
 </div>
@@ -188,65 +190,68 @@ require_once("inc/header.php");
 <?php echo $content; ?>
 
 <table class="table table-hover mb-5 bg-light text-center">
-  <thead class="thead-dark">
-    <tr>
-        <?php for ($i = 0; $i < $stmt->columnCount(); $i++) {
-            $col = $stmt->getColumnMeta($i); ?>
-            <th scope="col"><?= $col['name']; ?></th>
-        <?php } ?>
-        <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
+    <thead class="thead-dark">
+        <tr>
+            <?php for ($i = 0; $i < $stmt->columnCount(); $i++) {
+                $col = $stmt->getColumnMeta($i); ?>
+                <th scope="col"><?= $col['name']; ?></th>
+            <?php } ?>
+            <th scope="col"></th>
+            <!-- <th scope="col"></th> -->
+        </tr>
+    </thead>
+    <tbody>
 
         <!-- J'itère dans le fetchAll qui m'index dans un tableau multidimensionnel les arrays contenants mes produits
         Pour chaque array de produit récupéré j'itère dans les index pour récupérer les valeurs et générer un td pour chaque valeur  -->
-        <?php foreach($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
+        <?php foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $index => $produit) { ?>
             <tr>
-                <?php foreach($produit as $index => $valeur) { 
-                    if($index == 'photo') { ?>
+                <?php foreach ($produit as $index => $valeur) {
+                    if ($index == 'photo') { ?>
                         <td> <img style="width:75px" src="../<?= $valeur; ?>" alt=""> </td>
                     <?php } else { ?>
                         <td> <?php echo $produit[$index];  ?> </td>
                     <?php } ?>
                 <?php } ?>
-                
+
                 <!-- ***Lien de modification et de suppression*** -->
-                
 
-                <td> <a href="?action=suppression&id_produit=<?= $produit["id_produit"]?>" role="button" class="btn btn-outline-danger btn-sm"> Supprimer </a> </td>
-                
+                <!-- <td><a href="gestion_produits.php?id_produit=<?php echo $produit['id_produit']; ?>" class="btn btn-outline-primary btn-sm">Modifier</a></td> -->
+
+                <td><a href="gestion_produits.php?action=suppression&id_produit=<?php echo $produit['id_produit']; ?>" class="btn btn-outline-danger btn-sm" onclick="return(confirm('Êtes-vous sûr de vouloir supprimer ce produit?'))">Supprimer</a></td>
+
             </tr>
-       <?php } ?>
+        <?php } ?>
 
-  </tbody>
+    </tbody>
 </table>
 
 <!-- Pagination -->
 <div class="row col-md-6 col-sm-12 justify-content-center">
     <nav aria-label="Page navigation example">
-    <ul class="pagination">
+        <ul class="pagination">
 
-        <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == 1) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Précédent</a>
-        </li>
-
-        <?php for($page = 1; $page <= $elementsPourLaPagination["pages"]; $page++) { ?>
-            <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $page) ? "active" : ""; ?>">
-                <a class="page-link" href="?page=<?php echo $page; ?>"><?php echo $page; ?></a>
+            <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == 1) ? "disabled" : ""; ?>">
+                <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] - 1; ?>">Précédent</a>
             </li>
-        <?php } ?>
 
-        <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $elementsPourLaPagination["pages"]) ? "disabled" : ""; ?>">
-            <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Suivant</a>
-        </li>
-    </ul>
+            <?php for ($page = 1; $page <= $elementsPourLaPagination["pages"]; $page++) { ?>
+                <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $page) ? "active" : ""; ?>">
+                    <a class="page-link" href="?page=<?php echo $page; ?>"><?php echo $page; ?></a>
+                </li>
+            <?php } ?>
+
+            <li class="page-item <?php echo ($elementsPourLaPagination["pageEnCours"] == $elementsPourLaPagination["pages"]) ? "disabled" : ""; ?>">
+                <a class="page-link" href="?page=<?php echo $elementsPourLaPagination["pageEnCours"] + 1; ?>">Suivant</a>
+            </li>
+        </ul>
     </nav>
 </div>
 
+
 <!-- Formulaire de modification/ajout de produit -->
 <!-- <div class="mb-4 col-12 text-center">
-    <h2>Add or modify products:</h2>
+    <h2>Ajout ou modifié un produit:</h2>
 </div>
 
 <form action="" method="POST" enctype="multipart/form-data">
@@ -275,15 +280,15 @@ require_once("inc/header.php");
         </div>
         <div class="w-100"></div> -->
 
-        <!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
-        
-        <!-- <div class="col-md-6 custom-file m-auto">
-            <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
-            <label class="custom-file-label" for="maPhoto">Choose an image</label> -->
+<!-- FAIRE VARIABLED LE SELECTED DES INPUTS -->
 
-            <!-- Si je suis dans le cadre d'une modification j'affiche l'img actuelle -->
-            <!-- <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
-                <img class="mt-1" style="width:75px" src="<?= $photo; ?>" alt="<?= $titre; ?>" title="<?= $description; ?>">
+<!-- <div class="col-md-6 custom-file m-auto">
+            <input type="file" class="custom-file-input" id="maPhoto" name="maPhoto">
+            <label class="custom-file-label" for="maPhoto">Choisir une image</label> -->
+
+<!-- Si je suis dans le cadre d'une modification j'affiche l'img actuelle -->
+<!-- <?php if (isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
+                <img class="mt-1" style="width:75px" src=../<?= $photo; ?>" alt="<?= $titre; ?>" title="<?= $description; ?>">
             <?php } ?>
 
         </div>
@@ -296,16 +301,16 @@ require_once("inc/header.php");
 </form>
 
         <div class="mt-4">
-            <?php if(isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
+            <?php if (isset($_GET["action"]) && $_GET["action"] == "modification") { ?>
                 <button type="submit" class="btn btn-primary" name="modifierProduit">Modify the product</button>
             <?php } else { ?>
                 <button type="submit" class="btn btn-primary" name="ajouterProduit">Add a product</button>
             <?php } ?>
-        </div>
-     -->
+        </div> -->
+    
 
 
 
 <?php
-    require_once("inc/footer.php");
+require_once("inc/footer.php");
 ?>

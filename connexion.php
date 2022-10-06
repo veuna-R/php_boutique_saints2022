@@ -5,6 +5,7 @@ require_once("inc/header.php");
 // SI je me déconnecte alors je vide la session membre
 if (isset($_GET["action"]) && $_GET["action"] == "deconnexion") {
     unset($_SESSION["membre"]); // je supprime la session membre dans ma session
+    $content .= "<div class=\"col-md-3 alert alert-success mx-auto text-center p-0\">Vous avez bien été déconnecté</div>";
 }
 
 // Si je suis déjà connecté
@@ -85,25 +86,20 @@ if ($_POST) {
 </div>
 
 <div class="col-md-12">
-    <h3 class='text-center text-white mt-5 mb-5'>Connectez-vous à votre profil, Chevalier d'Athéna!</h3>
+    <h3 class='text-center text-white mt-5 mb-5'>Connectez-vous à votre compte, Chevalier d'Athéna!</h3>
 </div>
 
 <div class="col-lg-3 col-md-6 col-sm-6">
     <form method="post" action="" class="border border-warning px-3">
         <div class="form-group">
             <label for="pseudo"></label>
-            <input type="text" name="pseudo" class="form-control bg-transparent border border-warning text-white" id="pseudo" aria-describedby="pseudo" placeholder="Entrez votre pseudo">
+            <input type="text" name="pseudo" class="form-control bg-transparent border border-warning text-white" id="pseudo" aria-describedby="pseudo" placeholder="Entrez votre pseudo" required>
         </div>
-        <!-- <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-      <label class="form-check-label" for="autoSizingCheck">
-        Remember me
-      </label>
-    </div> -->
+
         <div class="form-group text-white">
             <label for="exampleInputPassword1"></label>
-            <input type="password" name="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Entrez votre mot de passe">
-            <input type="checkbox" onclick="myFunction()"> Afficher le mot de passe
+            <input type="password" name="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Entrez votre mot de passe" required>
+            <input type="checkbox" onclick="myFunction()"> Afficher/masquer le mot de passe
         </div>
 
         <br>

@@ -54,7 +54,7 @@
                         <a class="nav-link" href="../index.php">Acceuil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="gestion_produits.php">Produis</a>
+                        <a class="nav-link" href="gestion_produits.php">Produits</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="gestion_commandes.php">Commandes</a>

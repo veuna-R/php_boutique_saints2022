@@ -43,7 +43,7 @@ if ($_GET && isset($_GET["categorie"])) {
     // j'itère dans mon PDOSTATEMENT EN FETCHANT LES DONNÉES EN ITÉRANT DANS CHAQUE ARRAY GÉNÉRÉ PAR LE FETCH
     while ($produit = $r->fetch(PDO::FETCH_ASSOC)) {
         // Génération de card boostrap à chaque fois qu'un produit est récupéré.
-        // Si il y a plus que zero en stock, il va afficher un card normal, autre il va aussi afficher un card mais avec un badge: "out of stock" et un bouton désactivé.
+        // Si il y a plus que zero en stock, il va afficher un card normal, sinon il va aussi afficher un card mais avec un badge: "rupture de stock" et un bouton désactivé.
         if (($produit['stock'] > 0)) {
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>
@@ -64,7 +64,7 @@ if ($_GET && isset($_GET["categorie"])) {
                     <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning disabled'>Détails/Commander</a>
                 </div>
             
-                <span class='position-absolute ml-2 mt-2 translate-middle badge rounded-pill border border-dark shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
+                <span class='position-absolute ml-2 mt-2 translate-middle badge rounded-pill border border-danger shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
 
             </div> </div>";
         }
@@ -72,9 +72,6 @@ if ($_GET && isset($_GET["categorie"])) {
     // Fermeture concernant la partie des produits
     $content .= "</div>";
 }
-
-
-
 
 ?>
 

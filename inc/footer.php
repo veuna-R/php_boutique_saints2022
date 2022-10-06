@@ -1,7 +1,7 @@
 </div>
-</main><!-- End of header -->
+</main><!-- Fin du header -->
 
-<!-- changement de colour pour les icones -->
+<!-- Changement de colour en hover pour les icones -->
 <style>
     i {
         color: white ;
@@ -21,7 +21,7 @@
         <!-- Content -->
         <p class="text-white">La boutique est purement cosmétique et n'a d'autre but immédiat que le divertissement et la formation.</p>
         <p class="text-white mb-3">Merci d'avoir pris le temps de visiter mon site. <br> Pour me contacter directement, veuillez cliquer sur l'un des liens suivants ci-dessous :</p>
-        <!-- liens -->
+        <!-- Les liens -->
         <a href="https://github.com/veuna-R" target="_blank"><i class="fa-brands fa-square-github fa-xl"></i></a>
         <a href="https://www.linkedin.com/in/robertveuna/" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
         <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-xl"></i></a>

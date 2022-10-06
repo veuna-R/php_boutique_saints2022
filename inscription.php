@@ -68,14 +68,15 @@ if ($_POST) {
 
         // Si l'insert a correctement fonctionné msg de confirmation
         if ($count > 0) {
-            $content .= "<div class='alert alert-success' role='alert'>
-                    Votre compte est bien enregistré !
-                </div>";
+            $content .= "<div class='text-center mx-auto'> <p class='alert alert-success p-0 mx' role='alert'>Votre compte est bien enregistré !</p>";
+            $content .= "<a href='connexion.php'> Connectez-vous </a> </div>";
 
             $inscriptionDone = true;
         }
     }
 }
+
+
 
 require_once("inc/header.php");
 ?>
@@ -104,8 +105,8 @@ if ($inscriptionDone) { ?>
             <!-- Password -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
-                <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Mot de passe 3-20 caractères" name="mdp" required>
-                <input type="checkbox" onclick="myFunction()"> Afficher le mot de passe
+                <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Mot de passe : 3-20 caractères" name="mdp" required>
+                <input type="checkbox" onclick="myFunction()"> Afficher/masquer le mot de passe
             </div>
 
             <!-- Name -->
@@ -141,8 +142,8 @@ if ($inscriptionDone) { ?>
 
         <!-- Email -->
         <div class="form-group">
-                <!-- <label for="email"></label> -->
-                <input type="text" class="form-control bg-transparent border border-warning text-white" id="email" placeholder="Email" name="email" required>
+            <!-- <label for="email"></label> -->
+            <input type="text" class="form-control bg-transparent border border-warning text-white" id="email" placeholder="Email" name="email" required>
         </div>
 
         <!-- Address -->
@@ -167,7 +168,7 @@ if ($inscriptionDone) { ?>
         <br>
 
         <div class="text-center mb-5">
-            <button type="submit" class="btn btn-outline-warning">Créer mon compte</button>
+            <button type="submit" class="btn btn-outline-warning">S'inscrire</button>
         </div>
 
     </form>

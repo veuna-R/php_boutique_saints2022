@@ -27,8 +27,8 @@ require_once("inc/init.php");
     ////////////////////////////////////////////
     if($_POST && isset($_POST["modifierQuantite"])) {
         modifierQuantitePanier($_POST["id_produit"], $_POST["quantite"]);
-        $content .= "<div class=\"col-md-12 alert alert-success\" role=\"alert\">
-            La quantité de " . $_POST["titre"]  . " a été bien modifier!
+        $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-success'>
+            La quantité du produit:  " . $_POST["titre"]  . " a été bien modifier!
         </div>";
     }
 
@@ -63,7 +63,7 @@ require_once("inc/init.php");
 
                 if($produit["stock"] <= 0) {
                     
-                    $content .= "<div class=\"col-md-12 alert alert-danger\" role=\"alert\">
+                    $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-danger'>
                         Actuellement en rupture de stock " . $_SESSION["panier"]["titre"][$i] . "!
                     </div>";
                     retirerProduitDuPanier($_SESSION["panier"]["id_produit"][$i]);
@@ -74,7 +74,7 @@ require_once("inc/init.php");
                     // Le stock n'est pas vide du coup je mets à jour la quantité séléctionnée avec le stock dispo et msg d'info 'la quantité pour tel produit a été mise à jour'
 
                     $_SESSION["panier"]["quantite"][$i] = $produit["stock"];
-                    $content .= "<div class=\"col-md-12 alert alert-warning\" role=\"alert\">
+                    $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-danger'>
                         La quantité pour le produit " . $_SESSION["panier"]["titre"][$i] . "a été reduit à $produit[stock] car il n'y avait pas assez de stock pour votre achat !
                     </div>";
 
@@ -126,7 +126,7 @@ require_once("inc/init.php");
             unset($_SESSION["panier"]);
             // msg de confirmation en affichant le numéro de la commande
 
-            $content .= "<div class=\"col-md-6 mx-auto alert alert-success text-center\" role=\"alert\">
+            $content .= "<div class=\"col-md-6 mx-auto alert alert-success text-center m-0 p-0\" role=\"alert\">
                 Nous vous remercions de votre commande! Votre numéro de suivi est $idCommande 
             </div>";
 

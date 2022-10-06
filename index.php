@@ -29,8 +29,11 @@ require_once("inc/header.php");
 
 <body>
     <style>
+        #title_image {
+            transition: transform .5s ease;
+        }
         #title_image:hover {
-            transform: scale(1.05);
+            transform: scale(1.10);
             transition: transform .5s ease;
         }
 
@@ -108,7 +111,7 @@ require_once("inc/header.php");
     <!-- fin de rappel -->
 
     <!-- Profils  -->
-    <div class="container-fluid col-sm-12 text-light p-4" id="profiles">
+    <div class="container-fluid col-sm-12 text-light p-4">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
             <img src="profile_photo/Athena_1.png" alt="Athena" class="border border-warning p-3 img-fluid shadow">
             <h2 class="text-warning mt-2">Athena</h2>
@@ -249,7 +252,7 @@ require_once("inc/header.php");
             <textarea class="form-control bg-transparent text-white border border-warning" rows="5" placeholder="Entrez le texte ici..." name="feedback" required></textarea>
 
             <div class="text-center">
-                <button type="submit" name="submit" class="btn btn-outline-warning mt-3">Soumettre</button>
+                <button type="submit" name="submit" class="btn btn-outline-warning mt-3" onclick="return(confirm('Souhaitez-vous soumettre ce commentaire ?'))">Soumettre</button>
             </div>
             
         </div>
