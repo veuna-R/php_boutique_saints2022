@@ -1,7 +1,7 @@
 </div>
 </main><!-- Fin du header -->
 
-<!-- Changement de colour en hover pour les icones -->
+<!-- Changement de colour en hover pour les icones de réseaux sociaux -->
 <style>
     i {
         color: white ;
