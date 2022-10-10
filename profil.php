@@ -41,10 +41,10 @@ require_once("inc/header.php");
     <!-- Img d'avatar -->
     <!-- Si je me connecte entant qu'administateur -->
     <?php if ($_SESSION["membre"]["statut"] == "1") { ?>
-        <img src="photo/Avatar_a.png" alt="avatar admin" class="card-img-top">
+        <img src="photo/Avatar_2.png" alt="avatar admin" class="card-img-top">
         <!-- sinon, je me conecte au compte 'membre' -->
     <?php } elseif ($_SESSION["membre"]["civilite"] == "m") { ?>
-        <img src="photo/Avatar_1.png" alt="avatar male" class="card-img-top">
+        <img src="photo/Avatar_a.png" alt="avatar male" class="card-img-top">
     <?php } else { ?>
         <img src="photo/Avatar_fe.png" alt="avatar female" class="card-img-top">
     <?php } ?>

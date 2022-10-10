@@ -46,7 +46,7 @@ if ($_POST) {
             // Si je suis admin je suis redirigé directement vers le backoffice
             if ($_SESSION["membre"]["statut"] == 1) {
                 // Redirection vers la page profil
-                header("location:profil.php");
+                header("location:admin/index.php");
                 exit();
             } else {
                 // Redirection vers la page profil
