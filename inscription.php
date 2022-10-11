@@ -68,7 +68,7 @@ if ($_POST) {
 
         // Si l'insert a correctement fonctionné msg de confirmation
         if ($count > 0) {
-            $content .= "<div class='text-center mx-auto'> <p class='alert alert-success p-0 mx' role='alert'>Votre compte est bien enregistré !</p>";
+            $content .= "<div class='col-3 text-center mx-auto'> <p class='alert alert-success p-0 mx' role='alert'>Votre compte est bien enregistré !</p>";
             $content .= "<a href='connexion.php'> Connectez-vous </a> </div>";
 
             $inscriptionDone = true;
@@ -83,7 +83,7 @@ require_once("inc/header.php");
 
 <!-- BODY -->
 
-<div class="col-md-12">
+<div class="col-12">
     <h3 class='text-center text-white mt-5 mb-5'>Inscrivez-vous pour devenir un Chevalier d'Athéna !</h3>
 </div>
 
@@ -95,7 +95,7 @@ if ($inscriptionDone) { ?>
 <?php } else { ?>
 
     <form action="" method="POST" class="mx-auto col-sm-12 col-md-6 text-white border border-warning mb-5">
-        <div class="form-row">
+        <div class="row mb-1">
             <!-- Pseudo -->
             <div class="form-group col-md-6">
                 <label for="pseudo"></label>
@@ -110,19 +110,19 @@ if ($inscriptionDone) { ?>
             </div>
 
             <!-- Name -->
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 mb-2">
                 <!-- <label for="name"></label> -->
                 <input type="text" class="form-control bg-transparent border border-warning text-white" id="name" placeholder="Nom" name="nom" required>
             </div>
 
             <!-- First Name -->
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 mb-2">
                 <!-- <label for="firstName"></label> -->
                 <input type="text" class="form-control bg-transparent border border-warning text-white" id="firstName" placeholder="Prénom" name="prenom" required>
             </div>
 
             <!-- Civilité -->
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 mt-0 mb-1">
                 <!-- <label for="email"></label> -->
                 <div class="form-check">
                     <input class="form-check-input" type="radio" id="civilitem" value="m" name="civilite" checked>
@@ -141,20 +141,20 @@ if ($inscriptionDone) { ?>
         </div>
 
         <!-- Email -->
-        <div class="form-group">
+        <div class="form-group mb-2">
             <!-- <label for="email"></label> -->
             <input type="text" class="form-control bg-transparent border border-warning text-white" id="email" placeholder="Email" name="email" required>
         </div>
 
         <!-- Address -->
 
-        <div class="form-group">
+        <div class="form-group mb-2">
             <!-- <label for="address"></label> -->
             <input type="text" class="form-control bg-transparent border border-warning text-white" id="address" name="adresse" placeholder="Adresse" required>
         </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
+        <div class="row">
+            <div class="form-group col-md-6 mb-2">
                 <!-- <label for="inputCity"></label> -->
                 <input type="text" class="form-control bg-transparent border border-warning text-white" name="ville" id="inputCity" placeholder="Ville" required>
             </div>
@@ -167,7 +167,7 @@ if ($inscriptionDone) { ?>
 
         <br>
 
-        <div class="text-center mb-5">
+        <div class="text-center mb-4">
             <button type="submit" class="btn btn-outline-warning">S'inscrire</button>
         </div>
 

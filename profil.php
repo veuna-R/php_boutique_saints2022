@@ -36,7 +36,7 @@ require_once("inc/header.php");
 </div>
 
 <!-- cadre de profil -->
-<div class="card col-md-3 mb-4 p-3 border border-warning bg-transparent text-white" style="width:15rem">
+<div class="card col-md-3 mb-4 p-3 border border-warning bg-transparent text-white" style="width:20rem">
 
     <!-- Img d'avatar -->
     <!-- Si je me connecte entant qu'administateur -->

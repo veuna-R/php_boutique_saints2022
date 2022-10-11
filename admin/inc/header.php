@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="inc/css/style.css">
     <title>Space Admin</title>
 </head>
+
 <body>
-<style>
+    <style>
         .nav-item::after {
             content: '';
             display: block;
@@ -42,9 +46,9 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-end sticky-top" style="background-image: url(../photo/stars_bg2.jpg);">
             <a class="navbar-brand" href="index.php">
                 <img src="" width="" height="" class="d-inline-block align-center " alt="">
-            Administrateur
+                Administrateur
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -67,7 +71,7 @@
                     </li>
 
                     <!-- Si l'internaute est connecté j'affiche le bouton de déconnexion -->
-                    <?php if(internauteEstConnecte()) { ?>
+                    <?php if (internauteEstConnecte()) { ?>
 
                         <li class="nav-item">
                             <a class="nav-link font-italic" href="../connexion.php?action=deconnexion">

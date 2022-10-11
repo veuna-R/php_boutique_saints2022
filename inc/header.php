@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>navbar</title>
 </head>
 
 <body>
@@ -37,6 +40,7 @@
             padding: 5px 5px;
             transition: 0.2s;
         }
+
         body {
             background-image: url("photo/stars_bg3.jpg") !important;
             background-size: cover;
@@ -44,14 +48,14 @@
         }
     </style>
 
-    <div class="container-flud">
+    <div class="">
 
         <nav class="navbar navbar-expand-lg navbar-dark justify-content-start px-5 sticky-top">
             <a class="navbar-brand text-warning" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
                 SOUL OF GOLD
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon justify-content-end"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -105,7 +109,7 @@
 
                     <?php } ?>
 
-                    
+
 
                 </ul>
             </div>

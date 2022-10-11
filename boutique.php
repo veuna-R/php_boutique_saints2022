@@ -47,24 +47,24 @@ if ($_GET && isset($_GET["categorie"])) {
         if (($produit['stock'] > 0)) {
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>
-            <img style='' class='card-img-top mt-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
+            <img style='' class='card-img-top p-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
                 <div class='card-body'>
                     <h5 class='text-center card-title text-white'>$produit[titre]</h5>
                     <p class='text-center card-text text-white'>$produit[prix] €</p>
-                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning'>Détails/Commander</a>
+                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center mx-auto btn btn-outline-warning w-75'>Détails/Commander</a>
                 </div>
             </div> </div>";
         } else {
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>
-            <img style='' class='card-img-top mt-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
+            <img style='' class='card-img-top p-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
                 <div class='card-body'>
                     <h5 class='text-center card-title text-white'>$produit[titre]</h5>
                     <p class='text-center card-text text-white'>$produit[prix] €</p>
-                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center btn btn-outline-warning disabled'>Détails/Commander</a>
+                    <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center mx-auto btn btn-outline-warning w-75 disabled'>Détails/Commander</a>
                 </div>
             
-                <span class='position-absolute ml-2 mt-2 translate-middle badge rounded-pill border border-danger shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
+                <span class='position-absolute top-0 start-50 translate-middle-x badge rounded-pill border border-danger shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
 
             </div> </div>";
         }

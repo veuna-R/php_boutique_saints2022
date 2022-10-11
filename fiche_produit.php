@@ -23,8 +23,9 @@ require_once("inc/init.php");
 
 ?>
 
+<div class="row col-md-6 mx-auto">
 <!-- Cardre de produit -->
-    <div class='card col-md-3 my-3 border border-warning bg-transparent' style='width: 15rem;'>
+    <div class='card col-md-6 my-3 border border-warning bg-transparent' >
         <img class='card-img-top mt-3' src='<?php echo $produit["photo"]?>' alt='<?php echo $produit["titre"]?>'>
         <div class='card-body'>
             <h5 class='card-title text-center text-white'><?php echo $produit["titre"]?></h5>
@@ -33,7 +34,7 @@ require_once("inc/init.php");
     </div>
 
 <!-- Info de produit -->
-    <div class="col-md-3 my-3">
+    <div class="col-md-6 my-3">
         <ul class="list-group">
             <!-- récupération de produits de la BDD -->
             <li class="list-group-item border border-warning bg-transparent text-white text-center">Categorie : <?php echo $produit["categorie"]?> </li>
@@ -47,7 +48,7 @@ require_once("inc/init.php");
                 <li class="list-group-item border border-warning bg-transparent">                  
                     <input type="hidden" name="id_produit" value="<?php echo $produit["id_produit"]?>">
                     <input type="hidden" name="categorie" value="<?php echo $produit["categorie"]?>">
-                    <select class="custom-select border border-warning bg-transparent" name="quantite" id="selectQuantity">
+                    <select class="custom-select border border-warning bg-transparent text-secondary container-fluid" name="quantite" id="selectQuantity">
                         <!-- Je créé dynamiquement la quantité sélectionnable dans la limite du stock -->
                         <option disabled selected>Sélectionnez un montant</option>
                         <?php for($i = 1; $i <= $produit["stock"]; $i++) { ?>
@@ -59,10 +60,10 @@ require_once("inc/init.php");
      
                 <div class="text-center">
                     <!-- bouton: ajout au panier -->
-                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Ajouter au panier" name="ajout_panier" style="width:50%" id="addCart">
+                    <input class="btn btn-outline-warning mt-3" disabled type="submit" value="Ajouter au panier" name="ajout_panier" style="width:60%" id="addCart">
 
                     <!-- bouton: revien à la page de la boutique -->
-                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:50%">Retour à la boutique</a>
+                    <a class="btn btn-danger mt-3" href="boutique.php" role="button" style="width:60%">Retour à la boutique</a>
                 </div>
 
             </form>
@@ -71,7 +72,8 @@ require_once("inc/init.php");
 
         </ul>
     </div>
-
+    <!-- Fin d'info de produit -->
+</div>
 <!-- BODY -->
 
 <?php

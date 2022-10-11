@@ -6,7 +6,7 @@ require_once("inc/header.php");
 <!-- Cette page représente la page d'acceuil  -->
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <title>Home Page</title>
