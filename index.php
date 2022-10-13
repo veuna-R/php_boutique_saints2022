@@ -29,6 +29,7 @@ require_once("inc/header.php");
 
 <body>
     <style>
+        /* une animation d'hover pour le logo */
         #title_image {
             transition: transform .5s ease;
         }
@@ -36,11 +37,11 @@ require_once("inc/header.php");
             transform: scale(1.10);
             transition: transform .5s ease;
         }
-
+        /* Le titre */
         #maintitle {
             text-shadow: 3px 3px black;
         }
-
+        /* Le fond */
         body {
             background-image: url("photo/stars_bg3.jpg") !important;
             background-size: cover;
@@ -271,6 +272,7 @@ require_once("inc/header.php");
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
+    <!-- CDN - CSS only - bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
 

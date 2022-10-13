@@ -1,8 +1,6 @@
 <?php
 
-    //
     // Fonction permettant la création d'un panier
-    //
     function creation_panier() {
 
         if(!isset($_SESSION["panier"])) {
@@ -17,9 +15,7 @@
 
     }
 
-    //
     // Fonction permettant d'ajouter le produit au panier
-    //
     function ajouter_produit_panier($id_produit, $quantite, $prix, $titre, $photo, $stock) {
 
         creation_panier();
