@@ -1,14 +1,15 @@
 <?php
 require_once("inc/init.php");
 
+// Si je suis connecté, jes suis redirecté vers la page profil.php
 if (internauteEstConnecte()) {
     header("location:profil.php");
     exit();
 }
 
 ////////////////////////////////////////////
-//////////// Inscription ////////////////
-////////////////////////////////////////////
+//////////// Inscription //////////////////
+//////////////////////////////////////////
 
 $inscriptionDone = false;
 
@@ -18,15 +19,14 @@ if ($_POST) {
 
     // Vérifier si le pseudo a entre 3 et 20 caractères(strlen)
     if (strlen($_POST["mdp"]) < 3 || strlen($_POST["mdp"]) > 20) {
-        $erreur .= "<div class='alert alert-danger col-6 text-center' role='alert'>
+        $erreur .= "<div class='alert alert-danger col-md-3 text-center p-0' role='alert'>
                 Le mot de passe doit être entre 3 et 20 caractères !
             </div>";
     }
 
     // Vérifier si le pseudo a une valeur alphanumérique(preg_match)
-
     if (!ctype_alnum($_POST["pseudo"])) {
-        $erreur .= "<div class='alert alert-danger col-6 text-center' role='alert'>
+        $erreur .= "<div class='alert alert-danger col-md-3 text-center p-0' role='alert'>
                 Le pseudo ne doit contenir que des chiffres et des lettres uniquement !
             </div>";
     }
@@ -68,7 +68,7 @@ if ($_POST) {
 
         // Si l'insert a correctement fonctionné msg de confirmation
         if ($count > 0) {
-            $content .= "<div class='col-3 text-center mx-auto'> <p class='alert alert-success p-0 mx' role='alert'>Votre compte est bien enregistré !</p>";
+            $content .= "<div class='col-3 text-center mx-auto'> <p class='alert alert-success p-0' role='alert'>Votre compte est bien enregistré !</p>";
             $content .= "<a href='connexion.php'> Connectez-vous </a> </div>";
 
             $inscriptionDone = true;
@@ -82,7 +82,7 @@ require_once("inc/header.php");
 ?>
 
 <!-- BODY -->
-
+<!-- titre -->
 <div class="col-12">
     <h3 class='text-center text-white mt-5 mb-5'>Inscrivez-vous pour devenir un Chevalier d'Athéna !</h3>
 </div>
@@ -102,20 +102,20 @@ if ($inscriptionDone) { ?>
                 <input type="text" class="form-control bg-transparent border border-warning text-white" id="pseudo" placeholder="Pseudo" name="pseudo" required>
             </div>
 
-            <!-- Password -->
+            <!-- Mot de passe -->
             <div class="form-group col-md-6">
                 <label for="password"></label>
                 <input type="password" class="form-control bg-transparent border border-warning text-white" id="exampleInputPassword1" placeholder="Mot de passe : 3-20 caractères" name="mdp" required>
                 <input type="checkbox" onclick="myFunction()"> Afficher/masquer le mot de passe
             </div>
 
-            <!-- Name -->
+            <!-- Nom -->
             <div class="form-group col-md-4 mb-2">
                 <!-- <label for="name"></label> -->
                 <input type="text" class="form-control bg-transparent border border-warning text-white" id="name" placeholder="Nom" name="nom" required>
             </div>
 
-            <!-- First Name -->
+            <!-- Prénom -->
             <div class="form-group col-md-4 mb-2">
                 <!-- <label for="firstName"></label> -->
                 <input type="text" class="form-control bg-transparent border border-warning text-white" id="firstName" placeholder="Prénom" name="prenom" required>
@@ -175,6 +175,7 @@ if ($inscriptionDone) { ?>
 
 <?php } ?>
 
+<!-- Javascript -->
 <script src="js/pw.js"></script>
 
 <?php

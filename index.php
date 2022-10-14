@@ -9,18 +9,16 @@ require_once("inc/header.php");
 <html lang="fr">
 
 <head>
-    <title>Home Page</title>
+    <title>Page d'Accueil</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- google font -->
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
@@ -33,14 +31,17 @@ require_once("inc/header.php");
         #title_image {
             transition: transform .5s ease;
         }
+
         #title_image:hover {
             transform: scale(1.10);
             transition: transform .5s ease;
         }
+
         /* Le titre */
         #maintitle {
             text-shadow: 3px 3px black;
         }
+
         /* Le fond */
         body {
             background-image: url("photo/stars_bg3.jpg") !important;
@@ -53,7 +54,7 @@ require_once("inc/header.php");
     <div class="container text-center mt-5 col-12">
         <h1 class="display-2 p-2 text-warning border border-warning border-2 bg-transparent shadow" id="maintitle">Bienveunue sur le site de l'Or</h1><br>
         <p class="fs-5 text-white">
-        Ceci est un petit site dédié à mon amour pour l'anime "Saint Seiya", de préférence les Chevaliers d'Or. <br> <strong>"Have you ever felt your cosmos?"</strong>
+            Ceci est un site dédié à mon amour pour l'anime "Saint Seiya", de préférence les Chevaliers d'Or. <br> <strong>"Have you ever felt your cosmos?"</strong>
         </p>
         <div class="mb-3">
             <img src="photo/soul_of_gold.png" alt="" class="img-fluid" id="title_image">
@@ -255,7 +256,7 @@ require_once("inc/header.php");
             <div class="text-center">
                 <button type="submit" name="submit" class="btn btn-outline-warning mt-3" onclick="return(confirm('Souhaitez-vous soumettre ce commentaire ?'))">Soumettre</button>
             </div>
-            
+
         </div>
 
     </form>
@@ -266,14 +267,16 @@ require_once("inc/header.php");
     require_once("inc/footer.php");
     ?>
 
-    <!-- JS-->
-    <script src=""></script>
-
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 
+    <!-- CDN -  JS Popper - bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
     <!-- CDN - CSS only - bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 </body>
 
 </html>

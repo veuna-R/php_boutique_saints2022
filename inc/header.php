@@ -14,6 +14,7 @@
 
 <body>
     <style>
+        /* nav hover */
         .nav-item::after {
             content: '';
             display: block;
@@ -40,7 +41,7 @@
             padding: 5px 5px;
             transition: 0.2s;
         }
-
+        /* fond d'image */
         body {
             background-image: url("photo/stars_bg3.jpg") !important;
             background-size: cover;
@@ -48,8 +49,8 @@
         }
     </style>
 
-    <div class="">
-
+    <div>
+        <!-- bar de navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark justify-content-start px-5 sticky-top">
             <a class="navbar-brand text-warning" href="index.php" data-bs-toggle="tooltip" title="Home">
                 <img src="photo/soul_of_gold.png" width="100" height="50" class="d-inline-block align-center" alt="">
@@ -83,6 +84,7 @@
                         </li>
                     <?php } ?>
 
+                    <!-- si il y a une quantité supérieur de zero dans le panier, un chriffre affiche la quantité à une position relative du panier. -->
                     <li class="nav-item active position_relative">
                         <?php if (isset($_SESSION["panier"]["id_produit"]) && count($_SESSION["panier"]["id_produit"]) > 0) { ?>
                             <span class='number_elem_in_cart'> <?php echo afficherNombreProduitsPanier(); ?> </span>

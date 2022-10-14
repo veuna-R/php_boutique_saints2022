@@ -32,12 +32,12 @@
 
     <!-- Copyright -->
     <div class="text-white footer-copyright text-center">
-        <p class="m-0">© 2022 Copyright: Robert VEU NA</p>
+        <p class="m-0">© 2022 Copyright Robert VEU NA</p>
 
     </div>
 
 </footer>
-<!-- Footer -->
+<!-- Fin du footer -->
 
 </div>
 

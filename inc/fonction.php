@@ -1,6 +1,9 @@
 <?php
 
     // Fonction permettant la création d'un panier
+    // La fonction isset() vérifie si une variable est définie, ce qui signifie qu'elle doit être déclarée et n'est pas NULL.
+    // Les variables de session sont définies avec la variable globale PHP: $_SESSION
+
     function creation_panier() {
 
         if(!isset($_SESSION["panier"])) {
@@ -50,9 +53,7 @@
         } 
     }
 
-    //
     // Fonction permettant de calculer le montant total
-    //
     function montantTotal() {
 
         $total = 0;
@@ -67,9 +68,7 @@
 
     }
 
-    //
     // Fonction permettant de savoir si un internaute est connecté
-    //
     function internauteEstConnecte() {
 
         if(isset($_SESSION["membre"])) {
@@ -80,9 +79,7 @@
 
     }
 
-    //
     // Fonction permettant de savoir si un internaute est connecté et administrateur du site
-    //
     function internauteEstConnecteEtAdmin() {
 
         if(internauteEstConnecte() && $_SESSION["membre"]["statut"] == 1) {
@@ -93,10 +90,7 @@
 
     }
 
-
-    //
     // Fonction permettant de retirer un produit du panier
-    //
     function retirerProduitDuPanier($id_produit) {
 
         // Trouver l'index de $idProduit
@@ -109,6 +103,7 @@
             // la valeur correspondant à l'index dans $_SESSION["panier"]["quantite"][$indexIdProduit]
             // la valeur correspondant à l'index dans $_SESSION["panier"]["prix"][$indexIdProduit]
             // la valeur correspondant à l'index dans $_SESSION["panier"]["titre"][$indexIdProduit]
+            // la fonction unset() supprime une variable.
 
             unset($_SESSION["panier"]["id_produit"][$indexIdProduit]);
             unset($_SESSION["panier"]["quantite"][$indexIdProduit]);
@@ -119,9 +114,8 @@
         }
 
     }
-    //
+    
     // Fonction permettant d'afficher le nombre de produit dans le panier au niveau de la navbar
-    //
     function afficherNombreProduitsPanier() {
        $totalProduitDansPanier = 0;
 
@@ -132,9 +126,7 @@
         return $totalProduitDansPanier;
     }
 
-    //
     // Fonction permettant de réindexer les produits dans le panier après suppresion d'un produit dans le panier
-    //
 
     // array_values renvoit les valeurs indéxées correctement d'un tableau
     // on a besoin de réindéxer les valeurs du panier quand on supprime un produit
@@ -144,6 +136,7 @@
     // car dans la page panier, pour afficher les produits dans le panier j'itère dans la session panier
     // et je commence avec $i = 0 pour récupérer le premier index jusqu'au dernier
     // donc essentiel de réindéxer les valeur par ordre croissant après suppression d'un produit
+
 
     function mettreAJourIndiceIndexProduitPanier() {
         $_SESSION["panier"]["id_produit"] = array_values($_SESSION["panier"]["id_produit"]);
@@ -167,12 +160,12 @@
         }
 
         // Déterminer combien de pages je vais avoir (je récupère le total des produits à afficher / $articleParPage)
+        // La fonction query() / mysqli_query() effectue une requête sur une base de données.
         $nbrArticles = $pdo->query($requeteSQL)->fetchColumn();
 
         $pages = ceil($nbrArticles / $articlesParPage);
 
-        // Déterminer le premier articles qu'on récupère
-        // et le dernier article
+        // Déterminer le premier articles qu'on récupère et le dernier article
         $premierArticle = ($pageEnCours * $articlesParPage)  - $articlesParPage;
 
         $elemForPagination = ["nbrArticles" => $nbrArticles, "pages" => $pages, "premierArticle" => $premierArticle, "pageEnCours" => $pageEnCours];

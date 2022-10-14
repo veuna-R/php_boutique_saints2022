@@ -3,6 +3,8 @@ require_once("inc/init.php");
 require_once("inc/header.php");
 
 // SI je me déconnecte alors je vide la session membre
+// La fonction isset() vérifie si une variable est définie, ce qui signifie qu'elle doit être déclarée et n'est pas NULL.
+// la fonction unset() supprime une variable.
 if (isset($_GET["action"]) && $_GET["action"] == "deconnexion") {
     unset($_SESSION["membre"]); // je supprime la session membre dans ma session
     $content .= "<div class=\"col-md-3 alert alert-success mx-auto text-center p-0\">Vous avez bien été déconnecté</div>";
@@ -19,6 +21,7 @@ if (internauteEstConnecte()) {
 //  Si je me connecte
 if ($_POST) {
 
+    // La fonction query() effectue une requête sur une base de données.
     $r = $pdo->query("SELECT * FROM membre WHERE pseudo = '$_POST[pseudo]' ");
 
     // Si j'ai des données liées au pseudo renseigné dans le formulaire
@@ -54,22 +57,22 @@ if ($_POST) {
                 exit();
             }
 
-            echo '<pre>';
-            var_dump($_SESSION["membre"]);
-            echo '</pre>';
+            // echo '<pre>';
+            // var_dump($_SESSION["membre"]);
+            // echo '</pre>';
 
             // rediriger vers la page profil
 
         } else {
             // Si le mot de passe rentré dans le formulaire ne correspond pas au mdp en BDD
-            $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
+            $content .= "<div class='alert alert-danger col-md-3 mt-3 mx-auto text-center p-0' role='alert'>
             Veuillez vérifier votre mot de passe!
                 </div>";
         }
         // Si je n'ai pas ce pseudo en base
     } else {
 
-        $content .= "<div class='alert alert-danger col-md-4 mt-3 mx-auto text-center' role='alert'>
+        $content .= "<div class='alert alert-danger col-md-3 mt-3 mx-auto text-center p-0' role='alert'>
         Veuillez vérifier votre pseudo!
         </div>";
     }
@@ -80,15 +83,15 @@ if ($_POST) {
 
 
 ?>
-
+<!-- partie de la connexion -->
 <div class="col-md-12">
     <?php echo $content; ?>
 </div>
-
+<!-- titre -->
 <div class="col-md-12">
     <h3 class='text-center text-white mt-5 mb-5'>Connectez-vous à votre compte, Chevalier d'Athéna!</h3>
 </div>
-
+<!-- contenu -->
 <div class="col-lg-3 col-md-6 col-sm-6">
     <form method="post" action="" class="border border-warning px-3">
         <div class="form-group">
@@ -104,6 +107,7 @@ if ($_POST) {
 
         <br>
 
+        <!-- button -->
         <div class="text-center mb-3">
             <button type="submit" class="btn btn-outline-warning">Se connecter</button>
         </div>
@@ -111,7 +115,9 @@ if ($_POST) {
     </form>
 
 </div>
+<!-- fin de la partie de la connexion -->
 
+<!-- Javascript -->
 <script src="js/pw.js"></script>
 
 <?php

@@ -8,30 +8,33 @@ require_once("inc/header.php");
 
 // et quand je clique sur une catégorie ça m'affiche tous les produits de ma catégories
 
-////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 //////////// AFFICHER LA LISTE DE CATÉGORIES ////////////////
-////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 
 // Récupérer les catégories
+// La fonction query() / mysqli_query() effectue une requête sur une base de données.
 $stmt = $pdo->query("SELECT DISTINCT(categorie) FROM produit");
 // itérer à l'intérieur et générer une liste
 $content .= (!isset($_GET["categorie"])) ? "<h3 class='mt-5 text-center text-white'> Bienvenue dans la Boutique de l'Or <br> Choisissez votre destin</h3>" : "";
 $content .= "<div class='w-100'> </div>";
 $content .= " <div class='col-md-4 col-12 mb-5'>";
 $content .= "<ul class='list-group text-center display-5 pt-5' style='list-style: none'>";
+// La fonction fetch_assoc() / mysqli_fetch_assoc() récupère une ligne de résultat sous forme de tableau associatif.
 while ($categorie = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $content .= " <li class='my-1'> <a class='btn btn-outline-warning d-grid gap-2 col-6 mx-auto' role='button' href='?categorie=$categorie[categorie]'>  $categorie[categorie] </a> </li>";
 }
 $content .= "</ul>";
 $content .= "</div>";
 
-////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 //////////// AFFICHER LES PRODUITS DE LA CATÉGORIE ////////////////
-////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
 
 // quand je clique sur une catégorie c'est à dire un lient
 // j'ai un rechargement de page
 // je rècupère le paramètre $_GET
+// La fonction isset() vérifie si une variable est définie, ce qui signifie qu'elle doit être déclarée et n'est pas NULL.
 
 if ($_GET && isset($_GET["categorie"])) {
 
@@ -43,7 +46,7 @@ if ($_GET && isset($_GET["categorie"])) {
     // j'itère dans mon PDOSTATEMENT EN FETCHANT LES DONNÉES EN ITÉRANT DANS CHAQUE ARRAY GÉNÉRÉ PAR LE FETCH
     while ($produit = $r->fetch(PDO::FETCH_ASSOC)) {
         // Génération de card boostrap à chaque fois qu'un produit est récupéré.
-        // Si il y a plus que zero en stock, il va afficher un card normal, sinon il va aussi afficher un card mais avec un badge: "rupture de stock" et un bouton désactivé.
+        // Si le stock est supérieur à zero, il va afficher une cardre normal.
         if (($produit['stock'] > 0)) {
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>
@@ -55,6 +58,7 @@ if ($_GET && isset($_GET["categorie"])) {
                 </div>
             </div> </div>";
         } else {
+            // sinon il affiche une cardre avec un badge et un bouton désactivé.
             $content .= "<div class='col-md-6 col-lg-3 col-sm-12 pb-2 mx-auto mb-3'> 
             <div class='card col-12 border border-warning mx-auto bg-transparent shadow' style='max-width: 20rem;'>
             <img style='' class='card-img-top p-3' src='$produit[photo]' alt='$produit[titre]' title='$produit[description]'>
@@ -63,7 +67,7 @@ if ($_GET && isset($_GET["categorie"])) {
                     <p class='text-center card-text text-white'>$produit[prix] €</p>
                     <a href='fiche_produit.php?idProduit=$produit[id_produit]' class='d-flex justify-content-center mx-auto btn btn-outline-warning w-75 disabled'>Détails/Commander</a>
                 </div>
-            
+
                 <span class='position-absolute top-0 start-50 translate-middle-x badge rounded-pill border border-danger shadow p-2 bg-danger text-uppercase'>rupture de stock</span>
 
             </div> </div>";

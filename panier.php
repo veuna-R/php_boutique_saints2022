@@ -1,11 +1,11 @@
 <?php
 require_once("inc/init.php");
 
-    ////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////
     //////////// RETIRER UN PRODUIT DU PANIER ////////////////
-    ////////////////////////////////////////////
+    /////////////////////////////////////////////////////////
 
-
+// La fonction isset() vérifie si une variable est définie, ce qui signifie qu'elle doit être déclarée et n'est pas NULL.
     if(isset($_GET["action"]) && $_GET["action"] == "suppressionArticle") {
         $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-success'>
         Vos articles ont été supprimés du panier !</span> </div>";
@@ -13,7 +13,7 @@ require_once("inc/init.php");
         mettreAJourIndiceIndexProduitPanier();
     }
 
-    ////////////////////////////////////////////
+    //////////////////////////////////////////////
     //////////// VIDER LE PANIER ////////////////
     ////////////////////////////////////////////
 
@@ -22,9 +22,10 @@ require_once("inc/init.php");
         unset($_SESSION["panier"]);
     }
 
-    ////////////////////////////////////////////
+    ///////////////////////////////////////////////////
     //////////// MODIFIER LA QUANTITÉ ////////////////
-    ////////////////////////////////////////////
+    /////////////////////////////////////////////////
+
     if($_POST && isset($_POST["modifierQuantite"])) {
         modifierQuantitePanier($_POST["id_produit"], $_POST["quantite"]);
         $content .= "<div class='col-md-12 mb-5'> <span class='badge badge-success'>
@@ -207,7 +208,7 @@ require_once("inc/init.php");
                 <input type='hidden' name='modifierQuantite' value=''>
                 <input type='hidden' name='titre' value='". $_SESSION["panier"]["titre"][$i] ."'>
                 <input type='hidden' name='id_produit' value='". $_SESSION["panier"]["id_produit"][$i] ."'>
-                <select class='form-control' name='quantite'>";
+                <select class='form-select' name='quantite'>";
                 for($j = 1; $j <= $_SESSION["panier"]["stock"][$i]; $j++) {
                     if($j == $_SESSION["panier"]["quantite"][$i]) {
                         $content .=  "<option value='$j' selected>$j</option>";

@@ -49,7 +49,7 @@ require_once("inc/header.php");
                         <td>
                             <form method="post">
                                 <input type="hidden" value="<?php echo $commande["id_commande"] ?>" name="id_commande">
-                                <select class="form-control" name="etat">
+                                <select class="form-select" name="etat">
                                     <?php if($valeur == "en cours de traitement") { ?>
                                         <option value="en cours de traitement" selected> En attendant</option>
                                         <option value="envoyé"> Envoyé </option>

@@ -8,7 +8,8 @@ $pdo = new PDO('mysql:host=localhost;dbname=boutique','root','', array(PDO::ATTR
 // variable globale pour rendre le html dynamique
 $content = "";
 
-// Ouverture d'une sessions
+// Ouverture d'une session (séance en français)
+// Une session est un moyen de stocker des informations (dans des variables) à utiliser sur plusieurs pages. Contrairement à un cookie, les informations ne sont pas stockées sur l'ordinateur de l'utilisateur.
 session_start();
 
 // définition de constantes
